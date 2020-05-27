@@ -1,0 +1,37 @@
+extends layouts/base
+
+block head
+    link(rel="stylesheet", href="/stylesheets/home.css")
+block body
+    .container
+        include components/header
+        #videoWrap
+            video(src="/videos/demo.mp4", autoplay="autoplay", loop="loop", muted="muted", width="100%") 您的浏览器不支持 video 标签
+        #workImgs
+            .maxBox(style="max-width: 1020px")
+                .imgWrap
+                    a(href="#") 
+                        img(src="/images/img_work_1.jpg", alt="workImg")
+                        p 携手合作 
+                .imgWrap
+                    a(href="#") 
+                        img(src="/images/img_work_2.jpg", alt="workImg")
+                        p 携手合作 
+                .imgWrap
+                    a(href="#") 
+                        img(src="/images/img_work_3.jpg", alt="workImg")
+                        p 携手合作 
+                .imgWrap
+                    a(href="#") 
+                        img(src="/images/img_work_4.jpg", alt="workImg")
+                        p 携手合作 
+                .imgWrap
+                    a(href="#") 
+                        img(src="/images/img_work_5.jpg", alt="workImg")
+                        p 携手合作 
+                .imgWrap
+                    a(href="#") 
+                        img(src="/images/img_work_6.png", alt="workImg")
+                        p 携手合作 
+block script
+    script(src="/javascripts/home.js")

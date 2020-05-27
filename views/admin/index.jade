@@ -1,0 +1,41 @@
+extends layouts/base
+
+block head
+    link(rel="stylesheet", href="/stylesheets/admin/element-ui/index.css")
+    link(rel="stylesheet", href="/stylesheets/admin/index.css")
+
+block body
+    div#APP(v-cloak)
+        el-container(style="height: 100%")
+            el-aside#APP-ASIDE(width="200px") 
+                .logo
+                    img(src="/images/icon_logo_b.png", alt="logo")/
+                el-menu.menus(default-active='0', background-color='#444546', text-color='#fff', active-text-color='#4891DD')
+                    el-menu-item(index='0')
+                        i.el-icon-menu
+                        span(slot='title') 首页
+                    el-menu-item(index='1')
+                        i.el-icon-document
+                        span(slot='title') 用户管理
+                    el-menu-item(index='2')
+                        i.el-icon-setting
+                        span(slot='title') 新闻管理
+
+                //- div
+                //-     a(href="/admin/index/home") 首页
+                //- div
+                //-     a(href="/admin/index/user") 用户管理
+                //- div
+                //-     a(href="/admin/index/news") 新闻管理
+            el-main(style="padding: 0px")
+                el-container(style="height: 100%")
+                    el-header#APP-HEADER header
+                    el-main#APP-MAIN
+                        case module
+                            when 'home': include ./home
+                            when 'user': include ./user/list
+                            when 'news': include ./news/list
+
+    script(src="/javascripts/admin/vue.js")
+    script(src="/javascripts/admin/elementUI.js")
+    script(src="/javascripts/admin/index.js")

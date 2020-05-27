@@ -1,0 +1,28 @@
+@import './init.less';
+#videoWrap{
+
+}
+
+#workImgs{
+    overflow: hidden;
+    padding-top: 30px;
+    .imgWrap{
+        width: 33.3333%;
+        float: left;
+        padding: 10px;
+        img{
+            width: 100%;
+        }
+        p{
+            font-size: 16px;
+            color: @gray;
+            margin-top: 5px;
+            text-align: center;
+        }
+        &:hover{
+            p{
+                color: @highlight;
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@import './util.less';
+@import './init.less';
+
+.maxBox{
+    margin: 0px auto;
+    max-width: 1000px;
+}
+
+#HEADER{
+    padding: 18px 18px 0px 18px;
+    .top{
+        text-align: center;
+        img{
+            height: 40px;
+        }
+        .langSwitcher{
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            white-space: nowrap;
+            a{
+                font-size: 16px;
+                letter-spacing: 1.6px;
+                padding: 0px 8px;
+                color: @gray;
+                text-decoration: none;
+                &:hover{
+                    cursor: pointer;
+                    color: @highlight;
+                }
+            }
+        }
+    }
+    .nav{
+        margin-top: 15px;
+        text-align: center;
+        .menu{
+            display: inline-block;
+            vertical-align: top;
+            height: 44px;
+            line-height: 40px;
+            padding: 0px 25px;
+            .mainMenu{
+                font-size: 16px;
+                color: @gray;
+                &:hover{
+                    color: @highlight;
+                    cursor: pointer;
+                }
+            }
+            .subMenus{
+                position: absolute;
+                top: 44px;
+                z-index: 1;
+                background-color: rgba(200, 200, 200, 0.9);
+                padding: 0px 6px;
+                display: none;
+                .subMenu{
+                    border-bottom: 1px solid #fff;
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                    a{
+                        display: block;
+                        line-height: 45px;
+                        padding: 0px 20px;
+                        font-size: 16px;
+                        color: @gray;
+                        white-space: nowrap;
+                        &:hover{
+                            color: @highlight;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

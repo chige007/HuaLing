@@ -1,0 +1,12 @@
+extends layouts/base
+
+block head
+    link(rel="stylesheet", href="/stylesheets/admin/login.css")
+block body
+  form(id="form-login")
+    input(type="text", name="username")
+    input(type="password", name="password")
+  button(id="loginBtn") 登录
+
+  script(src="/javascripts/jquery/jquery-3.5.0.min.js")
+  script(src="/javascripts/admin/login.js")
