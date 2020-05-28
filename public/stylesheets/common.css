@@ -6,6 +6,14 @@
   -ms-user-select: none;
   user-select: none;
 }
+.clear:before,
+.clear:after {
+  display: table;
+  content: " ";
+}
+.clear:after {
+  clear: both;
+}
 @keyframes hip-animation {
   0% {
     transform: rotate(0deg);
@@ -375,6 +383,7 @@ textarea:-ms-input-placeholder {
 .maxBox {
   margin: 0px auto;
   max-width: 1000px;
+  width: 100%;
 }
 #HEADER {
   padding: 18px 18px 0px 18px;
@@ -445,5 +454,28 @@ textarea:-ms-input-placeholder {
 }
 #HEADER .nav .menu .subMenus .subMenu a:hover {
   color: #ec2127;
+  cursor: pointer;
+}
+#FOOTER {
+  height: 50px;
+  background-color: #e30917;
+  text-align: center;
+  padding: 15px 0px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: normal;
+}
+#FOOTER span {
+  margin-right: 10px;
+}
+#FOOTER a {
+  padding: 0px 10px;
+  display: inline-block;
+  border-left: 1px solid #fff;
+  height: 14px;
+  line-height: 14px;
+  color: #fff;
+}
+#FOOTER a:hover {
   cursor: pointer;
 }

@@ -88,6 +88,16 @@
 	-ms-user-select:none;
 	user-select:none;
 }
+.clear{
+    &:before,
+    &:after{
+        display: table;
+        content: " ";
+    }
+    &:after{
+        clear: both;
+    }
+}
 
 @keyframes hip-animation {
 	0%{
