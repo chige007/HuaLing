@@ -1,0 +1,37 @@
+@font-face {font-family: "icon";
+  src: url('iconfont.eot?t=1590658744074'); /* IE9 */
+  src: url('iconfont.eot?t=1590658744074#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPUAAsAAAAACFAAAAOHAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDQAqDYIJ/ATYCJAMYCw4ABCAFhD0HchsXB8guMRUZ6a6kNkwnBolOrLfBR273cj++p3iA9vffmbnz7tdKrESSlMgoRCK0bVCm6r7/XSv/IWnMrT5iGvjJzVLmzWaOQKEEhrbC1FWxYyOazF84ueATnAPC/7ABpxnsA4YyiN7CzM/7/udY6lXZAf9rAMgoarp3Qil0FFEL2hvhQPZ8grZleK1L4aDvE1CuiVhug4bUtoKvhCwLCEsXMQl8MwapoTwoFeQVe5NwREFp3Bs/AYeDnw9fJIdSokKGrB03v0yFwvfx/Q2zxZ2megjC6WyQD5GhE5AIaysdy3lEiU48lJsxTwOAFSsVxamqK72f+v7GRQB1XXIgVTn9l0dBJokCIUdKK4FROFngfeSCRFkJOGS8n8oh8f66XDflDRA9kiafcE4JtgJnEUonqkCzslq1KrWqBJ9dc+K8Du3YWK6Nbm0nZ2up7etzddnGWW1sXV2qQ93S/NK3KvT+R0NuP496ubSG7RzUaV5/bafS63e1Glf32qP6qd3aTWvv2zI8e6vbsrHfYCL0/MmupxVh+x/vfDQxobYNu4Rf+iMXrKzNmo+LmzF4FX7VKc7AjO3wrUuXZw5uhW87vaR6zLMlk83n6KrPt3Olz/FFpZkwsdNi+amitWKat2hOIN1QIhcYMx7/t6qWy1tUXfvu+/0J1dgdD1uktWwYG7bs3aLBEMWR3uKsZ2gwuKg42/Q1JgGKZP2z7qBY/CVAdi22gKLZrSwDpXZW+Ku/497Q/92H5P5DAm/+XXwIAkWS4clSkc7Cfyjs2JYsMTHmyWjNdwrIteIBotNVjn/nqeHnVK7aILEFSRECRCXqQyZphkzYVlBQoR3kkp5QrqOMwxVqknkIqQwdmAiCUmcgquIKZErdRibsYyio4yPkSr2FcuP9O7NCm9C/fOBqlASqRB4jmsKdlOmFf5jfjMy0S4bC59F2NFwa+ElSl27pdAU60RiywTXMkoWghBrcQcp7P4Z2Oye6wa2oiPghIfTshK7zq74pXuEO8DeQAUkEpCJkYwiNgnOinkfwL6xuhhiTncSoEAe2dghUF62SSBIvsQFZoXA2tlxqs8swJpkgUAS1SjkHonxxG7LTBEfo1bOskEKINzQgpsuWgDvRror4ZVWOtzkE5cjFeYghCykUQh5K1NqoSU42bnJrMJrgZpzC9bGQEllg1mSX1HHebJ3klDUf+yL0/BIHAAA=') format('woff2'),
+  url('iconfont.woff?t=1590658744074') format('woff'),
+  url('iconfont.ttf?t=1590658744074') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1590658744074#icon') format('svg'); /* iOS 4.1- */
+}
+
+.icon {
+  font-family: "icon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-xiangzuojiantou-copy:before {
+  content: "\e6b2";
+}
+
+.i-xiangzuojiantou:before {
+  content: "\e6b1";
+}
+
+.i-xialajiantou:before {
+  content: "\e60c";
+}
+
+.i-guanbi:before {
+  content: "\e65c";
+}
+
+.i-liebiao:before {
+  content: "\e602";
+}
+

@@ -5,6 +5,7 @@
     margin: 0px auto;
     max-width: 1000px;
     width: 100%;
+    overflow: hidden;
 }
 
 #HEADER{
@@ -31,6 +32,29 @@
                 }
             }
         }
+        .menuEntry_mobile{
+            position: absolute;
+            display: none;
+            padding: 10px 10px;
+            right: 10px;
+            top: -9px;
+            i{
+                font-size: 24px;
+                color: #333;
+                line-height: 1;
+                &.close{
+                    display: none;
+                }
+            }
+            &.open{
+                i.list{
+                    display: none;
+                }
+                i.close{
+                    display: block;
+                }
+            }
+        }
     }
     .nav{
         margin-top: 15px;
@@ -47,6 +71,9 @@
                 &:hover{
                     color: @highlight;
                     cursor: pointer;
+                }
+                .arrow{
+                    display: none;
                 }
             }
             .subMenus{
@@ -78,6 +105,79 @@
         }
     }
 }
+@media screen and (max-width: 650px) {
+    #HEADER{
+        padding: 12px 0px;
+        height: 50px;
+        .maxBox{
+            height: 100%;
+            .top{
+                height: 100%;
+                img{
+                    height: 100%;
+                }
+                .menuEntry_mobile{
+                    display: block;
+                }
+            }
+            .langSwitcher{
+                display: none;
+            }
+            .nav{
+                display: none;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                top: 50px;
+                bottom: 0px;
+                z-index: 20;
+                margin: 0px;
+                background-color: rgba(244, 244, 244, 0.98);
+                .menu{
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    padding: 0px;
+                    .mainMenu{
+                        height: 56px;
+                        line-height: 56px;
+                        width: 100%;
+                        border-bottom: 2px solid #fff;
+                        letter-spacing: 1px;
+                        .arrow{
+                            display: inline-block;
+                            margin-left: 7px;
+                            font-size: 12px;
+                            line-height: 1;
+                            vertical-align: middle;
+                            top: -2px;
+                            color: lighten(@gray, 20%);
+                        }
+                    }
+                    .subMenus{
+                        position: relative;
+                        display: none;
+                        top: 0px;
+                        padding: 0px;
+                        background-color: rgba(235, 235, 235, 0.98);
+                        .subMenu{
+                            border-bottom: 1px solid #999; 
+                            a{
+                                height: 56px;
+                                line-height: 56px;
+                                letter-spacing: 1px;
+                            }
+                        }
+                    }
+                }
+                &.show{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
 
 #FOOTER{
     height: 50px;
