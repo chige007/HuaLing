@@ -2,6 +2,7 @@
 $(function(){
     $('#businessList .item').on('click', function(e) {
         e.stopPropagation();
+        $(this).siblings().removeClass('open').find('.detail').slideUp(400);
         $(this).addClass('open').find('.detail').slideDown(400);
     });
 

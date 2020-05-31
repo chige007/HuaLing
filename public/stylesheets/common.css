@@ -674,3 +674,8 @@ textarea:-ms-input-placeholder {
   line-height: 28px;
   color: #646464;
 }
+@media screen and (max-width: 650px) {
+  .bigTitle .text {
+    font-size: 20px;
+  }
+}

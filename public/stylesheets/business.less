@@ -28,6 +28,11 @@
             z-index: 20;
             background-color: rgba(0, 0, 0, 0.4);
             .animation(.4s);
+            &:hover{
+                .text{
+                    .moves(hip-animation, .3s, ease-out, 1, 0s, backwards);
+                }
+            }
             .text{
                 position: absolute;
                 top: 0px;
@@ -44,21 +49,25 @@
             }
         }
         &.business-1{
+            .moves(up-animation, .3s, ease-out, 1, 0s, backwards);
             .bgImg{
                 background-image: url(/images/bg_business_1.jpg);
             }
         }
         &.business-2{
+            .moves(up-animation, .3s, ease-out, 1, .3s, backwards);
             .bgImg{
                 background-image: url(/images/bg_business_2.jpg);
             }
         }
         &.business-3{
+            .moves(up-animation, .3s, ease-out, 1, .6s, backwards);
             .bgImg{
                 background-image: url(/images/bg_business_3.jpg);
             }
         }
         &.business-4{
+            .moves(up-animation, .3s, ease-out, 1, .9s, backwards);
             .bgImg{
                 background-image: url(/images/bg_business_4.jpg);
             }
@@ -81,7 +90,10 @@
                 right: 10px;
                 top: 10px;
                 z-index: 30;
-                cursor: pointer;
+                &:hover{
+                    cursor: pointer;
+                    .moves(roll-animation, .4s, ease-out, 1, 0s, backwards);
+                }
             }
             .headline{
                 font-size: 32px;
@@ -174,4 +186,42 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 650px) {
+    #businessList{
+        .item{
+            .myTitle{
+                .text{
+                    font-size: 24px;
+                }
+            }
+            .detail{
+                .headline{
+                    font-size: 22px;
+                    font-weight: normal;
+                    padding-bottom: 0px;
+                }
+                .detailList{
+                    padding: 0px 20px;
+                    .detailItem{
+                        padding-left: 0px;
+                        img.pic{
+                            position: relative;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: auto;
+                        }
+                        .content{
+                            margin-top: 20px;
+                            .text{
+                                padding-right: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
 }
