@@ -1,21 +1,35 @@
-$(function(){
-    var t_resizeWin;
-    var resizeWin = function() {
+var t_resizeWin;
+var GLOBAL = {
+    getDeviceType: function() {
+        var type = '';
+        if (document.body.clientWidth <= 650) {
+            $('body').addClass('mobile').removeClass('pc pad');
+            type = 'mobile';
+        } else if (document.body.clientWidth > 650 && document.body.clientWidth <= 768) {
+            $('body').addClass('pad').removeClass('mobile pc');
+            type = 'pad';
+        } else {
+            $('body').addClass('pc').removeClass('mobile pad');
+            type = 'pc';
+        }
+        return type;
+    },
+    resizeWin: function(callback) {
         clearTimeout(t_resizeWin);
         t_resizeWin = setTimeout(function() {
-            if (document.body.clientWidth <= 650) {
-                $('body').addClass('mobile').removeClass('pc pad');
-            } else if (document.body.clientWidth > 650 && document.body.clientWidth <= 768) {
-                $('body').addClass('pad').removeClass('mobile pc');
-            } else {
-                $('body').addClass('pc').removeClass('mobile pad');
+            var type = GLOBAL.getDeviceType();
+            if (typeof callback == 'function') {
+                callback(type);
             }
         }, 300);
     }
+};
+
+$(function(){
+    
     window.onresize = function() {
-        resizeWin();
+        GLOBAL.resizeWin();
     }
-    resizeWin();
 
     $('#HEADER .nav .menu').on('mouseover', function() {
         if (!$('body').hasClass('mobile')) {
@@ -35,13 +49,17 @@ $(function(){
 
     $('#HEADER .nav .menu .mainMenu').on('click', function() {
         if ($('body').hasClass('mobile')) {
-            $(this).parent().siblings().find('.mainMenu').removeClass('open').siblings('.subMenus').slideUp();
-            $(this).toggleClass('open').siblings('.subMenus').slideDown();
+            $(this).parent().siblings().find('.mainMenu').removeClass('open').siblings('.subMenus').slideUp(300);
+            $(this).toggleClass('open').siblings('.subMenus').css({
+                left: 0
+            }).slideToggle(300);
         }
     });
 
     $('#HEADER .menuEntry_mobile').on('click', function() {
         $(this).toggleClass('open');
         $('#HEADER .nav').toggleClass('show');
-    })
+    });
+
+    $('#HEADER').find('.nav .menu').eq($('#HEADER').find('.nav').attr('data-current-index') * 1).addClass('current');
 })

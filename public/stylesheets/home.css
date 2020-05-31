@@ -297,7 +297,12 @@ html,
 body {
   height: 100%;
   width: 100%;
+  overflow: hidden;
   font-size: 14px;
+  background-color: #fff;
+}
+body {
+  overflow-y: auto;
 }
 a,
 span,
@@ -381,25 +386,142 @@ textarea:-ms-input-placeholder {
   border-radius: 10px;
 }
 #workImgs {
-  overflow: hidden;
   padding-top: 30px;
+  padding-bottom: 30px;
 }
-#workImgs .imgWrap {
+#workImgs:before,
+#workImgs:after {
+  display: table;
+  content: " ";
+}
+#workImgs:after {
+  clear: both;
+}
+#workImgs .imgsWrap {
+  width: 100%;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#workImgs .imgsWrap:before,
+#workImgs .imgsWrap:after {
+  display: table;
+  content: " ";
+}
+#workImgs .imgsWrap:after {
+  clear: both;
+}
+#workImgs .imgsWrap .imgWrap {
   width: 33.3333%;
+  max-width: 600px;
   float: left;
   padding: 10px;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-#workImgs .imgWrap img {
+#workImgs .imgsWrap .imgWrap a {
+  display: block;
+}
+#workImgs .imgsWrap .imgWrap a img {
   width: 100%;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-#workImgs .imgWrap p {
+#workImgs .imgsWrap .imgWrap a p {
   font-size: 16px;
   color: #646464;
   margin-top: 5px;
   text-align: center;
+  font-weight: normal;
 }
-#workImgs .imgWrap:hover p {
+#workImgs .imgsWrap .imgWrap a:hover p {
   color: #ec2127;
+}
+#workImgs .prevBtn,
+#workImgs .nextBtn {
+  display: none;
+  padding: 15px;
+  text-align: center;
+  line-height: 1;
+  position: absolute;
+  bottom: 18px;
+  color: #ec2127;
+  cursor: pointer;
+}
+#workImgs .prevBtn i,
+#workImgs .nextBtn i {
+  font-size: 22px;
+  display: block;
+  line-height: 1;
+}
+#workImgs .prevBtn {
+  left: 10px;
+}
+#workImgs .nextBtn {
+  right: 10px;
+}
+@media screen and (max-width: 650px) {
+  #workImgs {
+    padding-bottom: 30px;
+  }
+  #workImgs .imgsWrap {
+    width: 9000px;
+  }
+  #workImgs .imgsWrap:before,
+  #workImgs .imgsWrap:after {
+    display: table;
+    content: " ";
+  }
+  #workImgs .imgsWrap:after {
+    clear: both;
+  }
+  #workImgs .imgsWrap .imgWrap {
+    width: 300px;
+    padding: 0px;
+  }
+  #workImgs .imgsWrap .imgWrap:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+    -moz-opacity: 1;
+    -o-opacity: 1;
+    filter: alpha(opacity=10);
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+  }
+  #workImgs .imgsWrap .imgWrap a p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  #workImgs .imgsWrap .imgWrap.current:after {
+    opacity: 0;
+    -moz-opacity: 0;
+    -o-opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  #workImgs .prevBtn,
+  #workImgs .nextBtn {
+    display: inline-block;
+  }
 }
 #companyIntroduct {
   background-color: #d7d7d7;
@@ -408,15 +530,15 @@ textarea:-ms-input-placeholder {
 #companyIntroduct p.text {
   display: block;
   margin: 0px auto;
-  padding: 40px 0px;
+  padding: 38px 20px;
   width: 100%;
-  max-width: 800px;
+  max-width: 840px;
   font-weight: 300;
   line-height: 30px;
   font-size: 16px;
   text-align: center;
   letter-spacing: 1px;
-  color: #646464;
+  color: #222;
 }
 #companyIntroduct .introductEntry {
   width: 50%;
@@ -434,7 +556,6 @@ textarea:-ms-input-placeholder {
   top: 0;
   bottom: 0;
   margin: auto;
-  background-color: rgba(0, 0, 0, 0.1);
 }
 #companyIntroduct .introductEntry .linkWrap a {
   position: absolute;
@@ -452,6 +573,24 @@ textarea:-ms-input-placeholder {
   font-weight: normal;
   text-align: center;
   background-color: rgba(50, 50, 50, 0.4);
+}
+@media screen and (max-width: 650px) {
+  #companyIntroduct {
+    padding-bottom: 15px;
+  }
+  #companyIntroduct p.text {
+    padding-bottom: 20px;
+  }
+  #companyIntroduct .introductEntry {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  #companyIntroduct .introductEntry .linkWrap {
+    left: 20px;
+    right: 20px;
+    top: 10px;
+    bottom: 10px;
+  }
 }
 #companyIntroduct_2 {
   margin-bottom: 30px;
@@ -495,15 +634,41 @@ textarea:-ms-input-placeholder {
   border-bottom: 25px solid transparent;
   border-left: 40px solid #fff;
 }
+#companyIntroduct_2 .row .imgWrap .linkWrap {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: none;
+}
+#companyIntroduct_2 .row .imgWrap .linkWrap a {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+  border: 3px solid #fff;
+  width: 240px;
+  height: 52px;
+  line-height: 45px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  background-color: rgba(50, 50, 50, 0.4);
+}
 #companyIntroduct_2 .row .contentWrap {
   width: 50%;
   float: left;
   padding: 50px 40px;
 }
-#companyIntroduct_2 .row .contentWrap .title {
+#companyIntroduct_2 .row .contentWrap .myTitle {
   text-align: center;
 }
-#companyIntroduct_2 .row .contentWrap .title .text {
+#companyIntroduct_2 .row .contentWrap .myTitle .text {
   display: inline-block;
   width: 240px;
   height: 50px;
@@ -542,4 +707,34 @@ textarea:-ms-input-placeholder {
 }
 #companyIntroduct_2 .row .contentWrap a.more:hover span {
   color: #ec2127;
+}
+#companyIntroduct_2 .row.row-2 .imgWrap,
+#companyIntroduct_2 .row.row-2 .contentWrap {
+  float: right;
+}
+@media screen and (max-width: 650px) {
+  #companyIntroduct_2 .row .imgWrap {
+    width: 100%;
+    padding: 20px;
+  }
+  #companyIntroduct_2 .row .imgWrap .arrow {
+    display: none;
+  }
+  #companyIntroduct_2 .row .imgWrap .linkWrap {
+    display: block;
+  }
+  #companyIntroduct_2 .row .contentWrap {
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 10px;
+  }
+  #companyIntroduct_2 .row .contentWrap .myTitle {
+    display: none;
+  }
+  #companyIntroduct_2 .row .contentWrap p.content {
+    margin-top: 0px;
+  }
+  #companyIntroduct_2 .row .contentWrap a.more {
+    margin-top: 15px;
+  }
 }

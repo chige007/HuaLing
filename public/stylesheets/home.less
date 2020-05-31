@@ -4,28 +4,103 @@
 }
 
 #workImgs{
-    overflow: hidden;
     padding-top: 30px;
-    .imgWrap{
-        width: 33.3333%;
-        float: left;
-        padding: 10px;
-        img{
-            width: 100%;
-        }
-        p{
-            font-size: 16px;
-            color: @gray;
-            margin-top: 5px;
-            text-align: center;
-        }
-        &:hover{
-            p{
-                color: @highlight;
+    padding-bottom: 30px;
+    .clear;
+    .imgsWrap{
+        .clear;
+        width: 100%;
+        .noSelect;
+        .imgWrap{
+            width: 33.3333%;
+            max-width: 600px;
+            float: left;
+            padding: 10px;
+            .noSelect;
+            a{
+                display: block;
+                img{
+                    width: 100%;
+                    .noSelect;
+                }
+                p{
+                    font-size: 16px;
+                    color: @gray;
+                    margin-top: 5px;
+                    text-align: center;
+                    font-weight: normal;
+                }
+                &:hover{
+                    p{
+                        color: @highlight;
+                    }
+                }
             }
         }
     }
+    .prevBtn,
+    .nextBtn{
+        display: none;
+        padding: 15px;
+        text-align: center;
+        line-height: 1;
+        position: absolute;
+        bottom: 18px;
+        color: @highlight;
+        cursor: pointer;
+        i{
+            font-size: 22px;
+            display: block;
+            line-height: 1;
+        }
+    }
+    .prevBtn{
+        left: 10px;
+    }
+    .nextBtn{
+        right: 10px;
+    }
 }
+@media screen and (max-width: 650px) {
+    #workImgs{
+        padding-bottom: 30px;
+        .imgsWrap{
+            .clear;
+            width: 9000px;
+            .imgWrap{
+                width: 300px;
+                padding: 0px;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(255, 255, 255, 0.6);
+                    .opacity(1);
+                    .animation(.3s);
+                }
+                a{
+                    p{
+                        font-size: 18px;
+                        margin-top: 10px;
+                    }
+                }
+                &.current{
+                    &:after{
+                        .opacity(0);
+                    }
+                }
+            }
+        }
+        .prevBtn,
+        .nextBtn{
+            display: inline-block;
+        }
+    }
+}
+
 
 #companyIntroduct{
     background-color: #d7d7d7;
@@ -33,15 +108,15 @@
     p.text{
         display: block;
         margin: 0px auto;
-        padding: 40px 0px;
+        padding: 38px 20px;
         width: 100%;
-        max-width: 800px;
+        max-width: 840px;
         font-weight: 300;
         line-height: 30px;
         font-size: 16px;
         text-align: center;
         letter-spacing: 1px;
-        color: @gray;
+        color: #222;
     }
     .introductEntry{
         width: 50%;
@@ -58,7 +133,7 @@
             top: 0;
             bottom: 0;
             margin: auto;
-            background-color: rgba(0, 0, 0, 0.1);
+            // background-color: rgba(0, 0, 0, 0.1);
             a{
                 position: absolute;
                 top: 0px;
@@ -77,6 +152,24 @@
                 background-color: rgba(50, 50, 50, 0.4);
             }
         }   
+    }
+}
+@media screen and (max-width: 650px) {
+    #companyIntroduct{
+        padding-bottom: 15px;
+        p.text{
+            padding-bottom: 20px;
+        }
+        .introductEntry{
+            width: 100%;
+            padding: 10px 20px;
+            .linkWrap{
+                left: 20px;
+                right: 20px;
+                top: 10px;
+                bottom: 10px;
+            }
+        }
     }
 }
 
@@ -114,12 +207,38 @@
                     border-left: 40px solid #fff;
                 }
             }
+            .linkWrap{
+                position: absolute;
+                left: 10px;
+                right: 10px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                display: none;
+                a{
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    margin: auto;
+                    border: 3px solid #fff;
+                    width: 240px;
+                    height: 52px;
+                    line-height: 45px;
+                    color: #fff;
+                    font-size: 20px;
+                    font-weight: normal;
+                    text-align: center;
+                    background-color: rgba(50, 50, 50, 0.4);
+                }
+            }   
         }
         .contentWrap{
             width: 50%;
             float: left;
             padding: 50px 40px;
-            .title{
+            .myTitle{
                 text-align: center;
                 .text{
                     display: inline-block;
@@ -162,6 +281,42 @@
                     span{
                         color: @highlight;
                     }
+                }
+            }
+        }
+        &.row-2{
+            .imgWrap,
+            .contentWrap{
+                float: right;
+            }
+        }
+    }
+}
+@media screen and (max-width: 650px) {
+    #companyIntroduct_2{
+        .row{
+            .imgWrap{
+                width: 100%;
+                padding: 20px;
+                .arrow{
+                    display: none;
+                }
+                .linkWrap{
+                    display: block;
+                }
+            }
+            .contentWrap{
+                width: 100%;
+                padding: 20px;
+                padding-bottom: 10px;
+                .myTitle{
+                    display: none;
+                }
+                p.content{
+                    margin-top: 0px;
+                }
+                a.more{
+                    margin-top: 15px;
                 }
             }
         }

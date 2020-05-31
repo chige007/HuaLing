@@ -1,15 +1,15 @@
-div#HEADER
+#HEADER
     .maxBox
         .top
             img.logo(src="/images/icon_logo_w.png", alt="logo")
             .langSwitcher
-                a EN
-                a 繁體
-                a 简体
+                a(href="#") EN
+                a(href="#") 繁體
+                a(href="#") 简体
             .menuEntry_mobile
                 i.icon.list &#xe602;
                 i.icon.close &#xe65c;
-        .nav
+        .nav(data-current-index="#{currentMenu}")
             .menu
                 .mainMenu 集团简介
                     i.icon.arrow &#xe60c;
@@ -17,23 +17,23 @@ div#HEADER
                     .subMenu
                         a(href="#") 集团业务
                     .subMenu 
-                        a(href="#")核心价值
+                        a(href="#") 核心价值
                     .subMenu 
-                        a(href="#")发展历程
+                        a(href="#") 发展历程
                     .subMenu 
-                        a(href="#")管理团队
+                        a(href="#") 管理团队
             .menu
                 .mainMenu 我们的业务
                     i.icon.arrow &#xe60c;
                 .subMenus
                     .subMenu
-                        a(href="#") 集团业务
+                        a(href="/business") 冯氏集团公司
                     .subMenu 
-                        a(href="#")核心价值
+                        a(href="#") 核心价值
                     .subMenu 
-                        a(href="#")发展历程
+                        a(href="#") 发展历程
                     .subMenu 
-                        a(href="#")管理团队
+                        a(href="#") 管理团队
             .menu
                 .mainMenu 可持续发展
                     i.icon.arrow &#xe60c;
@@ -43,9 +43,9 @@ div#HEADER
                     .subMenu 
                         a(href="#") 安全公平的工作环境
                     .subMenu 
-                        a(href="#")发展历程
+                        a(href="#") 发展历程
                     .subMenu 
-                        a(href="#")管理团队
+                        a(href="#") 管理团队
             .menu
                 .mainMenu 发掘更多
                     i.icon.arrow &#xe60c;
@@ -53,11 +53,11 @@ div#HEADER
                     .subMenu
                         a(href="#") 集团业务
                     .subMenu 
-                        a(href="#")核心价值
+                        a(href="#") 核心价值
                     .subMenu 
-                        a(href="#")发展历程
+                        a(href="#") 发展历程
                     .subMenu 
-                        a(href="#")管理团队
+                        a(href="#") 管理团队
             .menu
                 .mainMenu 最新消息
                     i.icon.arrow &#xe60c;
@@ -65,8 +65,12 @@ div#HEADER
                     .subMenu
                         a(href="#") 集团业务
                     .subMenu 
-                        a(href="#")核心价值
+                        a(href="#") 核心价值
                     .subMenu 
-                        a(href="#")发展历程
+                        a(href="#") 发展历程
                     .subMenu 
-                        a(href="#")管理团队
+                        a(href="#") 管理团队
+            .langSwitcher
+                a(href="#") EN
+                a(href="#") 繁體
+                a(href="#") 简体
