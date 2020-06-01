@@ -425,22 +425,6 @@ textarea:-ms-input-placeholder {
   -o-transition: all 0.4s;
   -ms-transition: all 0.4s;
 }
-#businessList .item .myTitle:hover .text {
-  -webkit-animation-name: hip-animation;
-  animation-name: hip-animation;
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
-  -webkit-animation-fill-mode: backwards;
-  animation-fill-mode: backwards;
-  -webkit-animation-direction: normal;
-  animation-direction: normal;
-}
 #businessList .item .myTitle .text {
   position: absolute;
   top: 0px;
@@ -555,20 +539,6 @@ textarea:-ms-input-placeholder {
 }
 #businessList .item .detail .closeBtn:hover {
   cursor: pointer;
-  -webkit-animation-name: roll-animation;
-  animation-name: roll-animation;
-  -webkit-animation-duration: 0.4s;
-  animation-duration: 0.4s;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
-  -webkit-animation-fill-mode: backwards;
-  animation-fill-mode: backwards;
-  -webkit-animation-direction: normal;
-  animation-direction: normal;
 }
 #businessList .item .detail .headline {
   font-size: 32px;

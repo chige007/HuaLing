@@ -26,6 +26,9 @@
                 padding: 0px 8px;
                 color: @gray;
                 text-decoration: none;
+                &.current{
+                    color: @highlight;
+                }
                 &:hover{
                     cursor: pointer;
                     color: @highlight;
@@ -120,6 +123,9 @@
                 color: @gray;
                 padding: 0px 10px;
                 font-size: 16px;
+                &.current{
+                    color: @highlight;
+                }
                 &:hover{
                     color: @highlight;
                     cursor: pointer;
@@ -153,7 +159,7 @@
                 height: 100%;
                 top: 50px;
                 bottom: 0px;
-                z-index: 20;
+                z-index: 99;
                 margin: 0px;
                 background-color: rgba(244, 244, 244, 0.98);
                 .menu{

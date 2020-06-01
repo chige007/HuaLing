@@ -31,6 +31,8 @@ $(function(){
         GLOBAL.resizeWin();
     }
 
+    GLOBAL.resizeWin();
+
     $('#HEADER .nav .menu').on('mouseover', function() {
         if (!$('body').hasClass('mobile')) {
             var subMenus = $(this).find('.subMenus');
@@ -61,5 +63,4 @@ $(function(){
         $('#HEADER .nav').toggleClass('show');
     });
 
-    $('#HEADER').find('.nav .menu').eq($('#HEADER').find('.nav').attr('data-current-index') * 1).addClass('current');
 })

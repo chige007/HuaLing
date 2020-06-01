@@ -420,6 +420,9 @@ textarea:-ms-input-placeholder {
   color: #646464;
   text-decoration: none;
 }
+#HEADER .top .langSwitcher a.current {
+  color: #ec2127;
+}
 #HEADER .top .langSwitcher a:hover {
   cursor: pointer;
   color: #ec2127;
@@ -510,6 +513,9 @@ textarea:-ms-input-placeholder {
   padding: 0px 10px;
   font-size: 16px;
 }
+#HEADER .nav .langSwitcher a.current {
+  color: #ec2127;
+}
 #HEADER .nav .langSwitcher a:hover {
   color: #ec2127;
   cursor: pointer;
@@ -541,7 +547,7 @@ textarea:-ms-input-placeholder {
     height: 100%;
     top: 50px;
     bottom: 0px;
-    z-index: 20;
+    z-index: 99;
     margin: 0px;
     background-color: rgba(244, 244, 244, 0.98);
   }
