@@ -1,0 +1,53 @@
+extends layouts/base
+
+block head
+    link(rel="stylesheet", href="/stylesheets/information_center.css")
+
+block body
+    .container
+        include components/header
+        .maxBox(style="padding: 0px 20px;")
+            .g-bigTitle 
+                .text 新闻中心
+                
+            .searcher
+                span 以年份查阅
+                br.br
+                .selectWrap
+                    select
+                        option(value="all") 全部
+                        option(value="2020") 2020
+                        option(value="2019") 2019
+                        option(value="2018") 2018
+                        option(value="2017") 2017
+                        option(value="2016") 2016
+                        option(value="2015") 2015
+                        option(value="2014") 2014
+            
+            #newList
+                .item
+                    p.date 27 May 2020
+                    p.title 利丰从联交所撤销上市及为长远转型奠定基础
+                    p.content 利丰有限公司今日公布公司将于下午4时起从香港联合交易所撤销上市，成功完成私有化程序。
+                .item
+                    p.date 27 May 2020
+                    p.title 利丰公布私有化建议获股东通过
+                    p.content 利丰今日公布公司股东于今日举行的法院会议及特别股东大会上，通过由冯氏家族及建基于新加坡的领先环球物流配送中心营运商及投资者GLP Pte Ltd. 为股东的Golden Lincoln Holdings I Limited以协议安排方式的私有化建议。
+                .item
+                    p.date 27 May 2020
+                    p.title MEIYUME transforms its manufacturing facilities to support medical staff and facilities amidst COVID-19
+                    p.content Meiyume (a Fung Group company), a one-stop shop partner providing product and retail solutions for the beauty industry, is doing its part to support those impacted by the global COVID-19 pandemic.
+                .item
+                    p.date 27 May 2020
+                    p.title 利丰从联交所撤销上市及为长远转型奠定基础
+                    p.content 利丰有限公司今日公布公司将于下午4时起从香港联合交易所撤销上市，成功完成私有化程序。
+                .item
+                    p.date 27 May 2020
+                    p.title 利丰公布私有化建议获股东通过
+                    p.content 利丰今日公布公司股东于今日举行的法院会议及特别股东大会上，通过由冯氏家族及建基于新加坡的领先环球物流配送中心营运商及投资者GLP Pte Ltd. 为股东的Golden Lincoln Holdings I Limited以协议安排方式的私有化建议。
+                .item
+                    p.date 27 May 2020
+                    p.title MEIYUME transforms its manufacturing facilities to support medical staff and facilities amidst COVID-19
+                    p.content Meiyume (a Fung Group company), a one-stop shop partner providing product and retail solutions for the beauty industry, is doing its part to support those impacted by the global COVID-19 pandemic.
+
+        include components/footer

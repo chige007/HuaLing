@@ -277,50 +277,51 @@
     filter: alpha(opacity=0);
   }
 }
-#valueList .imageText {
+.imageText {
   padding: 30px 0px;
 }
-#valueList .imageText:before,
-#valueList .imageText:after {
+.imageText:before,
+.imageText:after {
   display: table;
   content: " ";
 }
-#valueList .imageText:after {
+.imageText:after {
   clear: both;
 }
-#valueList .imageText .imgWrap,
-#valueList .imageText .textWrap {
+.imageText .imgWrap,
+.imageText .textWrap {
   float: left;
 }
-#valueList .imageText.right .imgWrap,
-#valueList .imageText.right .textWrap {
+.imageText.right .imgWrap,
+.imageText.right .textWrap {
   float: right;
 }
-#valueList .imageText .imgWrap {
+.imageText .imgWrap {
   width: 48%;
 }
-#valueList .imageText .imgWrap img {
+.imageText .imgWrap img {
   display: block;
   width: 100%;
   height: auto;
 }
-#valueList .imageText .textWrap {
+.imageText .textWrap {
   width: 52%;
   padding-left: 30px;
 }
-#valueList .imageText .textWrap .title {
+.imageText .textWrap .title {
   font-size: 25px;
   color: #444;
+  padding-right: 20px;
   margin-bottom: 15px;
   font-weight: 400;
 }
-#valueList .imageText .textWrap .redLine {
+.imageText .textWrap .redLine {
   width: 40px;
   height: 5px;
   border-bottom: 0.3rem solid #ec2127;
   margin-bottom: 10px;
 }
-#valueList .imageText .textWrap .text {
+.imageText .textWrap .text {
   display: block;
   font-size: 16px;
   letter-spacing: 1px;
@@ -329,35 +330,40 @@
   font-weight: 200;
   color: #646464;
 }
-#valueList .imageText .textWrap a.website {
+.imageText .textWrap a.website {
   display: block;
   margin-top: 10px;
 }
-#valueList .imageText .textWrap a.website > img.icon {
+.imageText .textWrap a.website > img.icon {
   margin-right: 5px;
   display: inline-block;
   vertical-align: middle;
 }
-#valueList .imageText .textWrap a.website span {
+.imageText .textWrap a.website span {
   font-weight: normal;
   color: #5b92a1;
   font-size: 16px;
   display: inline-block;
 }
 @media screen and (max-width: 650px) {
-  #valueList .imageText .imgWrap,
-  #valueList .imageText .textWrap {
+  .imageText .imgWrap,
+  .imageText .textWrap {
     width: 100%;
     float: none;
   }
-  #valueList .imageText .imgWrap img {
+  .imageText .imgWrap img {
     height: auto;
   }
-  #valueList .imageText .textWrap {
+  .imageText .textWrap {
     padding-left: 0px;
     margin-top: 20px;
   }
-  #valueList .imageText .textWrap .text {
+  .imageText .textWrap .text {
     padding-right: 0px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .imageText .textWrap {
+    padding: 20px;
   }
 }
