@@ -98,11 +98,18 @@
         clear: both;
     }
 }
-.f-imageText(@imgWidth: 30%, @imgHeight: auto, @textWidth: 70%, @float: left) {
+.f-imageText(@imgWidth: 30%, @imgHeight: auto, @textWidth: 70%, @float: left, @padding: 0px, @titleSize: 19px) {
     .clear;
+    padding: @padding;
     .imgWrap,
     .textWrap{
         float: @float;
+    }
+    &.right{
+        .imgWrap,
+        .textWrap{
+            float: right;
+        }
     }
     .imgWrap{
         width: @imgWidth;
@@ -116,7 +123,7 @@
         width: @textWidth;
         padding-left: 30px;
         .title{
-            font-size: 19px;
+            font-size: @titleSize;
             color: #444;
             margin-bottom: 15px;
             font-weight: 400;

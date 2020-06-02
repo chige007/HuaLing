@@ -1,4 +1,4 @@
-@import './init.less';
+@import './util.less';
 #businessList{
     margin-top: 30px;
     margin-bottom: 50px;
@@ -107,9 +107,7 @@
             .detailList{
                 padding: 0px 80px;
                 .imageText{
-                    .f-imageText(25%, 160px, 75%, left);
-                    padding-top: 30px;
-                    padding-bottom: 30px;
+                    .f-imageText(25%, 160px, 75%, left, 30px 0px);
                     border-bottom: 1px solid #999;
                     &:last-child{
                         border-bottom: none;
@@ -118,25 +116,25 @@
                 @media screen and (min-width: 651px) {
                     padding: 0px 40px;
                     .imageText{
-                        .f-imageText(32%, 160px, 68%, left);
+                        .f-imageText(32%, 160px, 68%, left, 30px 0px);
                     }
                 }
                 @media screen and (min-width: 750px) {
                     padding: 0px 50px;
                     .imageText{
-                        .f-imageText(30%, 162px, 70%, left);
+                        .f-imageText(30%, 162px, 70%, left, 30px 0px);
                     }
                 }
                 @media screen and (min-width: 850px) {
                     padding: 0px 60px;
                     .imageText{
-                        .f-imageText(28%, 166px, 72%, left);
+                        .f-imageText(28%, 166px, 72%, left, 30px 0px);
                     }
                 }
                 @media screen and (min-width: 950px) {
                     padding: 0px 70px;
                     .imageText{
-                        .f-imageText(26%, 170px, 74%, left);
+                        .f-imageText(26%, 170px, 74%, left, 30px 0px);
                     }
                 }
             }
