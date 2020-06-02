@@ -411,7 +411,7 @@ textarea:-ms-input-placeholder {
   -o-transition: all 0.4s;
   -ms-transition: all 0.4s;
 }
-#businessList .item .myTitle {
+#businessList .item .maskTitle {
   position: absolute;
   top: 5px;
   left: 5px;
@@ -425,7 +425,7 @@ textarea:-ms-input-placeholder {
   -o-transition: all 0.4s;
   -ms-transition: all 0.4s;
 }
-#businessList .item .myTitle .text {
+#businessList .item .maskTitle .text {
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -439,78 +439,14 @@ textarea:-ms-input-placeholder {
   font-weight: bolder;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-#businessList .item.business-1 {
-  -webkit-animation-name: up-animation;
-  animation-name: up-animation;
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
-  -webkit-animation-fill-mode: backwards;
-  animation-fill-mode: backwards;
-  -webkit-animation-direction: normal;
-  animation-direction: normal;
-}
 #businessList .item.business-1 .bgImg {
   background-image: url(/images/bg_business_1.jpg);
-}
-#businessList .item.business-2 {
-  -webkit-animation-name: up-animation;
-  animation-name: up-animation;
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-  -webkit-animation-fill-mode: backwards;
-  animation-fill-mode: backwards;
-  -webkit-animation-direction: normal;
-  animation-direction: normal;
 }
 #businessList .item.business-2 .bgImg {
   background-image: url(/images/bg_business_2.jpg);
 }
-#businessList .item.business-3 {
-  -webkit-animation-name: up-animation;
-  animation-name: up-animation;
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-delay: 0.6s;
-  animation-delay: 0.6s;
-  -webkit-animation-fill-mode: backwards;
-  animation-fill-mode: backwards;
-  -webkit-animation-direction: normal;
-  animation-direction: normal;
-}
 #businessList .item.business-3 .bgImg {
   background-image: url(/images/bg_business_3.jpg);
-}
-#businessList .item.business-4 {
-  -webkit-animation-name: up-animation;
-  animation-name: up-animation;
-  -webkit-animation-duration: 0.3s;
-  animation-duration: 0.3s;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-delay: 0.9s;
-  animation-delay: 0.9s;
-  -webkit-animation-fill-mode: backwards;
-  animation-fill-mode: backwards;
-  -webkit-animation-direction: normal;
-  animation-direction: normal;
 }
 #businessList .item.business-4 .bgImg {
   background-image: url(/images/bg_business_4.jpg);
@@ -560,65 +496,423 @@ textarea:-ms-input-placeholder {
 #businessList .item .detail .detailList {
   padding: 0px 80px;
 }
-#businessList .item .detail .detailList .detailItem {
-  padding-left: 180px;
+#businessList .item .detail .detailList .imageText {
   padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid #999;
 }
-#businessList .item .detail .detailList .detailItem:last-child {
-  border-bottom: none;
+#businessList .item .detail .detailList .imageText:before,
+#businessList .item .detail .detailList .imageText:after {
+  display: table;
+  content: " ";
 }
-#businessList .item .detail .detailList .detailItem img.pic {
-  position: absolute;
-  left: 0px;
-  top: 30px;
-  width: 150px;
-  height: 150px;
+#businessList .item .detail .detailList .imageText:after {
+  clear: both;
 }
-#businessList .item .detail .detailList .detailItem .content {
-  min-height: 150px;
+#businessList .item .detail .detailList .imageText .imgWrap,
+#businessList .item .detail .detailList .imageText .textWrap {
+  float: left;
 }
-#businessList .item .detail .detailList .detailItem .content .lilHeadline {
+#businessList .item .detail .detailList .imageText .imgWrap {
+  width: 25%;
+}
+#businessList .item .detail .detailList .imageText .imgWrap img {
+  display: block;
+  width: 100%;
+  height: 160px;
+}
+#businessList .item .detail .detailList .imageText .textWrap {
+  width: 75%;
+  padding-left: 30px;
+}
+#businessList .item .detail .detailList .imageText .textWrap .title {
   font-size: 19px;
   color: #444;
   margin-bottom: 15px;
   font-weight: 400;
 }
-#businessList .item .detail .detailList .detailItem .content .redLine {
+#businessList .item .detail .detailList .imageText .textWrap .redLine {
   width: 40px;
   height: 5px;
   border-bottom: 0.3rem solid #ec2127;
   margin-bottom: 10px;
 }
-#businessList .item .detail .detailList .detailItem .content .text {
+#businessList .item .detail .detailList .imageText .textWrap .text {
   display: block;
   font-size: 16px;
   letter-spacing: 1px;
   line-height: 28px;
   padding-right: 30px;
-  font-weight: normal;
+  font-weight: 200;
   color: #646464;
 }
-#businessList .item .detail .detailList .detailItem .content a.website {
+#businessList .item .detail .detailList .imageText .textWrap a.website {
   display: block;
   margin-top: 10px;
 }
-#businessList .item .detail .detailList .detailItem .content a.website img.icon {
+#businessList .item .detail .detailList .imageText .textWrap a.website > img.icon {
   margin-right: 5px;
   display: inline-block;
   vertical-align: middle;
 }
-#businessList .item .detail .detailList .detailItem .content a.website span {
+#businessList .item .detail .detailList .imageText .textWrap a.website span {
   font-weight: normal;
   color: #5b92a1;
   font-size: 16px;
   display: inline-block;
 }
+@media screen and (max-width: 650px) {
+  #businessList .item .detail .detailList .imageText .imgWrap,
+  #businessList .item .detail .detailList .imageText .textWrap {
+    width: 100%;
+    float: none;
+  }
+  #businessList .item .detail .detailList .imageText .imgWrap img {
+    height: auto;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap {
+    padding-left: 0px;
+    margin-top: 20px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap .text {
+    padding-right: 0px;
+  }
+}
+#businessList .item .detail .detailList .imageText:last-child {
+  border-bottom: none;
+}
+@media screen and (min-width: 651px) {
+  #businessList .item .detail .detailList {
+    padding: 0px 40px;
+  }
+  #businessList .item .detail .detailList .imageText:before,
+  #businessList .item .detail .detailList .imageText:after {
+    display: table;
+    content: " ";
+  }
+  #businessList .item .detail .detailList .imageText:after {
+    clear: both;
+  }
+  #businessList .item .detail .detailList .imageText .imgWrap,
+  #businessList .item .detail .detailList .imageText .textWrap {
+    float: left;
+  }
+  #businessList .item .detail .detailList .imageText .imgWrap {
+    width: 32%;
+  }
+  #businessList .item .detail .detailList .imageText .imgWrap img {
+    display: block;
+    width: 100%;
+    height: 160px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap {
+    width: 68%;
+    padding-left: 30px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap .title {
+    font-size: 19px;
+    color: #444;
+    margin-bottom: 15px;
+    font-weight: 400;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap .redLine {
+    width: 40px;
+    height: 5px;
+    border-bottom: 0.3rem solid #ec2127;
+    margin-bottom: 10px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap .text {
+    display: block;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    padding-right: 30px;
+    font-weight: 200;
+    color: #646464;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap a.website {
+    display: block;
+    margin-top: 10px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap a.website > img.icon {
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap a.website span {
+    font-weight: normal;
+    color: #5b92a1;
+    font-size: 16px;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 651px) and screen and (max-width: 650px) {
+  #businessList .item .detail .detailList .imageText .imgWrap,
+  #businessList .item .detail .detailList .imageText .textWrap {
+    width: 100%;
+    float: none;
+  }
+  #businessList .item .detail .detailList .imageText .imgWrap img {
+    height: auto;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap {
+    padding-left: 0px;
+    margin-top: 20px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap .text {
+    padding-right: 0px;
+  }
+}
+@media screen and (min-width: 750px) {
+  #businessList .item .detail .detailList {
+    padding: 0px 50px;
+  }
+  #businessList .item .detail .detailList .imageText:before,
+  #businessList .item .detail .detailList .imageText:after {
+    display: table;
+    content: " ";
+  }
+  #businessList .item .detail .detailList .imageText:after {
+    clear: both;
+  }
+  #businessList .item .detail .detailList .imageText .imgWrap,
+  #businessList .item .detail .detailList .imageText .textWrap {
+    float: left;
+  }
+  #businessList .item .detail .detailList .imageText .imgWrap {
+    width: 30%;
+  }
+  #businessList .item .detail .detailList .imageText .imgWrap img {
+    display: block;
+    width: 100%;
+    height: 162px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap {
+    width: 70%;
+    padding-left: 30px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap .title {
+    font-size: 19px;
+    color: #444;
+    margin-bottom: 15px;
+    font-weight: 400;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap .redLine {
+    width: 40px;
+    height: 5px;
+    border-bottom: 0.3rem solid #ec2127;
+    margin-bottom: 10px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap .text {
+    display: block;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    padding-right: 30px;
+    font-weight: 200;
+    color: #646464;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap a.website {
+    display: block;
+    margin-top: 10px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap a.website > img.icon {
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap a.website span {
+    font-weight: normal;
+    color: #5b92a1;
+    font-size: 16px;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 750px) and screen and (max-width: 650px) {
+  #businessList .item .detail .detailList .imageText .imgWrap,
+  #businessList .item .detail .detailList .imageText .textWrap {
+    width: 100%;
+    float: none;
+  }
+  #businessList .item .detail .detailList .imageText .imgWrap img {
+    height: auto;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap {
+    padding-left: 0px;
+    margin-top: 20px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap .text {
+    padding-right: 0px;
+  }
+}
+@media screen and (min-width: 850px) {
+  #businessList .item .detail .detailList {
+    padding: 0px 60px;
+  }
+  #businessList .item .detail .detailList .imageText:before,
+  #businessList .item .detail .detailList .imageText:after {
+    display: table;
+    content: " ";
+  }
+  #businessList .item .detail .detailList .imageText:after {
+    clear: both;
+  }
+  #businessList .item .detail .detailList .imageText .imgWrap,
+  #businessList .item .detail .detailList .imageText .textWrap {
+    float: left;
+  }
+  #businessList .item .detail .detailList .imageText .imgWrap {
+    width: 28%;
+  }
+  #businessList .item .detail .detailList .imageText .imgWrap img {
+    display: block;
+    width: 100%;
+    height: 166px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap {
+    width: 72%;
+    padding-left: 30px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap .title {
+    font-size: 19px;
+    color: #444;
+    margin-bottom: 15px;
+    font-weight: 400;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap .redLine {
+    width: 40px;
+    height: 5px;
+    border-bottom: 0.3rem solid #ec2127;
+    margin-bottom: 10px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap .text {
+    display: block;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    padding-right: 30px;
+    font-weight: 200;
+    color: #646464;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap a.website {
+    display: block;
+    margin-top: 10px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap a.website > img.icon {
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap a.website span {
+    font-weight: normal;
+    color: #5b92a1;
+    font-size: 16px;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 850px) and screen and (max-width: 650px) {
+  #businessList .item .detail .detailList .imageText .imgWrap,
+  #businessList .item .detail .detailList .imageText .textWrap {
+    width: 100%;
+    float: none;
+  }
+  #businessList .item .detail .detailList .imageText .imgWrap img {
+    height: auto;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap {
+    padding-left: 0px;
+    margin-top: 20px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap .text {
+    padding-right: 0px;
+  }
+}
+@media screen and (min-width: 950px) {
+  #businessList .item .detail .detailList {
+    padding: 0px 70px;
+  }
+  #businessList .item .detail .detailList .imageText:before,
+  #businessList .item .detail .detailList .imageText:after {
+    display: table;
+    content: " ";
+  }
+  #businessList .item .detail .detailList .imageText:after {
+    clear: both;
+  }
+  #businessList .item .detail .detailList .imageText .imgWrap,
+  #businessList .item .detail .detailList .imageText .textWrap {
+    float: left;
+  }
+  #businessList .item .detail .detailList .imageText .imgWrap {
+    width: 26%;
+  }
+  #businessList .item .detail .detailList .imageText .imgWrap img {
+    display: block;
+    width: 100%;
+    height: 170px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap {
+    width: 74%;
+    padding-left: 30px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap .title {
+    font-size: 19px;
+    color: #444;
+    margin-bottom: 15px;
+    font-weight: 400;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap .redLine {
+    width: 40px;
+    height: 5px;
+    border-bottom: 0.3rem solid #ec2127;
+    margin-bottom: 10px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap .text {
+    display: block;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    padding-right: 30px;
+    font-weight: 200;
+    color: #646464;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap a.website {
+    display: block;
+    margin-top: 10px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap a.website > img.icon {
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap a.website span {
+    font-weight: normal;
+    color: #5b92a1;
+    font-size: 16px;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 950px) and screen and (max-width: 650px) {
+  #businessList .item .detail .detailList .imageText .imgWrap,
+  #businessList .item .detail .detailList .imageText .textWrap {
+    width: 100%;
+    float: none;
+  }
+  #businessList .item .detail .detailList .imageText .imgWrap img {
+    height: auto;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap {
+    padding-left: 0px;
+    margin-top: 20px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap .text {
+    padding-right: 0px;
+  }
+}
 #businessList .item.open {
   padding: 6px;
 }
-#businessList .item.open .myTitle {
+#businessList .item.open .maskTitle {
   display: none;
 }
 #businessList .item.open .detail {
@@ -646,7 +940,7 @@ textarea:-ms-input-placeholder {
   -webkit-animation-direction: normal;
   animation-direction: normal;
 }
-#businessList .item.open .detail .detailItem {
+#businessList .item.open .detail .detailList {
   -webkit-animation-name: upShow-animation;
   animation-name: upShow-animation;
   -webkit-animation-duration: 0.4s;
@@ -666,7 +960,7 @@ textarea:-ms-input-placeholder {
   transform: scale(1);
 }
 @media screen and (max-width: 650px) {
-  #businessList .item .myTitle .text {
+  #businessList .item .maskTitle .text {
     font-size: 24px;
   }
   #businessList .item .detail .headline {
@@ -676,21 +970,5 @@ textarea:-ms-input-placeholder {
   }
   #businessList .item .detail .detailList {
     padding: 0px 20px;
-  }
-  #businessList .item .detail .detailList .detailItem {
-    padding-left: 0px;
-  }
-  #businessList .item .detail .detailList .detailItem img.pic {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-  }
-  #businessList .item .detail .detailList .detailItem .content {
-    margin-top: 20px;
-  }
-  #businessList .item .detail .detailList .detailItem .content .text {
-    padding-right: 0px;
   }
 }

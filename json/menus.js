@@ -1,172 +1,172 @@
 const menus = {
     cn: [{
-        url: '',
+        url: '/',
         name: '集团简介',
         sub: [{
-            url: '',
+            url: '/group_business',
             name: '集团业务',
         }, {
-            url: '',
+            url: '/core_value',
             name: '核心价值',
         }, {
-            url: '',
+            url: '/development_history',
             name: '发展历程',
         }, {
-            url: '',
+            url: '/management_team',
             name: '管理团队',
         }]
     }, {
-        url: '',
+        url: '/',
         name: '我们的业务',
         sub: [{
             url: '/business',
             name: '四大板块业务',
         }, {
-            url: '',
+            url: '/product_line',
             name: '产品线',
         }, {
-            url: '',
+            url: '/independent_brand',
             name: '自主品牌',
         }, {
-            url: '',
+            url: '/cooperation_mode',
             name: '合作模式',
         }]
     }, {
-        url: '',
+        url: '/',
         name: '最新消息',
         sub: [{
-            url: '',
+            url: '/information_center',
             name: '新闻中心',
         }]
     }, {
-        url: '',
+        url: '/',
         name: '发掘',
         sub: [{
-            url: '',
+            url: '/innovate',
             name: '创新',
         }, {
-            url: '',
+            url: '/personnel',
             name: '人才',
         }]
     }, {
-        url: '',
+        url: '/',
         name: '联系我们',
         sub: [{
-            url: '',
+            url: '/contact_information',
             name: '联系方式',
         }]
     }],
     en: [{
-        url: '',
+        url: '/',
         name: 'Group Profile',
         sub: [{
-            url: '',
+            url: '/group_business',
             name: 'Group Business',
         }, {
-            url: '',
+            url: '/core_value',
             name: 'Core Value',
         }, {
-            url: '',
+            url: '/development_history',
             name: 'Development History',
         }, {
-            url: '',
+            url: '/management_team',
             name: 'Management Team',
         }]
     }, {
-        url: '',
+        url: '/',
         name: 'Our Business',
         sub: [{
             url: '/business',
             name: 'Four Business Sectors',
         }, {
-            url: '',
+            url: '/product_line',
             name: 'Product Line',
         }, {
-            url: '',
+            url: '/independent_brand',
             name: 'Independent Brand',
         }, {
-            url: '',
+            url: '/cooperation_mode',
             name: 'Cooperation Mode',
         }]
     }, {
-        url: '',
+        url: '/',
         name: 'Latest News',
         sub: [{
-            url: '',
+            url: '/information_center',
             name: 'Information Center',
         }]
     }, {
-        url: '',
+        url: '/',
         name: 'Explore',
         sub: [{
-            url: '',
+            url: '/innovate',
             name: 'Innovate',
         }, {
-            url: '',
+            url: '/personnel',
             name: 'Personnel',
         }]
     }, {
-        url: '',
+        url: '/',
         name: 'Contact Us',
         sub: [{
-            url: '',
+            url: '/contact_information',
             name: 'Contact Information',
         }]
     }],
     hk: [{
-        url: '',
+        url: '/',
         name: '集團簡介',
         sub: [{
-            url: '',
+            url: '/group_business',
             name: '集團業務',
         }, {
-            url: '',
+            url: '/core_value',
             name: '核心價值',
         }, {
-            url: '',
+            url: '/development_history',
             name: '發展歷程',
         }, {
-            url: '',
+            url: '/management_team',
             name: '管理團隊',
         }]
     }, {
-        url: '',
+        url: '/',
         name: '我們的業務',
         sub: [{
             url: '/business',
             name: '四大板塊業務',
         }, {
-            url: '',
+            url: '/product_line',
             name: '產品線',
         }, {
-            url: '',
+            url: '/independent_brand',
             name: '自主品牌',
         }, {
-            url: '',
+            url: '/cooperation_mode',
             name: '合作模式',
         }]
     }, {
-        url: '',
+        url: '/',
         name: '最新消息',
         sub: [{
-            url: '',
+            url: '/information_center',
             name: '新聞中心',
         }]
     }, {
-        url: '',
+        url: '/',
         name: '發掘',
         sub: [{
-            url: '',
+            url: '/innovate',
             name: '創新',
         }, {
-            url: '',
+            url: '/personnel',
             name: '人才',
         }]
     }, {
-        url: '',
+        url: '/',
         name: '聯繫我們',
         sub: [{
-            url: '',
+            url: '/contact_information',
             name: '聯繫方式',
         }]
     }]

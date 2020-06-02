@@ -98,6 +98,81 @@
         clear: both;
     }
 }
+.f-imageText(@imgWidth: 30%, @imgHeight: auto, @textWidth: 70%, @float: left) {
+    .clear;
+    .imgWrap,
+    .textWrap{
+        float: @float;
+    }
+    .imgWrap{
+        width: @imgWidth;
+        img{
+            display: block;
+            width: 100%;
+            height: @imgHeight;
+        }
+    }
+    .textWrap{
+        width: @textWidth;
+        padding-left: 30px;
+        .title{
+            font-size: 19px;
+            color: #444;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+        .redLine{
+            width: 40px;
+            height: 5px;
+            border-bottom: 0.3rem solid #ec2127;
+            margin-bottom: 10px;
+        }
+        .text{
+            display: block;
+            font-size: 16px;
+            letter-spacing: 1px;
+            line-height: 28px;
+            padding-right: 30px;
+            font-weight: 200;
+            color: @gray;
+        }
+        a.website{
+            display: block;
+            margin-top: 10px;
+            >img.icon{
+                margin-right: 5px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            span{
+                font-weight: normal;
+                color: #5b92a1;
+                font-size: 16px;
+                display: inline-block;
+            }
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        .imgWrap,
+        .textWrap{
+            width: 100%;
+            float: none;
+        }
+        .imgWrap{
+            img{
+                height: auto;
+            }
+        }
+        .textWrap{
+            padding-left: 0px;
+            margin-top: 20px;
+            .text{
+                padding-right: 0px;
+            }
+        }
+    }
+}
 
 @keyframes hip-animation {
 	0%{

@@ -655,15 +655,11 @@ textarea:-ms-input-placeholder {
     border-right: none;
   }
 }
-.title {
-  border-bottom: none;
-  padding: 0px;
-}
-.bigTitle {
+.g-bigTitle {
   text-align: center;
   margin: 40px 0px;
 }
-.bigTitle .text {
+.g-bigTitle .text {
   font-size: 22px;
   padding: 12px 15px;
   line-height: 1;
@@ -673,15 +669,19 @@ textarea:-ms-input-placeholder {
   font-weight: bolder;
   color: #646464;
 }
-.normalText {
+.g-normalText {
   font-size: 16px;
   letter-spacing: 1px;
   padding: 0px 20px;
-  line-height: 28px;
+  line-height: 30px;
+  margin-bottom: 15px;
   color: #646464;
 }
+.g-normalText .bold {
+  font-weight: bold;
+}
 @media screen and (max-width: 650px) {
-  .bigTitle .text {
+  .g-bigTitle .text {
     font-size: 20px;
   }
 }
