@@ -404,6 +404,10 @@
 #businessList .item .detail .detailList .imageText .textWrap {
   float: left;
 }
+#businessList .item .detail .detailList .imageText.right .imgWrap,
+#businessList .item .detail .detailList .imageText.right .textWrap {
+  float: right;
+}
 #businessList .item .detail .detailList .imageText .imgWrap {
   width: 25%;
 }
@@ -419,6 +423,7 @@
 #businessList .item .detail .detailList .imageText .textWrap .title {
   font-size: 19px;
   color: #444;
+  padding-right: 20px;
   margin-bottom: 15px;
   font-weight: 400;
 }
@@ -465,6 +470,9 @@
     padding-left: 0px;
     margin-top: 20px;
   }
+  #businessList .item .detail .detailList .imageText .textWrap .title {
+    padding-right: 0px;
+  }
   #businessList .item .detail .detailList .imageText .textWrap .text {
     padding-right: 0px;
   }
@@ -491,6 +499,10 @@
   #businessList .item .detail .detailList .imageText .textWrap {
     float: left;
   }
+  #businessList .item .detail .detailList .imageText.right .imgWrap,
+  #businessList .item .detail .detailList .imageText.right .textWrap {
+    float: right;
+  }
   #businessList .item .detail .detailList .imageText .imgWrap {
     width: 32%;
   }
@@ -506,6 +518,7 @@
   #businessList .item .detail .detailList .imageText .textWrap .title {
     font-size: 19px;
     color: #444;
+    padding-right: 20px;
     margin-bottom: 15px;
     font-weight: 400;
   }
@@ -553,6 +566,9 @@
     padding-left: 0px;
     margin-top: 20px;
   }
+  #businessList .item .detail .detailList .imageText .textWrap .title {
+    padding-right: 0px;
+  }
   #businessList .item .detail .detailList .imageText .textWrap .text {
     padding-right: 0px;
   }
@@ -576,6 +592,10 @@
   #businessList .item .detail .detailList .imageText .textWrap {
     float: left;
   }
+  #businessList .item .detail .detailList .imageText.right .imgWrap,
+  #businessList .item .detail .detailList .imageText.right .textWrap {
+    float: right;
+  }
   #businessList .item .detail .detailList .imageText .imgWrap {
     width: 30%;
   }
@@ -591,6 +611,7 @@
   #businessList .item .detail .detailList .imageText .textWrap .title {
     font-size: 19px;
     color: #444;
+    padding-right: 20px;
     margin-bottom: 15px;
     font-weight: 400;
   }
@@ -638,6 +659,9 @@
     padding-left: 0px;
     margin-top: 20px;
   }
+  #businessList .item .detail .detailList .imageText .textWrap .title {
+    padding-right: 0px;
+  }
   #businessList .item .detail .detailList .imageText .textWrap .text {
     padding-right: 0px;
   }
@@ -661,6 +685,10 @@
   #businessList .item .detail .detailList .imageText .textWrap {
     float: left;
   }
+  #businessList .item .detail .detailList .imageText.right .imgWrap,
+  #businessList .item .detail .detailList .imageText.right .textWrap {
+    float: right;
+  }
   #businessList .item .detail .detailList .imageText .imgWrap {
     width: 28%;
   }
@@ -676,6 +704,7 @@
   #businessList .item .detail .detailList .imageText .textWrap .title {
     font-size: 19px;
     color: #444;
+    padding-right: 20px;
     margin-bottom: 15px;
     font-weight: 400;
   }
@@ -723,6 +752,9 @@
     padding-left: 0px;
     margin-top: 20px;
   }
+  #businessList .item .detail .detailList .imageText .textWrap .title {
+    padding-right: 0px;
+  }
   #businessList .item .detail .detailList .imageText .textWrap .text {
     padding-right: 0px;
   }
@@ -746,6 +778,10 @@
   #businessList .item .detail .detailList .imageText .textWrap {
     float: left;
   }
+  #businessList .item .detail .detailList .imageText.right .imgWrap,
+  #businessList .item .detail .detailList .imageText.right .textWrap {
+    float: right;
+  }
   #businessList .item .detail .detailList .imageText .imgWrap {
     width: 26%;
   }
@@ -761,6 +797,7 @@
   #businessList .item .detail .detailList .imageText .textWrap .title {
     font-size: 19px;
     color: #444;
+    padding-right: 20px;
     margin-bottom: 15px;
     font-weight: 400;
   }
@@ -807,6 +844,9 @@
   #businessList .item .detail .detailList .imageText .textWrap {
     padding-left: 0px;
     margin-top: 20px;
+  }
+  #businessList .item .detail .detailList .imageText .textWrap .title {
+    padding-right: 0px;
   }
   #businessList .item .detail .detailList .imageText .textWrap .text {
     padding-right: 0px;

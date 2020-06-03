@@ -641,7 +641,7 @@ textarea:-ms-input-placeholder {
 }
 @media screen and (max-width: 650px) {
   #FOOTER {
-    height: 80px;
+    height: auto;
   }
   #FOOTER .br {
     display: block;
@@ -683,5 +683,8 @@ textarea:-ms-input-placeholder {
 @media screen and (max-width: 650px) {
   .g-bigTitle .text {
     font-size: 20px;
+    padding: 10px 13px;
+    min-width: 210px;
+    border-width: 2px;
   }
 }

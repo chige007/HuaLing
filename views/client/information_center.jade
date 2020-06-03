@@ -8,14 +8,14 @@ block body
         include components/header
         .maxBox(style="padding: 0px 20px;")
             .g-bigTitle 
-                .text 新闻中心
-                
+                .text #{text.title[lang]}
+
             .searcher
-                span 以年份查阅
+                span #{text.selectLabel[lang]}
                 br.br
                 .selectWrap
                     select
-                        option(value="all") 全部
+                        option(value="All") #{text.selectAll[lang]}
                         option(value="2020") 2020
                         option(value="2019") 2019
                         option(value="2018") 2018

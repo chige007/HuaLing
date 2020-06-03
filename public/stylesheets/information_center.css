@@ -292,6 +292,7 @@
   height: 32px;
   width: 180px;
   display: inline-block;
+  text-align: right;
   border-bottom: 1px solid #999;
 }
 .searcher .selectWrap select {
@@ -301,6 +302,7 @@
   font-size: 15px;
   border: none;
   color: #646464;
+  width: 118px;
   text-align: center;
 }
 #newList {
@@ -317,7 +319,7 @@
 }
 #newList .item p.title {
   font-size: 19px;
-  color: #4a4a4a;
+  color: #3e3e3e;
   margin-bottom: 10px;
   font-weight: normal;
   line-height: 28px;

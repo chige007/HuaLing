@@ -358,6 +358,9 @@
     padding-left: 0px;
     margin-top: 20px;
   }
+  .imageText .textWrap .title {
+    padding-right: 0px;
+  }
   .imageText .textWrap .text {
     padding-right: 0px;
   }

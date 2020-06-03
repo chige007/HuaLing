@@ -11,14 +11,14 @@
                 i.icon.list &#xe602;
                 i.icon.close &#xe65c;
         .nav(data-current-index="#{currentMenu}")
-            each menu,index in menus[lang]
+            each menu,index in menus
                 .menu(class="#{currentMenu == index? 'current' : ''}")
-                    .mainMenu #{menu.name}
+                    .mainMenu #{menu.name[lang]}
                         i.icon.arrow &#xe60c;
                     .subMenus
                         each sub in menu.sub
                             .subMenu
-                                a(href="#{sub.url + '/' + lang}") #{sub.name}
+                                a(href="#{sub.url + '/' + lang}") #{sub.name[lang]}
             .langSwitcher
                 a(href="en", class="#{lang == 'en' ? 'current' : ''}") EN
                 a(href="hk", class="#{lang == 'hk' ? 'current' : ''}") 繁體
