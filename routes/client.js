@@ -25,6 +25,8 @@ router.get('/', function (req, res, next) {
 
 // 首页
 router.get('/:lang', function (req, res, next) {
+    const country = req.headers['cf-ipcountry'] || '123';
+    console.log(country);
     res.render('client/home', {
         menus,
         lang: req.params.lang,

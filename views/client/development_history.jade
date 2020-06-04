@@ -5,10 +5,16 @@ block head
 block body
     .container
         include components/header
-        .maxBox
+        .maxBox(style="padding-bottom: 30px;")
             .g-bigTitle 
                 .text #{text.title[lang]}
             
-            img(src="/images/img_development_history.png", alt="发展历程", style="width: 100%")
+            - var i = 1
+            - var length = 8
+            if (lang == 'en') 
+                -length = 6
+            while i < length
+                img(src="/images/img_fzlc_pc_#{lang}_#{i}.jpg", alt="发展历程", style="width: 100%; display: block;")
+                - i += 1
 
         include components/footer
