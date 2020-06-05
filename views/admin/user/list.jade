@@ -1,1 +1,8 @@
-p userList
+#APP-USERLIST(style="width: 100%; height: 100%")
+    .g-page(v-loading="loading")
+        el-table.g-table(:data="listData", stripe, border, fit)
+            el-table-column(type="index", width="60px")
+            el-table-column(type="selection", width="60px")
+            el-table-column(prop="username", label="用户名")
+            el-table-column(prop="updateTime", label="修改时间", :formatter="$util.formatter.mongoTime")
+            el-table-column(prop="createTime", label="创建时间")

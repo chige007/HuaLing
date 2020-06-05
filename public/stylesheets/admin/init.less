@@ -1,0 +1,71 @@
+@import './../util.less';
+*{
+	box-sizing: border-box;
+	position: relative;
+    font-family: sans-serif, 'Microsoft YaHei', Helvetica, Arial;
+}
+html,body,ul,li,p,span,img{
+	margin: 0px;
+	padding: 0px;
+}
+html,body{
+	height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-size: 14px;
+    background-color: #fff;
+}
+body{
+    overflow-y: auto;
+}
+a,span,input,button,textarea,i{
+	text-decoration: none;
+	outline: none;
+	&:hover,&:active,&:focus,&:focus:active{
+		text-decoration: none!important;
+		outline: none!important;
+		box-shadow: none!important;
+	}
+}
+:focus {
+    outline: none;
+}
+
+
+ul,li{
+	list-style: none;
+}
+
+input,
+textarea{
+	&::-webkit-input-placeholder { /* WebKit browsers */
+		color: #aaa!important;
+	}
+	&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+		color: #aaa!important;
+	}
+	&::-moz-placeholder { /* Mozilla Firefox 19+ */
+		color: #aaa!important;
+	}
+	&:-ms-input-placeholder { /* Internet Explorer 10+ */
+		color: #aaa!important;
+	}
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track-piece{
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb:vertical{
+    height: 8px;
+    background-color: rgba(220, 220, 220, 0.5);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:horizontal{
+    width: 8px;
+    background-color: rgba(220, 220, 220, 0.5);
+    border-radius: 10px;
+}

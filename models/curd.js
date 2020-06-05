@@ -2,6 +2,14 @@ var fs = require('fs');
 
 const curd = {
     save (model, data, success, error) {
+        if (!model) {
+            console.error('找不到model');
+            return;
+        }
+        if (!data) {
+            console.error('找不到数据');
+            return;
+        }
         var saveData = new model(data);
         saveData.save((err, doc) => {
             if (err) {
@@ -16,8 +24,16 @@ const curd = {
             }
         });
     },
-    update (model, condition, newData, success) {
-        model.updateOne(condition, {$set: newData}, (err, doc) => {
+    update (model, filter = {}, newData, success) {
+        if (!model) {
+            console.error('找不到model');
+            return;
+        }
+        if (!newData) {
+            console.error('找不到数据');
+            return;
+        }
+        model.updateOne(filter, {$set: newData}, (err, doc) => {
             if (err) {
                 console.log(err);
                 if (typeof error == 'function') {
@@ -30,8 +46,12 @@ const curd = {
             }
         });
     },
-    findOne (model, condition, success) {
-        model.findOne(condition, (err, doc) => {
+    findOne (model, filter = {}, success) {
+        if (!model) {
+            console.error('找不到model');
+            return;
+        }
+        model.findOne(filter, (err, doc) => {
             if (err) {
                 console.log(err);
                 if (typeof error == 'function') {
@@ -44,8 +64,12 @@ const curd = {
             }
         });
     },
-    count (model, condition, success, error) {
-        model.countDocuments(condition, (err, doc) => {
+    count (model, filter = {}, success, error) {
+        if (!model) {
+            console.error('找不到model');
+            return;
+        }
+        model.countDocuments(filter, (err, doc) => {
             if (err) {
                 console.log(err);
                 (typeof error == 'function') && error(err);
@@ -54,8 +78,12 @@ const curd = {
             }
         });
     },
-    remove (model, condition, success, error) {
-        model.remove(condition, (err, doc) => {
+    remove (model, filter = {}, success, error) {
+        if (!model) {
+            console.error('找不到model');
+            return;
+        }
+        model.remove(filter, (err, doc) => {
             if (err) {
                 console.log(err);
                 if (typeof error == 'function') {
@@ -68,42 +96,25 @@ const curd = {
             }
         });
     },
-    getList (model, condition, options, success, error) {
-        options = options || {};
-        var defaultOpts = {
-            offset: 0,
-            pageSize: 10,
-            sort: 'updateTime',
-            order: 'desc'
+    getList ({model, filter = {}, projection = {}, options = {}, callback}) {
+        if (!model) {
+            console.error('找不到model');
+            return;
         }
-        defaultOpts = Object.assign(defaultOpts, options);
-        var sort = {};
-        if (defaultOpts.order == 'asc')
-            sort[defaultOpts.sort] = 1;
-        else
-            sort[defaultOpts.sort] = -1;
-        var $and = [];
-        for(var x in condition) {
-            if (x != 'offset' && x != 'limit' && x != 'order' && x != 'sort' && condition[x]) {
-                let param = {};
-                param[x] = new RegExp(condition[x], 'i');
-                $and.push(param);
+        var defaultOptions = {
+            skip: 0,
+            limit: 10,
+            sort: {
+                'updateTime': -1
             }
         }
-        condition = {};
-        if ($and.length)
-            condition['$and'] = $and;
-        var query = model.find(condition);
-        query.skip(defaultOpts.offset).limit(defaultOpts.pageSize).sort(sort).exec((err, doc) => {
-            if (err) {
-                console.log(err);
-                if (typeof error == 'function') {
-                    error(err);
-                }
-            } else {
-                curd.count(model, condition, (count) => {
-                    (typeof success == 'function') && success(doc, count);
-                });
+        defaultOptions = Object.assign(defaultOptions, options);
+        
+        let query = model.find(filter).select(projection).setOptions(defaultOptions);
+        console.log(`* QUERY: ${JSON.stringify(filter)} / ${JSON.stringify(projection)} / ${JSON.stringify(defaultOptions)}`);
+        query.exec((err, doc) => {
+            if (typeof callback == 'function') {
+                callback(err, doc);
             }
         });
     },

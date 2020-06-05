@@ -1,12 +1,40 @@
 extends layouts/base
 
-block head
+block style_pre
     link(rel="stylesheet", href="/stylesheets/admin/login.css")
 block body
-  form(id="form-login")
-    input(type="text", name="username")
-    input(type="password", name="password")
-  button(id="loginBtn") 登录
+    #APP
+        .container
+            .loginBox
+                .left
+                    .logo
+                        img(src="/images/icon_logo_b.png", alt="logo")
+                        p 官网后台管理系统
+                .right
+                    .wrap
+                        .title 用户登录
+                        .inputGroup
+                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAPFBMVEUAAACZmZmampqZmZmXl5eXl5eZmZmZmZmZmZmZmZmfn5+YmJiZmZmXl5eYmJiZmZmZmZmZmZmYmJiZmZnHKcGcAAAAE3RSTlMA4DDwQCDAoE/PENCAXpBw77GUP8a+nwAAAJJJREFUGNNdj1sOxCAIRUVBfLS1Lfvf6xhHhfR8GHJDrhw3ObNIRGcpUbg1lqeYkMNYwnBohpL+QxLa4QFrMqsx6qSVeU312uG5qqiXbyCWcVmuTvEBElGC4J3hBOlAsotZ6vO+XCXTzm7w0wJuXD68lQuLn1/b9jpuboFsSMMUhoRyQX9UQvVwNut9gl3GfQj+B+T4BGteRKWaAAAAAElFTkSuQmCC", alt="", srcset="")
+                            input(type="text", v-model="username", autofocus, placeholder="请输入用户名", @keyup.13="login")
+                        .inputGroup
+                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAMAAADzapwJAAAAOVBMVEUAAACXl5eZmZmYmJiYmJiXl5eZmZmampqYmJiZmZmYmJiZmZmYmJiZmZmYmJiZmZmfn5+ZmZmZmZkK8frLAAAAEnRSTlMAQIC/nyDwMJDgYFDf0LBwEKCZBaiTAAAAfUlEQVQY053P2Q7CIBCFYYad0s3//R/WhpJ00BqN54YzHwmL6Qne4XwwY2qkuEKcBk1EORYpJM1LHxOL0p1Hb5n9YmHrbUM0y9W+sFiPty2tnRuB17RPWazR6bNFBpafuObphgMQ3jkBcnPIyvrhyv+5MjudmfOhOaIT82FPsEMHdtuIZP8AAAAASUVORK5CYII=", alt="", srcset="")
+                            input(type="password", v-model="password", placeholder="请输入密码", @keyup.13="login")
+                        .passwordOpt
+                            label.remember
+                                input(type="checkbox", v-model="rememberPwd")
+                                span 记住密码
+                        button.loginBtn(type="button", @click="login") 登　录
+        .tipsBox(v-cloak, :class="{show: requestMsg}") {{requestMsg}}
 
-  script(src="/javascripts/jquery/jquery-3.5.0.min.js")
-  script(src="/javascripts/admin/login.js")
+        #g-loading(v-show="loading")
+            .wrap
+                .bar
+                .bar
+                .bar
+                .bar
+                .bar
+                p 拼命加载中...
+
+block script_sub
+    script(src="/javascripts/admin/vue.js")
+    script(src="/javascripts/admin/login.js")

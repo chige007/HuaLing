@@ -1,4 +1,4 @@
-@import './../init.less';
+@import './init.less';
 
 [v-cloak]{
     visibility: hidden;    
@@ -28,8 +28,20 @@
 }
 
 #APP-HEADER{
-    height: 60px;
     padding: 0px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    .el-menu{
+        .el-submenu,
+        .el-menu-item{
+            float: right;
+            img.pic{
+                height: 40px;
+                width: 40px;
+                margin-right: 10px;
+            }
+        }
+    }
 }
 
 

@@ -16,17 +16,11 @@ var https = require('https');
 
 // 首页
 router.get('/', function (req, res, next) {
-    res.render('client/home', {
-        menus,
-        lang: 'cn',
-        text: text_home
-    });
+    res.redirect(301, '/home/en');
 });
 
 // 首页
-router.get('/:lang', function (req, res, next) {
-    const country = req.headers['cf-ipcountry'] || '123';
-    console.log(country);
+router.get('/home/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/home', {
         menus,
         lang: req.params.lang,
@@ -35,7 +29,7 @@ router.get('/:lang', function (req, res, next) {
 });
 
 // 核心价值
-router.get('/core_value/:lang', function (req, res, next) {
+router.get('/core_value/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/core_value', {
         menus,
         lang: req.params.lang,
@@ -45,7 +39,7 @@ router.get('/core_value/:lang', function (req, res, next) {
 });
 
 // 发展历程
-router.get('/development_history/:lang', function (req, res, next) {
+router.get('/development_history/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/development_history', {
         menus,
         lang: req.params.lang,
@@ -54,18 +48,8 @@ router.get('/development_history/:lang', function (req, res, next) {
     });
 });
 
-// 创新
-router.get('/innovate/:lang', function (req, res, next) {
-    res.render('client/innovate', {
-        menus,
-        lang: req.params.lang,
-        currentMenu: 3,
-        text: text_innovate
-    });
-});
-
 // 四大业务板块
-router.get('/business/:lang', function (req, res, next) {
+router.get('/business/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/business', {
         menus,
         lang: req.params.lang,
@@ -75,7 +59,7 @@ router.get('/business/:lang', function (req, res, next) {
 });
 
 // 合作模式
-router.get('/cooperation_mode/:lang', function (req, res, next) {
+router.get('/cooperation_mode/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/cooperation_mode', {
         menus,
         lang: req.params.lang,
@@ -85,7 +69,7 @@ router.get('/cooperation_mode/:lang', function (req, res, next) {
 });
 
 // 新闻中心
-router.get('/information_center/:lang', function (req, res, next) {
+router.get('/information_center/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/information_center', {
         menus,
         lang: req.params.lang,
@@ -94,8 +78,18 @@ router.get('/information_center/:lang', function (req, res, next) {
     });
 });
 
+// 创新
+router.get('/innovate/:lang(en|cn|hk)', function (req, res, next) {
+    res.render('client/innovate', {
+        menus,
+        lang: req.params.lang,
+        currentMenu: 3,
+        text: text_innovate
+    });
+});
+
 // 联系方式
-router.get('/contact_information/:lang', function (req, res, next) {
+router.get('/contact_information/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/contact_information', {
         menus,
         lang: req.params.lang,

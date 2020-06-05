@@ -1,7 +1,8 @@
 extends layouts/base
 
-block head
+block style_pre
     link(rel="stylesheet", href="/stylesheets/admin/element-ui/index.css")
+block style_sub
     link(rel="stylesheet", href="/stylesheets/admin/index.css")
 
 block body
@@ -10,32 +11,45 @@ block body
             el-aside#APP-ASIDE(width="200px") 
                 .logo
                     img(src="/images/icon_logo_b.png", alt="logo")/
-                el-menu.menus(default-active='0', background-color='#444546', text-color='#fff', active-text-color='#4891DD')
-                    el-menu-item(index='0')
+                el-menu.menus(default-active='#{module}', background-color='#444546', text-color='#fff', active-text-color='#4891DD', @select="handleMenuSelect")
+                    el-menu-item(index='home')
                         i.el-icon-menu
                         span(slot='title') 首页
-                    el-menu-item(index='1')
+                    el-menu-item(index='manager')
                         i.el-icon-document
                         span(slot='title') 用户管理
-                    el-menu-item(index='2')
+                    el-menu-item(index='news')
                         i.el-icon-setting
                         span(slot='title') 新闻管理
-
-                //- div
-                //-     a(href="/admin/index/home") 首页
-                //- div
-                //-     a(href="/admin/index/user") 用户管理
-                //- div
-                //-     a(href="/admin/index/news") 新闻管理
             el-main(style="padding: 0px")
                 el-container(style="height: 100%")
-                    el-header#APP-HEADER header
-                    el-main#APP-MAIN
+                    el-header#APP-HEADER(height="61px")
+                        el-menu(mode="horizontal", @select="handleHeaderMenu")
+                            el-submenu(index="0")
+                                template(slot="title") 
+                                    img.pic(src="/images/admin/portrait.png", alt="头像")
+                                    span #{username}
+                                el-menu-item(index="0-1")
+                                    i.el-icon-switch-button
+                                    span 退出登录
+                            el-menu-item(index="1")
+                                i.el-icon-bell
+                                span 消息
+                    el-main#APP-MAIN(ref="view")
                         case module
                             when 'home': include ./home
-                            when 'user': include ./user/list
+                            when 'manager': include ./manager/list
                             when 'news': include ./news/list
+                            default: include ./home
 
-    script(src="/javascripts/admin/vue.js")
+block script_pre
     script(src="/javascripts/admin/elementUI.js")
+    
+block script_sub
     script(src="/javascripts/admin/index.js")
+    if(module == 'home')
+        script(src="/javascripts/admin/home.js")
+    if(module == 'manager')
+        script(src="/javascripts/admin/manager/list.js")
+    if(module == 'news')
+        script(src="/javascripts/admin/news/list.js")

@@ -12,7 +12,7 @@ var userRouter = require('./routes/user');
 
 var app = express();
 
-// view engine setup
+// 安装视图引擎
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // 使用 session 中间件
 app.use(session({
     secret :  'hualing2020', // 对session id 相关的cookie 进行签名
-    name: 'hualing',
+    name: 'sessionKey',
     resave : false,
     saveUninitialized: true, // 是否保存未初始化的会话
     cookie : {
@@ -38,18 +38,25 @@ app.use('/', clientRouter);
 app.use('/admin', adminRouter);
 app.use('/user', userRouter);
 
+// 我的日志
+app.use(function(req, res, next) {
+    console.log(`${req.method}: ${req.url}`);
+    next();
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
-// error handler
+// 捕获错误
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
+  console.log(res.locals.error);
+    //   渲染错误页面
   res.status(err.status || 500);
   res.render('error');
 });
