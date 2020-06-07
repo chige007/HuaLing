@@ -386,6 +386,8 @@ textarea:-ms-input-placeholder {
 }
 .g-page {
   padding: 20px;
+  height: 100%;
+  width: 100%;
 }
 .g-page .g-title {
   font-size: 20px;
@@ -394,6 +396,9 @@ textarea:-ms-input-placeholder {
 }
 .g-table {
   width: 100%;
+}
+.el-dialog__body {
+  padding-top: 10px;
 }
 #g-loading {
   position: fixed;
@@ -442,6 +447,69 @@ textarea:-ms-input-placeholder {
   font-size: 13px;
   color: #4891DD;
   margin-top: 10px;
+}
+[v-cloak] {
+  visibility: hidden;
+}
+.el-table {
+  margin-top: 10px;
+}
+.el-pagination {
+  margin-top: 20px;
+  text-align: right;
+}
+.el-pagination:before,
+.el-pagination:after {
+  display: table;
+  content: " ";
+}
+.el-pagination:after {
+  clear: both;
+}
+.el-pagination .el-pagination__total,
+.el-pagination .el-pagination__sizes,
+.el-pagination .el-pagination__jump {
+  float: left;
+}
+#APP {
+  height: 100%;
+  width: 100%;
+}
+#APP-ASIDE {
+  height: 100%;
+  background-color: #444546;
+}
+#APP-ASIDE .logo {
+  height: 60px;
+  line-height: 60px;
+  padding: 0px 20px;
+}
+#APP-ASIDE .logo img {
+  width: 100%;
+  vertical-align: middle;
+}
+#APP-ASIDE .menus {
+  width: 100%;
+  border-right: none;
+}
+#APP-HEADER {
+  padding: 0px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+#APP-HEADER .el-menu .el-submenu,
+#APP-HEADER .el-menu .el-menu-item {
+  float: right;
+}
+#APP-HEADER .el-menu .el-submenu img.pic,
+#APP-HEADER .el-menu .el-menu-item img.pic {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+#APP-MAIN {
+  padding: 0px;
+  height: 100%;
 }
 @keyframes homeLoading {
   0%,

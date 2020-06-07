@@ -385,6 +385,9 @@ textarea:-ms-input-placeholder {
   background-color: rgba(220, 220, 220, 0.5);
   border-radius: 10px;
 }
+#videoWrap video {
+  display: block;
+}
 #workImgs {
   padding-top: 30px;
   padding-bottom: 30px;

@@ -1,9 +1,10 @@
 new Vue({
-    el: '#APP-USERLIST',
+    el: '#APP',
     data: function () {
         return {
             loading: false,
             listData: [],
+            dialogVisible: false,
             formData: {
                 username: '',
                 password: ''

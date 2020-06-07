@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 const menus = require('./../json/menus');
 const text_business = require('./../json/business');
+const text_product_line = require('./../json/product_line');
+const text_independent_brand = require('./../json/independent_brand');
 const text_information_center = require('./../json/information_center');
 const text_contact_information = require('./../json/contact_information');
 const text_cooperation_mode = require('./../json/cooperation_mode');
@@ -28,6 +30,16 @@ router.get('/home/:lang(en|cn|hk)', function (req, res, next) {
     });
 });
 
+// 集团业务
+router.get('/group_business/:lang(en|cn|hk)', function (req, res, next) {
+    res.render('client/group_business', {
+        menus,
+        lang: req.params.lang,
+        currentMenu: 0,
+        text: text_group_business
+    });
+});
+
 // 核心价值
 router.get('/core_value/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/core_value', {
@@ -48,13 +60,33 @@ router.get('/development_history/:lang(en|cn|hk)', function (req, res, next) {
     });
 });
 
-// 四大业务板块
+// 七大业务板块
 router.get('/business/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/business', {
         menus,
         lang: req.params.lang,
         currentMenu: 1,
         text: text_business
+    });
+});
+
+// 产品线
+router.get('/product_line/:lang(en|cn|hk)', function (req, res, next) {
+    res.render('client/product_line', {
+        menus,
+        lang: req.params.lang,
+        currentMenu: 1,
+        text: text_product_line
+    });
+});
+
+// 自主品牌
+router.get('/independent_brand/:lang(en|cn|hk)', function (req, res, next) {
+    res.render('client/independent_brand', {
+        menus,
+        lang: req.params.lang,
+        currentMenu: 1,
+        text: text_independent_brand
     });
 });
 

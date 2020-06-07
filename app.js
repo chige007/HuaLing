@@ -9,6 +9,7 @@ var logger = require('morgan');
 var clientRouter = require('./routes/client');
 var adminRouter = require('./routes/admin');
 var userRouter = require('./routes/user');
+var newsRouter = require('./routes/news');
 
 var app = express();
 
@@ -37,6 +38,7 @@ app.use(session({
 app.use('/', clientRouter);
 app.use('/admin', adminRouter);
 app.use('/user', userRouter);
+app.use('/news', newsRouter);
 
 // 我的日志
 app.use(function(req, res, next) {

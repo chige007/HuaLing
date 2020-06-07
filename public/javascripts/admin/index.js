@@ -15,12 +15,28 @@ document.body.onload = function () {
             */
             handleHeaderMenu: function(key, keyPath) {
                 if (key == '0-1') {
-                    console.log('登出')
                     window.location.href = '/user/logout';
                 }
             },
             handleMenuSelect: function(key, keyPath) {
-                window.location.href = '/admin/' + key;
+                // var _this = this;
+                // var url = '/admin/module/' + key;
+                // Util.ajax({
+                //     url: url,
+                //     dataType: 'text',
+                //     contentType: 'application/text',
+                //     success: function(res) {
+                //         debugger;
+                //         _this.$refs.view.$el.innerHTML = res;
+                //         var script, scripts;
+                //         scripts = [];
+                //         var regexp = /<script[^>]*>([\s\S]*?)<\/script>/gi;
+                //         while ((script = regexp.exec(res))) scripts.push(script[1]);
+                //         scripts = scripts.join('\n');
+                //         if (scripts) (window.execScript) ? window.execScript(scripts) : window.setTimeout(scripts, 0);
+                //     }
+                // })
+                window.location.href = '/admin/index/' + key;
             }
         },
         mounted: function () {

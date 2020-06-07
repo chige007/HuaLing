@@ -8,23 +8,27 @@ router.post('/login', (req, res, next) => {
     var username = req.body.username;
     var password = req.body.password;
     console.log(`${username}尝试登录`);
-    Curd.count(User, {
-        username,
-        password
-    }, (doc) => {
-        if (!doc) {
-            res.json({
-                code: 1,
-                msg: '用户名或密码错误'
-            });
-        } else {
-            req.session.username = username;
-            console.log(`${username}登录成功`);
-            res.json({
-                code: 200,
-                msg: '登录成功',
-                data: {}
-            });
+    Curd.count({
+        model: User, 
+        filter: {
+            username,
+            password
+        }, 
+        callback: (err, doc) => {
+            if (!doc) {
+                res.json({
+                    code: 1,
+                    msg: '用户名或密码错误'
+                });
+            } else {
+                req.session.username = username;
+                console.log(`${username}登录成功`);
+                res.json({
+                    code: 200,
+                    msg: '登录成功',
+                    data: {}
+                });
+            }
         }
     });
 });
@@ -40,7 +44,7 @@ router.get('/logout', (req, res, next) => {
     });
 });
 
-// 用户列表
+// 管理员列表
 router.post('/manager/list', (req, res, next) => {
     Curd.getList({
         model: User,

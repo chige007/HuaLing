@@ -5,7 +5,7 @@ var Util = {
      * @auther: 陈宇驰
      * @date: 29/8/19 下午3:26
      */
-    getCurrentDate: function() {
+    getCurrentDate: function () {
         var d = new Date();
         var year = d.getFullYear() + '';
         var month = d.getMonth() + 1;
@@ -25,7 +25,7 @@ var Util = {
      * @auther: 陈宇驰
      * @date: 21/6/19 下午2:58
      */
-    resetForm: function(vue, formName) {
+    resetForm: function (vue, formName) {
         vue.$refs[formName].resetFields();
         vue.$refs[formName].clearValidate();
     },
@@ -39,7 +39,7 @@ var Util = {
      * @auther: 陈宇驰
      * @date: 2019-12-23 15:11:20
      */
-    validForm: function(vue, formName, success, error) {
+    validForm: function (vue, formName, success, error) {
         vue.$refs[formName].validate(valid => {
             if (valid && typeof success == 'function') { // 表单验证通过
                 success();
@@ -50,52 +50,52 @@ var Util = {
             }
         });
     },
-    ajax: function(options){
-        options = options ||{};  //调用函数时如果options没有指定，就给它赋值{}, 一个空的Object
-        options.type = (options.type || "GET").toUpperCase();/// 请求格式GET、POST，默认为GET
-        options.dataType = (options.dataType || "json").toUpperCase();    //响应数据格式，默认json
-    
-        var params = options.data;//options.data请求的数据
-    
+    ajax: function (options) {
+        options = options || {}; //调用函数时如果options没有指定，就给它赋值{}, 一个空的Object
+        options.type = (options.type || "GET").toUpperCase(); /// 请求格式GET、POST，默认为GET
+        options.dataType = (options.dataType || "json").toUpperCase(); //响应数据格式，默认json
+
+        var params = options.data; //options.data请求的数据
+
         var xhr;
-    
+
         //考虑兼容性
-        if(window.XMLHttpRequest){
+        if (window.XMLHttpRequest) {
             xhr = new XMLHttpRequest();
-        }else if(window.ActiveObject){//兼容IE6以下版本
+        } else if (window.ActiveObject) { //兼容IE6以下版本
             xhr = new ActiveXobject('Microsoft.XMLHTTP');
         }
-    
+
         //启动并发送一个请求
-        if(options.type == "GET"){
+        if (options.type == "GET" || options.type == "DELETE") {
             params = this.formatParams(options.params);
-            xhr.open("GET", options.url+"?" + params, true);
+            xhr.open(options.type, options.url + "?" + params, true);
             xhr.send(null);
-        }else if(options.type == "POST"){
+        } else if (options.type == "POST" || options.type == "PUT") {
             params = JSON.stringify(params);
-    
-            xhr.open("post", options.url, true);
-    
+
+            xhr.open(options.type, options.url, true);
+
             //设置表单提交时的内容类型
             //Content-type数据请求的格式
-            xhr.setRequestHeader("Content-type",  options.contentType || "application/json");
+            xhr.setRequestHeader("Content-type", options.contentType || "application/json");
             xhr.send(params);
         }
-    
-    //    设置有效时间
-        setTimeout(function(){
-            if(xhr.readySate != 4){
+
+        //    设置有效时间
+        setTimeout(function () {
+            if (xhr.readySate != 4) {
                 xhr.abort();
             }
         }, options.timeout || 60000)
-    
-    //    接收
-    //     options.success成功之后的回调函数  options.error失败后的回调函数
-    //xhr.responseText, xhr.responseXML  获得字符串形式的响应数据或者XML形式的响应数据
-        xhr.onreadystatechange = function(){
-            if(xhr.readyState == 4){
+
+        //    接收
+        //     options.success成功之后的回调函数  options.error失败后的回调函数
+        //xhr.responseText, xhr.responseXML  获得字符串形式的响应数据或者XML形式的响应数据
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
                 var status = xhr.status;
-                if(status >= 200 && status < 300 || status == 304){
+                if (status >= 200 && status < 300 || status == 304) {
                     var response = xhr.responseText;
                     if (options.dataType == 'JSON') {
                         try {
@@ -104,8 +104,8 @@ var Util = {
                             console.error(error);
                         }
                     }
-                  options.success && options.success(response, xhr.responseXML);
-                }else{
+                    options.success && options.success(response, xhr.responseXML);
+                } else {
                     options.error && options.error(status);
                 }
             }
@@ -117,10 +117,10 @@ var Util = {
      * @param: {Object} data 请求数据
      * @auther: 陈宇驰
      * @date: 2020-06-04 23:34:16
-    */
-    formatParams: function(data){
+     */
+    formatParams: function (data) {
         var arr = [];
-        for(var name in data){
+        for (var name in data) {
             arr.push(encodeURIComponent(name) + "=" + encodeURIComponent(data[name]));
         }
         arr.push(("v=" + Math.random()).replace(".", ""));
@@ -135,7 +135,7 @@ var Util = {
      * @auther: 陈宇驰
      * @date: 21/6/19 下午3:02
      */
-    setCookie: function(cname, value, iDay) {
+    setCookie: function (cname, value, iDay) {
         let oDate = new Date();
         oDate.setDate(oDate.getDate() + iDay);
         document.cookie = cname + '=' + value + ';expires=' + oDate;
@@ -147,7 +147,7 @@ var Util = {
      * @auther: 陈宇驰
      * @date: 21/6/19 下午3:02
      */
-    getCookie: function(cname) {
+    getCookie: function (cname) {
         var strCookie = document.cookie;
         var arrCookie = strCookie.split("; ");
         for (var i = 0; i < arrCookie.length; i++) {
@@ -178,7 +178,7 @@ var Util = {
      * @auther: 陈宇驰
      * @date: 21/6/19 下午3:02
      */
-    setLocalStorage: function(name, value) {
+    setLocalStorage: function (name, value) {
         if (window.Storage && window.localStorage && window.localStorage instanceof Storage) { // 支持本地存储
             window.localStorage.setItem(name, value);
             return true;
@@ -192,7 +192,7 @@ var Util = {
      * @auther: 陈宇驰
      * @date: 21/6/19 下午3:02
      */
-    getLocalStorage: function(name) {
+    getLocalStorage: function (name) {
         if (window.Storage && window.localStorage && window.localStorage instanceof Storage) { // 支持本地存储
             return window.localStorage.getItem(name);
         }
@@ -205,7 +205,7 @@ var Util = {
      * @auther: 陈宇驰
      * @date: 21/6/19 下午3:02
      */
-    removeLocalStorage: function(name) {
+    removeLocalStorage: function (name) {
         if (window.Storage && window.localStorage && window.localStorage instanceof Storage) { // 支持本地存储
             window.localStorage.removeItem(name);
             return true;
@@ -221,7 +221,7 @@ var Util = {
      * @auther: 陈宇驰
      * @date: 2019-10-22 15:55:53
      */
-    uuid: function(len, radix) { // 获取随机数
+    uuid: function (len, radix) { // 获取随机数
         len = len || 16;
         radix = radix || 16;
         var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
@@ -250,7 +250,7 @@ var Util = {
      * @date: 21/6/19 下午3:02
      */
     formatter: {
-        mongoTime: function(row, col, value) {
+        mongoTime: function (row, col, value) {
             console.log(value);
             var d = new Date(value);
             var date = {
@@ -261,7 +261,7 @@ var Util = {
                 minute: d.getMinutes(),
                 second: d.getSeconds()
             }
-            for(var x in date){
+            for (var x in date) {
                 date[x] = date[x] * 1 < 10 ? '0' + date[x] : date[x];
             }
             return date.year + '-' + date.month + '-' + date.day + ' ' + date.hour + ':' + date.minute;
@@ -270,8 +270,8 @@ var Util = {
          * 去除时间的时分秒，只剩日期
          * @param: {String}value 日期值
          */
-        onlyDate: function(row, col, value) {
-            return this.dateFormat('YYYY-mm-dd',new Date(value));
+        onlyDate: function (row, col, value) {
+            return this.dateFormat('YYYY-mm-dd', new Date(value));
         },
         /**
          * 根据日期格式，格式化日期
@@ -282,15 +282,15 @@ var Util = {
          * @date: 28/4/20 下午3:05
          * 
          */
-        dateFormat: function(row, col, value, fmt){
+        dateFormat: function (row, col, value, fmt) {
             let ret;
             let opt = {
-                "Y+": date.getFullYear().toString(),        // 年
-                "m+": (date.getMonth() + 1).toString(),     // 月
-                "d+": date.getDate().toString(),            // 日
-                "H+": date.getHours().toString(),           // 时
-                "M+": date.getMinutes().toString(),         // 分
-                "S+": date.getSeconds().toString()          // 秒
+                "Y+": date.getFullYear().toString(), // 年
+                "m+": (date.getMonth() + 1).toString(), // 月
+                "d+": date.getDate().toString(), // 日
+                "H+": date.getHours().toString(), // 时
+                "M+": date.getMinutes().toString(), // 分
+                "S+": date.getSeconds().toString() // 秒
                 // 有其他格式化字符需求可以继续添加，必须转化成字符串
             };
             for (let k in opt) {
@@ -308,7 +308,7 @@ var Util = {
          * @auther: 陈宇驰
          * @date: 21/6/19 下午3:02
          */
-        noSecond: function(row, col, value) {
+        noSecond: function (row, col, value) {
             return /\d{4}-\d{1,2}-\d{1,2} \d{1,2}:\d{1,2}/g.exec(value);
         },
         /**
@@ -320,7 +320,7 @@ var Util = {
          * @auther: 陈宇驰
          * @date: 21/6/19 下午3:02
          */
-        thousandBit: function(row, col, value, decimal = 0, unit) {
+        thousandBit: function (row, col, value, decimal = 0, unit) {
             if (Number(value) === 0) decimal = 0;
             value = Number(value).toFixed(decimal);
             var myValue = 0;
@@ -341,13 +341,24 @@ var Util = {
          * @auther: 陈宇驰
          * @date: 21/6/19 下午3:02
          */
-        booleanFormatter: function(row, col, value) {
+        booleanFormatter: function (row, col, value) {
             if (value) {
                 return '是';
             } else {
                 return '否';
             }
         }
+    },
+    confirm: function (vue, text, callback) {
+        vue.$confirm(text, '系统提示', {
+            confirmButtonText: '确定',
+            cancelButtonText: '取消',
+            type: 'warning'
+        }).then(() => {
+            if (typeof callback == 'function') {
+                callback();
+            }
+        }).catch(() => {});
     },
     /**
      * 提示框
@@ -358,28 +369,28 @@ var Util = {
      * @date: 2019-09-05 18:43:54
      */
     log: {
-        success: function(vue, text) {
+        success: function (vue, text) {
             vue.$message({
                 message: text,
                 type: 'success',
                 center: true
             });
         },
-        warn: function(vue, text) {
+        warn: function (vue, text) {
             vue.$message({
                 message: text,
                 type: 'warning',
                 center: true
             });
         },
-        error: function(vue, text) {
+        error: function (vue, text) {
             vue.$message({
                 message: text,
                 type: 'error',
                 center: true
             });
         },
-        info: function(vue, text) {
+        info: function (vue, text) {
             vue.$message({
                 message: text,
                 type: 'info',
@@ -394,7 +405,7 @@ var Util = {
      * @auther: 陈宇驰
      * @date: 2019-09-05 18:43:54
      */
-    arrayCopy: function(array) {
+    arrayCopy: function (array) {
         let myArray = [];
         for (let i = 0; i < array.length; i++) {
             if (Object.prototype.toString.call(array[i]) === '[object Object]') {
@@ -414,7 +425,7 @@ var Util = {
      * @auther: 陈宇驰
      * @date: 2019-09-05 18:43:54
      */
-    objectCopy: function(object) {
+    objectCopy: function (object) {
         let myObject = {};
         for (let x in object) {
             if (Object.prototype.toString.call(object[x]) === '[object Object]') {
@@ -435,7 +446,7 @@ var Util = {
      * @auther: 陈宇驰
      * @date: 2019-09-05 18:43:54
      */
-    objectMerge: function(o1, o2) {
+    objectMerge: function (o1, o2) {
         for (var key in o2) {
             if (o1[key] && o1[key].toString() === "[object Object]") {
                 o1[key] = this.objectMerge(o1[key], o2[key]);
@@ -447,3 +458,28 @@ var Util = {
     }
 }
 Vue.prototype.$util = Util;
+
+Vue.mixin({
+    data: function () {
+        return {};
+    },
+    methods: {
+        /**
+         * 头部栏菜单点击事件
+         *
+         * @auther: 陈宇驰
+         * @date: 2020-06-05 00:23:36
+         */
+        _handleHeaderMenu: function (key, keyPath) {
+            if (key == '0-1') {
+                window.location.href = '/user/logout';
+            }
+        },
+        _handleMenuSelect: function (key, keyPath) {
+            window.location.href = '/admin/index/' + key;
+        }
+    },
+    mounted: function () {
+
+    }
+});

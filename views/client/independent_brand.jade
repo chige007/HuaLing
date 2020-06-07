@@ -1,23 +1,24 @@
 extends layouts/base
 
 block head
-    link(rel="stylesheet", href="/stylesheets/product_line.css")
+    link(rel="stylesheet", href="/stylesheets/business.css")
 block body
     .container
         include components/header
         .maxBox
             .g-bigTitle 
                 .text #{text.title[lang]}
-            p.g-normalText(style="text-align: center") #{text.paragraph[lang]}
+            p.g-normalText 冯氏集团的业务涵盖全球消费品供应链的每个环节，包括贸易、物流、分销及零售。以下提供更多有关我们旗下公司和品牌的资料。
             #businessList
                 each m_b, m_index in text.business
                     .item(class="business-#{m_index + 1}")
                         .bgImg
+                        .bgImg_2
                         .maskTitle
                             .text #{m_b.name[lang]}
                         .detail
                             i.icon.closeBtn &#xe65c;
-                            .p.headline #{(m_b.openName && m_b.openName[lang]) || m_b.name[lang]}
+                            .p.headline #{m_b.name[lang]}
                             .detailList
                                 each s_b, s_index in m_b.sub
                                     .imageText
@@ -26,13 +27,12 @@ block body
                                         .textWrap
                                             .title #{s_b.name[lang]}
                                             .redLine
-                                            .text !{s_b.detail[lang].replace(/\n/g, '<br>')}
-                                            if (s_b.web)
-                                                a(href="#{s_b.web}", target="_blank").website 
-                                                    img.icon(src="/images/icon_website.png", alt="icon")
-                                                    span #{s_b.web}
+                                            .text #{s_b.detail[lang]}
+                                            a(href="#{s_b.web}", target="_blank").website 
+                                                img.icon(src="/images/icon_website.png", alt="icon")
+                                                span #{s_b.web}
 
         include components/footer
                     
 block script
-    script(src="/javascripts/product_line.js")
+    script(src="/javascripts/business.js")

@@ -2,29 +2,27 @@ extends layouts/base
 
 block style_pre
     link(rel="stylesheet", href="/stylesheets/admin/element-ui/index.css")
-block style_sub
-    link(rel="stylesheet", href="/stylesheets/admin/index.css")
 
 block body
-    div#APP(v-cloak)
-        el-container(style="height: 100%")
+    #APP(v-cloak)
+        el-container(style="height: 100%; width: 100%;")
             el-aside#APP-ASIDE(width="200px") 
                 .logo
                     img(src="/images/icon_logo_b.png", alt="logo")/
-                el-menu.menus(default-active='#{module}', background-color='#444546', text-color='#fff', active-text-color='#4891DD', @select="handleMenuSelect")
+                el-menu.menus(default-active='#{module}', background-color='#444546', text-color='#fff', active-text-color='#4891DD', @select="_handleMenuSelect")
                     el-menu-item(index='home')
                         i.el-icon-menu
                         span(slot='title') 首页
                     el-menu-item(index='manager')
                         i.el-icon-document
-                        span(slot='title') 用户管理
+                        span(slot='title') 管理员管理
                     el-menu-item(index='news')
                         i.el-icon-setting
                         span(slot='title') 新闻管理
-            el-main(style="padding: 0px")
+            el-main(style="padding: 0px; height: 100%; width: 100%;")
                 el-container(style="height: 100%")
                     el-header#APP-HEADER(height="61px")
-                        el-menu(mode="horizontal", @select="handleHeaderMenu")
+                        el-menu(mode="horizontal", @select="_handleHeaderMenu")
                             el-submenu(index="0")
                                 template(slot="title") 
                                     img.pic(src="/images/admin/portrait.png", alt="头像")
@@ -35,18 +33,17 @@ block body
                             el-menu-item(index="1")
                                 i.el-icon-bell
                                 span 消息
-                    el-main#APP-MAIN(ref="view")
+                    el-main#APP-MAIN(ref="view", style="height: 100%; width: 100%;")
                         case module
                             when 'home': include ./home
                             when 'manager': include ./manager/list
                             when 'news': include ./news/list
                             default: include ./home
-
+        
 block script_pre
     script(src="/javascripts/admin/elementUI.js")
-    
+
 block script_sub
-    script(src="/javascripts/admin/index.js")
     if(module == 'home')
         script(src="/javascripts/admin/home.js")
     if(module == 'manager')

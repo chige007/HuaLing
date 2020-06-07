@@ -56,7 +56,7 @@ document.body.onload = function () {
                                 Util.removeCookie('username');
                                 Util.removeCookie('password');
                             }
-                            window.location.href = '/admin/home';
+                            window.location.href = '/admin/index/home';
                         }
                     },
                     error: function(err) {

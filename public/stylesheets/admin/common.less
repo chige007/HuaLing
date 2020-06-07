@@ -3,6 +3,8 @@
 
 .g-page{
     padding: 20px;
+    height: 100%;
+    width: 100%;
     .g-title{
         font-size: 20px;
         color: #333;
@@ -13,7 +15,10 @@
     width: 100%;
 }
 .g-toolbar{
-    
+
+}
+.el-dialog__body{
+    padding-top: 10px;
 }
 #g-loading {
     position: fixed;
@@ -73,8 +78,70 @@
     }
 }
 
-@keyframes homeLoading {
+[v-cloak]{
+    visibility: hidden;    
+}
+.el-table{
+    margin-top: 10px;
+}
+.el-pagination{
+    .clear;
+    margin-top: 20px;
+    text-align: right;
+    .el-pagination__total,
+    .el-pagination__sizes,
+    .el-pagination__jump{
+        float: left;
+    }
+}
 
+#APP{
+    height: 100%;
+    width: 100%;
+}
+
+#APP-ASIDE{
+    height: 100%;
+    background-color: #444546;
+    .logo{
+        height: 60px;
+        line-height: 60px;
+        padding: 0px 20px;
+        img{
+            width: 100%;
+            vertical-align: middle;
+        }
+    }
+    .menus{
+        width: 100%;
+        border-right: none;
+    }
+}
+
+#APP-HEADER{
+    padding: 0px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    .el-menu{
+        .el-submenu,
+        .el-menu-item{
+            float: right;
+            img.pic{
+                height: 40px;
+                width: 40px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+
+#APP-MAIN{
+    padding: 0px; 
+    height: 100%
+}
+
+@keyframes homeLoading {
     0%,
     60%,
     100% {

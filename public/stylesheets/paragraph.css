@@ -296,6 +296,12 @@
 .paragraph .b {
   font-weight: bold;
 }
+.paragraph .indent-2 {
+  text-indent: 2em;
+}
+.paragraph .indent-4 {
+  text-indent: 4em;
+}
 .paragraph img {
   width: 100%;
   margin: 20px 0px;

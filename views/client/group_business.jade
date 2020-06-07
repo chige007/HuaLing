@@ -1,0 +1,19 @@
+extends layouts/base
+
+block head
+    link(rel="stylesheet", href="/stylesheets/paragraph.css")
+block body
+    .container
+        include components/header
+        .maxBox(style="padding-bottom: 30px;")
+            .g-bigTitle 
+                .text #{text.title[lang]}
+
+            .paragraph
+                each p in text.paragraph
+                    p #{p[lang]}
+                
+                img(src="/images/img_group_business_1.jpg", alt="")
+                img(src="/images/img_group_business_2.jpg", alt="")
+
+        include components/footer

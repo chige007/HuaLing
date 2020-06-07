@@ -44,9 +44,9 @@ const menus = [{
     sub: [{
         url: '/business',
         name: {
-            cn: '四大板块业务',
-            en: 'Four Business Sectors',
-            hk: '四大板塊業務'
+            cn: '七大板块业务',
+            en: 'Seven Business Sectors',
+            hk: '七大板塊業務'
         }
     }, {
         url: '/product_line',
