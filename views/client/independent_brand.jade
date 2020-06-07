@@ -1,38 +1,27 @@
 extends layouts/base
 
 block head
-    link(rel="stylesheet", href="/stylesheets/business.css")
+    link(rel="stylesheet", href="/stylesheets/independent_brand.css")
 block body
     .container
         include components/header
         .maxBox
             .g-bigTitle 
                 .text #{text.title[lang]}
-            p.g-normalText 冯氏集团的业务涵盖全球消费品供应链的每个环节，包括贸易、物流、分销及零售。以下提供更多有关我们旗下公司和品牌的资料。
+            //- p.g-normalText 冯氏集团的业务涵盖全球消费品供应链的每个环节，包括贸易、物流、分销及零售。以下提供更多有关我们旗下公司和品牌的资料。
             #businessList
-                each m_b, m_index in text.business
-                    .item(class="business-#{m_index + 1}")
-                        .bgImg
-                        .bgImg_2
-                        .maskTitle
-                            .text #{m_b.name[lang]}
-                        .detail
-                            i.icon.closeBtn &#xe65c;
-                            .p.headline #{m_b.name[lang]}
-                            .detailList
-                                each s_b, s_index in m_b.sub
-                                    .imageText
-                                        .imgWrap
-                                            img.pic(src="/images/bg_business_#{m_index + 1}_#{s_index + 1}.jpg", alt="图片")
-                                        .textWrap
-                                            .title #{s_b.name[lang]}
-                                            .redLine
-                                            .text #{s_b.detail[lang]}
-                                            a(href="#{s_b.web}", target="_blank").website 
-                                                img.icon(src="/images/icon_website.png", alt="icon")
-                                                span #{s_b.web}
+                a.item(href="#", class="brand-1")
+                    .bgImg
+                a.item(href="#", class="brand-2")
+                    .bgImg
+                a.item(href="#", class="brand-3")
+                    .bgImg
+                a.item(href="#", class="brand-4")
+                    .bgImg
+                a.item(href="#", class="brand-5")
+                    .bgImg
 
         include components/footer
                     
 block script
-    script(src="/javascripts/business.js")
+    script(src="/javascripts/independent_brand.js")

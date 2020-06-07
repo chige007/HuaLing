@@ -358,6 +358,9 @@
 #businessList .item.business-4 .bgImg {
   background-image: url(/images/bg_business_4.jpg);
 }
+#businessList .item:hover {
+  cursor: pointer;
+}
 #businessList .item:hover .bgImg {
   transform: scale(1.2);
 }
