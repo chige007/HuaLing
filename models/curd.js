@@ -95,8 +95,8 @@ const curd = {
             model, 
             filter, 
             callback: (err, count) => {
-                let query = model.find(filter).select(projection).setOptions(defaultOptions);
                 console.log(`* QUERY: ${JSON.stringify(filter)} / ${JSON.stringify(projection)} / ${JSON.stringify(defaultOptions)}`);
+                let query = model.find(filter).select(projection).setOptions(defaultOptions);
                 query.exec((err, doc) => {
                     if (typeof callback == 'function') {
                         callback(err, doc, count);

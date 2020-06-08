@@ -251,7 +251,6 @@ var Util = {
      */
     formatter: {
         mongoTime: function (row, col, value) {
-            console.log(value);
             var d = new Date(value);
             var date = {
                 year: d.getFullYear(),
