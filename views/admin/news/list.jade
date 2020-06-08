@@ -1,17 +1,20 @@
 #APP-MANAGERLIST(style="width: 100%; height: 100%")
     .g-page(v-loading="loading")
         .g-title 新闻列表
-        el-button-group()
-            el-button(icon="el-icon-plus", @click="add") 新增
-            el-button(icon="el-icon-delete", @click="batchDelete") 删除
-            el-button(icon="el-icon-refresh-right" @click="refresh") 刷新
+        .toolbar
+            el-button-group
+                el-button(icon="el-icon-plus", @click="add") 新增
+                el-button(icon="el-icon-delete", @click="batchDelete") 删除
+                el-button(icon="el-icon-refresh-right" @click="refresh") 刷新
+            el-input(placeholder="搜索关键字", v-model="keyword", @keyup.enter.native="getNews(1)", style="width: 200px; float: right;")
         el-table(:data="listData", stripe, style="width: 100%", row-key="_id", @selection-change="selectionChange")
             el-table-column(type="index", width="40")
             el-table-column(type="selection", width="40")
             el-table-column(prop="cn.title", label="标题")
-            el-table-column(prop="cn.content", label="内容")
-            el-table-column(prop="status", label="状态", :formatter='statusFormatter')
-            el-table-column(prop="updateTime", label="时间", width="190", :formatter="$util.formatter.mongoTime")
+            el-table-column(prop="cn.content", label="内容", show-overflow-tooltip)
+            el-table-column(prop="status", label="状态", width="90", :formatter='statusFormatter')
+            el-table-column(prop="happenTime", label="发生时间", width="180", :formatter="$util.formatter.mongoTime")
+            el-table-column(prop="updateTime", label="新增/修改时间", width="180", :formatter="$util.formatter.mongoTime")
             el-table-column(label="操作", width="160")
                 template(slot-scope="scope")
                     el-button(type="text" size="small" @click="check(scope.row, 'check')") 查看
@@ -23,23 +26,21 @@
 
 
         el-dialog(title="新闻详情", :visible.sync="dialogVisible", width="900px", top="5vh", @closed="initData")
-            el-form(:model="formData", ref="form", label-width="80px", :disabled='formDisabled', style="padding-right: 30px;", :rules="formRules", @validate="validate")
-                el-tabs(v-model="tabName")
-                    el-tab-pane(label="中文简体", name="cn", style="padding: 30px 20px 0px 20px")
-                        el-form-item(label="标题：" prop="cn.title")
-                            el-input(v-model="formData.cn.title", type="text")
-                        el-form-item(label="内容：" prop="cn.content")
-                            el-input(v-model="formData.cn.content", type="textarea", :rows="8")
-                    el-tab-pane(label="中文繁体", name="hk", style="padding: 30px 20px 0px 20px")
-                        el-form-item(label="标题：" prop="hk.title")
-                            el-input(v-model="formData.hk.title", type="text")
-                        el-form-item(label="内容：" prop="hk.content")
-                            el-input(v-model="formData.hk.content", type="textarea", :rows="8")
-                    el-tab-pane(label="英文", name="en", style="padding: 30px 20px 0px 20px")
-                        el-form-item(label="标题：" prop="en.title")
-                            el-input(v-model="formData.en.title", type="text")
-                        el-form-item(label="内容：" prop="en.content")
-                            el-input(v-model="formData.en.content", type="textarea", :rows="8")
+            el-form(:model="formData", ref="form", label-width="150px", :disabled='formDisabled', style="padding-right: 30px;", :rules="formRules")
+                el-form-item(label="标题（简体）：" prop="cn.title")
+                    el-input(v-model="formData.cn.title", type="text")
+                el-form-item(label="内容（简体）：" prop="cn.content")
+                    el-input(v-model="formData.cn.content", type="textarea", :rows="8")
+                el-form-item(label="标题（繁体）：" prop="hk.title")
+                    el-input(v-model="formData.hk.title", type="text")
+                el-form-item(label="内容（繁体）：" prop="hk.content")
+                    el-input(v-model="formData.hk.content", type="textarea", :rows="8")
+                el-form-item(label="标题（英文）：" prop="en.title")
+                    el-input(v-model="formData.en.title", type="text")
+                el-form-item(label="内容（英文）：" prop="en.content")
+                    el-input(v-model="formData.en.content", type="textarea", :rows="8")
+                el-form-item(label="发生时间：" prop="happenTime")
+                    el-date-picker(v-model="formData.happenTime" type="datetime" placeholder="请选择新闻发生时间")
                 
             .dialog-footer(v-if="!formDisabled", slot="footer", style="text-align: center;")
                 el-button(@click="dialogVisible = false") 关闭

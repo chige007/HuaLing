@@ -16,6 +16,9 @@ var Schema = new mongoose.Schema({
     status: {
         type: Number
     },
+    happenTime: {
+        type: Date
+    },
     createTime: {
         type: Date,
         default: Date.now

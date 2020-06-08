@@ -332,6 +332,12 @@
 #newList .item:last-child {
   border-bottom: none;
 }
+#newList .loading {
+  padding: 20px;
+  color: #999;
+  font-size: 13px;
+  text-align: center;
+}
 @media screen and (max-width: 650px) {
   .searcher {
     text-align: center;

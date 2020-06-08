@@ -395,9 +395,6 @@ textarea:-ms-input-placeholder {
 .g-table {
   width: 100%;
 }
-.el-dialog__body {
-  padding-top: 10px;
-}
 #g-loading {
   position: fixed;
   z-index: 99999;

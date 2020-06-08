@@ -6,9 +6,9 @@ new Vue({
             listData: [],
             page: 1,
             pageSize: 10,
+            keyword: '',
             total: 0,
             dialogVisible: false,
-            tabName: 'cn',
             formDisabled: false,
             selection: [],
             formData: {
@@ -24,7 +24,8 @@ new Vue({
                 hk: {
                     title: '',
                     content: ''
-                }
+                },
+                happenTime: new Date()
             },
             formRules: {
                 'cn.title': [{
@@ -47,18 +48,6 @@ new Vue({
     },
     methods: {
         /**
-         * 表单验证事件
-         *
-         * @param:  
-         * @auther: 陈宇驰
-         * @date: 2020-06-08 17:01:08
-         */
-        validate: function(prop, result, err) {
-            if (!result) {
-                this.tabName = prop.split('.')[0];
-            }
-        },
-        /**
          * 新增
          *
          * @param:  
@@ -79,7 +68,7 @@ new Vue({
         check: function (row, type) {
             this.formDisabled = type == 'check' ? true : false;
             this.dialogVisible = true;
-            var formData = Object.assign({}, row);
+            var formData = this.$util.objectCopy(row);
             for (var x in this.formData) {
                 this.$set(this.formData, x, formData[x]);
             }
@@ -207,6 +196,7 @@ new Vue({
                             success: function (res) {
                                 loading.close();
                                 _this.$util.log.success(_this, '保存成功');
+
                                 _this.refresh();
                                 _this.dialogVisible = false;
                             }
@@ -240,8 +230,23 @@ new Vue({
          * @date: 2020-06-08 17:01:08
          */
         getNews: function (page, pageSize) {
+            console.log(123);
             this.loading = true;
             var _this = this;
+            var filter = {};
+            if (this.keyword) {
+                filter = {
+                    $or: [{
+                        'cn.title': {
+                            '$regex': this.keyword
+                        }
+                    }, {
+                        'cn.content': {
+                            '$regex': this.keyword
+                        }
+                    }]
+                }
+            }
             var limit = pageSize || this.pageSize;
             var skip = page || this.page;
             skip = (skip - 1) * limit;
@@ -249,6 +254,7 @@ new Vue({
                 url: '/news/list',
                 type: 'post',
                 data: {
+                    filter: filter,
                     options: {
                         skip: skip,
                         limit: limit
@@ -285,9 +291,10 @@ new Vue({
          * @date: 2020-06-08 17:01:08
          */
         initData: function () {
-            this.tabName = 'cn';
+            this.$refs.form.clearValidate();
             this.formData = {
                 _id: '',
+                happenTime: new Date(),
                 cn: {
                     title: '',
                     content: ''
