@@ -338,25 +338,43 @@
   background-image: url(/images/bg_business_1_open.jpg);
 }
 #businessList .item.business-1 .bgImg {
-  background-image: url(/images/bg_business_1.jpg);
+  background-image: url(/images/bg_business_1.png);
 }
 #businessList .item.business-2 {
   background-image: url(/images/bg_business_2_open.jpg);
 }
 #businessList .item.business-2 .bgImg {
-  background-image: url(/images/bg_business_2.jpg);
+  background-image: url(/images/bg_business_2.png);
 }
 #businessList .item.business-3 {
   background-image: url(/images/bg_business_3_open.jpg);
 }
 #businessList .item.business-3 .bgImg {
-  background-image: url(/images/bg_business_3.jpg);
+  background-image: url(/images/bg_business_3.png);
 }
 #businessList .item.business-4 {
   background-image: url(/images/bg_business_4_open.jpg);
 }
 #businessList .item.business-4 .bgImg {
-  background-image: url(/images/bg_business_4.jpg);
+  background-image: url(/images/bg_business_4.png);
+}
+#businessList .item.business-5 {
+  background-image: url(/images/bg_business_5_open.jpg);
+}
+#businessList .item.business-5 .bgImg {
+  background-image: url(/images/bg_business_5.png);
+}
+#businessList .item.business-6 {
+  background-image: url(/images/bg_business_6_open.jpg);
+}
+#businessList .item.business-6 .bgImg {
+  background-image: url(/images/bg_business_6.png);
+}
+#businessList .item.business-7 {
+  background-image: url(/images/bg_business_7_open.jpg);
+}
+#businessList .item.business-7 .bgImg {
+  background-image: url(/images/bg_business_7.png);
 }
 #businessList .item:hover {
   cursor: pointer;
