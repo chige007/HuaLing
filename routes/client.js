@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 const menus = require('./../json/menus');
-const text_business = require('./../json/business');
-const text_product_line = require('./../json/product_line');
-const text_independent_brand = require('./../json/independent_brand');
-const text_information_center = require('./../json/information_center');
-const text_contact_information = require('./../json/contact_information');
+const text_seven_business = require('../json/seven_business');
+const text_four_commodity = require('../json/four_commodity');
+const text_brand = require('../json/brand');
+const text_latest_information = require('../json/latest_information');
+const text_contact_us = require('../json/contact_us');
 const text_cooperation_mode = require('./../json/cooperation_mode');
 const text_core_value = require('./../json/core_value');
 const text_development_history = require('./../json/development_history');
@@ -13,6 +13,7 @@ const text_group_business = require('./../json/group_business');
 const text_home = require('./../json/home');
 const text_innovate = require('./../json/innovate');
 const text_personnel = require('./../json/personnel');
+const text_management_team = require('./../json/management_team')
 
 var https = require('https');
 
@@ -60,33 +61,23 @@ router.get('/development_history/:lang(en|cn|hk)', function (req, res, next) {
     });
 });
 
+// 桦岭团队
+router.get('/management_team/:lang(en|cn|hk)', function (req, res, next) {
+    res.render('client/management_team', {
+        menus,
+        lang: req.params.lang,
+        currentMenu: 0,
+        text: text_management_team
+    });
+});
+
 // 七大业务板块
-router.get('/business/:lang(en|cn|hk)', function (req, res, next) {
-    res.render('client/business', {
+router.get('/seven_business/:lang(en|cn|hk)', function (req, res, next) {
+    res.render('client/seven_business', {
         menus,
         lang: req.params.lang,
         currentMenu: 1,
-        text: text_business
-    });
-});
-
-// 产品线
-router.get('/product_line/:lang(en|cn|hk)', function (req, res, next) {
-    res.render('client/product_line', {
-        menus,
-        lang: req.params.lang,
-        currentMenu: 1,
-        text: text_product_line
-    });
-});
-
-// 自主品牌
-router.get('/independent_brand/:lang(en|cn|hk)', function (req, res, next) {
-    res.render('client/independent_brand', {
-        menus,
-        lang: req.params.lang,
-        currentMenu: 1,
-        text: text_independent_brand
+        text: text_seven_business
     });
 });
 
@@ -100,13 +91,33 @@ router.get('/cooperation_mode/:lang(en|cn|hk)', function (req, res, next) {
     });
 });
 
-// 新闻中心
-router.get('/information_center/:lang(en|cn|hk)', function (req, res, next) {
-    res.render('client/information_center', {
+// 四大商品系列
+router.get('/four_commodity/:lang(en|cn|hk)', function (req, res, next) {
+    res.render('client/four_commodity', {
         menus,
         lang: req.params.lang,
         currentMenu: 2,
-        text: text_information_center
+        text: text_four_commodity
+    });
+});
+
+// 品牌
+router.get('/brand/:lang(en|cn|hk)', function (req, res, next) {
+    res.render('client/brand', {
+        menus,
+        lang: req.params.lang,
+        currentMenu: 2,
+        text: text_brand
+    });
+});
+
+// 最新资讯
+router.get('/latest_information/:lang(en|cn|hk)', function (req, res, next) {
+    res.render('client/latest_information', {
+        menus,
+        lang: req.params.lang,
+        currentMenu: 3,
+        text: text_latest_information
     });
 });
 
@@ -120,13 +131,23 @@ router.get('/innovate/:lang(en|cn|hk)', function (req, res, next) {
     });
 });
 
-// 联系方式
-router.get('/contact_information/:lang(en|cn|hk)', function (req, res, next) {
-    res.render('client/contact_information', {
+// 加入我们
+router.get('/join_us/:lang(en|cn|hk)', function (req, res, next) {
+    res.render('client/join_us', {
         menus,
         lang: req.params.lang,
         currentMenu: 4,
-        text: text_contact_information
+        text: text_join_us
+    });
+});
+
+// 联系我们
+router.get('/contact_us/:lang(en|cn|hk)', function (req, res, next) {
+    res.render('client/contact_us', {
+        menus,
+        lang: req.params.lang,
+        currentMenu: 5,
+        text: text_contact_us
     });
 });
 

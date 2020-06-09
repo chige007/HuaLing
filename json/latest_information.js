@@ -1,8 +1,8 @@
 const text = {
     title: {
-        cn: '新闻中心',
-        hk: '新聞中心',
-        en: 'Information Center'
+        cn: '最新资讯',
+        hk: '最新資訊',
+        en: 'Latest Information'
     },
     selectLabel: {
         cn: '以年份查阅',

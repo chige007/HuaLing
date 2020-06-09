@@ -1,0 +1,15 @@
+extends layouts/base
+
+block head
+    link(rel="stylesheet", href="/stylesheets/image_text.css")
+block body
+    .container
+        include components/header
+        .maxBox
+            .g-bigTitle 
+                .text #{text.title[lang]}
+            p.g-normalText(style="text-align: center;") 我们是一家以目标为导向的集团，致力为业务相关社区作出有意义的贡献。我们的愿景是
+
+            #teamList
+
+        include components/footer

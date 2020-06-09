@@ -105,14 +105,13 @@
 
 
 #companyIntroduct{
-    background-color: #d7d7d7;
     padding-bottom: 45px;
     p.text{
         display: block;
         margin: 0px auto;
         padding: 38px 20px;
         width: 100%;
-        max-width: 840px;
+        max-width: 900px;
         font-weight: 300;
         line-height: 30px;
         font-size: 16px;
@@ -138,6 +137,7 @@
             // background-color: rgba(0, 0, 0, 0.1);
             a{
                 position: absolute;
+                white-space: nowrap;
                 top: 0px;
                 left: 0px;
                 right: 0px;
@@ -176,7 +176,8 @@
 }
 
 #companyIntroduct_2{
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
+    background-color: #f2f4f6;
     .row{
         .clear;
         .imgWrap{
@@ -225,7 +226,7 @@
                     bottom: 0px;
                     margin: auto;
                     border: 3px solid #fff;
-                    width: 240px;
+                    min-width: 240px;
                     height: 52px;
                     line-height: 45px;
                     color: #fff;
@@ -244,7 +245,7 @@
                 text-align: center;
                 .text{
                     display: inline-block;
-                    width: 240px;
+                    min-width: 240px;
                     height: 50px;
                     color: @gray;
                     font-size: 22px;

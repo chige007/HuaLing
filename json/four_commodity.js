@@ -1,8 +1,8 @@
 const text = {
     title: {
-        cn: '产品线',
-        en: 'Product Line',
-        hk: '產品線'
+        cn: '四大商品系列',
+        en: 'Four Commodity Series',
+        hk: '四大商品系列'
     },
     business: [{
         name: {

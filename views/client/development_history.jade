@@ -8,13 +8,15 @@ block body
         .maxBox(style="padding-bottom: 30px;")
             .g-bigTitle 
                 .text #{text.title[lang]}
+
+            p.g-normalText(style="text-align: center;") #{text.content[lang]}
             
             - var i = 1
             - var length = 8
             if (lang == 'en') 
                 -length = 6
             while i < length
-                img(src="/images/img_fzlc_pc_#{lang}_#{i}.jpg", alt="发展历程", style="width: 100%; display: block;")
+                img(src="/images/img_fzlc_pc_#{lang == 'hk' ? 'cn' : lang}_#{i}.jpg", alt="发展历程", style="width: 100%; display: block;")
                 - i += 1
 
         include components/footer

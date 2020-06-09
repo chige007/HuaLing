@@ -12,13 +12,13 @@ const text = {
     business: [{
         name: {
             cn: '创展运动',
-            en: 'WELON CREATIVE SPORT',
+            en: 'Welon Creative Sport',
             hk: '創展運動'
         },
         sub: [{
             name: {
                 cn: '创展运动',
-                en: 'WELON CREATIVE SPORT',
+                en: 'Welon Creative Sport',
                 hk: '創展運動'
             },
             detail: {
@@ -30,9 +30,9 @@ const text = {
         }]
     }, {
         name: {
-            cn: '桦兴运动',
-            en: 'HUAXING SPORT ',
-            hk: '樺興運動'
+            cn: '整个团队含广州桦兴，旗下有两家工厂，以及水上运动品牌NEO-SPLASH',
+            en: 'Huaxing Sports contain Guangzhou Huaxing, Huizhou Huaxing, Hualixin and watersport brand , NEOSPLASH',
+            hk: '整個團隊含廣州樺興，旗下有兩家工廠，以及水上運動品牌NEO-SPLASH'
         },
         sub: [{
             name: {
@@ -92,7 +92,7 @@ const text = {
         sub: [{
             name: {
                 cn: '桦岭运动时尚集团有限公司',
-                en: 'WELON SPORT AND FASHION GROUP LTD',
+                en: 'Welon Sport and Fashion Group Ltd',
                 hk: '樺嶺運動時尚集團有限公司'
             },
             detail: {
@@ -123,7 +123,7 @@ const text = {
         sub: [{
             name: {
                 cn: '惠州威玛斯运动器材有限公司',
-                en: 'HUIZHOU WINMAX SPORT LTD',
+                en: 'Huizhou Winmax Sport Ltd',
                 hk: '惠州威瑪斯運動器材有限公司'
             },
             detail: {
@@ -160,13 +160,13 @@ const text = {
     }, {
         name: {
             cn: '互联网商务',
-            en: 'GLOBAL E-COMMERCE',
+            en: 'Global E-commerce',
             hk: '互聯網商務'
         },
         sub: [{
             name: {
                 cn: '互联网商务',
-                en: 'GLOBAL E-COMMERCE',
+                en: 'Global E-commerce',
                 hk: '互聯網商務'
             },
             detail: {
@@ -178,14 +178,14 @@ const text = {
         }]
     }, {
         name: {
-            cn: '国内零售',
-            en: 'DOMESTIC RETAI',
-            hk: '國內零售'
+            cn: '自有品牌及进口品牌线下线上零售',
+            en: 'Private labels and imported labels retail in China',
+            hk: '自有品牌及進口品牌線下線上零售'
         },
         sub: [{
             name: {
                 cn: '威玛斯运动零售公司',
-                en: 'WINMAX SPORT RETAIL LID',
+                en: 'Winmax Sport Retail Lid',
                 hk: '威瑪斯運動零售公司'
             },
             detail: {
@@ -222,13 +222,13 @@ const text = {
     }, {
         name: {
             cn: '投资业务',
-            en: 'INVESTMENT',
+            en: 'Investment',
             hk: '投資業務'
         },
         sub: [{
             name: {
                 cn: '投资业务',
-                en: 'INVESTMENT',
+                en: 'Investment',
                 hk: '投資業務'
             },
             detail: {

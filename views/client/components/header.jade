@@ -13,12 +13,13 @@
         .nav(data-current-index="#{currentMenu}")
             each menu,index in menus
                 .menu(class="#{currentMenu == index? 'current' : ''}")
-                    .mainMenu #{menu.name[lang]}
+                    a.mainMenu(href="#{menu.url ? menu.url + '/' + lang : 'javascript:void(0)'}") #{menu.name[lang]}
                         i.icon.arrow &#xe60c;
-                    .subMenus
-                        each sub in menu.sub
-                            .subMenu
-                                a(href="#{sub.url + '/' + lang}") #{sub.name[lang]}
+                    if (menu.sub && menu.sub.length)
+                        .subMenus
+                            each sub in menu.sub
+                                .subMenu
+                                    a(href="#{sub.url + '/' + lang}") #{sub.name[lang]}
             .langSwitcher
                 a(href="en", class="#{lang == 'en' ? 'current' : ''}") EN
                 a(href="hk", class="#{lang == 'hk' ? 'current' : ''}") 繁體

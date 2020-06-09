@@ -40,41 +40,41 @@ block body
         //-         i.icon &#xe6b2;
         #companyIntroduct
             .maxBox.clear(style="max-width: 1020px")
-                p.text 冯氏控股（1937）有限公司总部设于香港，是一家私人全资拥有的跨国集团。集团发展历程源远流长，集团在贸易和供应链管理方面的历史可以追溯到1906年。冯氏控股亦是冯氏集团旗下公司的主要股东，集团的核心业务涵盖整个全球消费品市场的全球供应链管理，包括贸易，物流，分销和零售。
+                p.text #{text.introduction[lang]}
                 .introductEntry.devHistory
                     img(src="/images/img_home_company_1.jpg", alt="img_home_company_1")/
                     .linkWrap
-                        a(href="#") 发展历程
+                        a(href="#{text.section_1.url + '/' + lang}") #{text.section_1.title[lang]}
                 .introductEntry.coreValue
-                    img(src="/images/img_home_company_2.png", alt="img_home_company_1")/
+                    img(src="/images/img_home_company_2.jpg", alt="img_home_company_1")/
                     .linkWrap
-                        a(href="#") 核心价值
+                        a(href="#{text.section_2.url + '/' + lang}") #{text.section_2.title[lang]}
         #companyIntroduct_2
             .maxBox.clear
                 .row.row-1
                     .imgWrap
-                        img(src="/images/img_home_3.jpg", alt="img_home_3")/
-                        .arrow.left
+                        img(src="/images/img_home_company_3.jpg", alt="img_home_3")/
+                        //- .arrow.left
                         .linkWrap
-                            a(href="#") 可持续发展
+                            a(href="#{text.section_3.url + '/' + lang}") #{text.section_3.title[lang]}
                     .contentWrap
                         .myTitle
-                            .text 可持续发展
-                        p.content 我们坚信集团是变革的推动者，并以对社会和环境负责的态度，在业务遍及社区的经济与社会发展方面作出有意义的贡献。
-                        a.more(href="#")
+                            .text  #{text.section_3.title[lang]}
+                        p.content #{text.section_3.content[lang]}
+                        a.more(href="#{text.section_3.url + '/' + lang}")
                             img(src="/images/icon_plus.png", alt="+")/   
                             span 了解更多
                 .row.row-2
                     .imgWrap
-                        img(src="/images/img_home_4.jpg", alt="img_home_4")/
-                        .arrow.right
+                        img(src="/images/img_home_company_4.jpg", alt="img_home_4")/
+                        //- .arrow.right
                         .linkWrap
-                            a(href="#") 人才培养
+                            a(href="#{text.section_4.url + '/' + lang}") #{text.section_4.title[lang]}
                     .contentWrap
                         .myTitle
-                            .text 人才培养
-                        p.content 我们的初级经理培训生计划向全球招募优秀人才，培育和发展领导才能，塑造未来领袖。
-                        a.more(href="#")
+                            .text #{text.section_4.title[lang]}
+                        p.content #{text.section_4.content[lang]}
+                        a.more(href="#{text.section_4.url + '/' + lang}")
                             img(src="/images/icon_plus.png", alt="+")/   
                             span 了解更多
         include components/footer
