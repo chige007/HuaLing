@@ -8,8 +8,18 @@ block body
         .maxBox
             .g-bigTitle 
                 .text #{text.title[lang]}
-            p.g-normalText(style="text-align: center;") 我们是一家以目标为导向的集团，致力为业务相关社区作出有意义的贡献。我们的愿景是
+            p.g-normalText(style="text-align: center;") #{text.paragraph[lang]}
 
-            #teamList
+            #recruitments
+                each recruit, index in text.recruitments
+                    .item(class="#{'recruit_' + index}")
+                        .wrap
+                            .headline
+                                p.big #{recruit.name[lang]}
+                                p.small #{recruit.name['en']}
+                                .redLine
+                            .content
+                                p.label 职位信息
+                                p.detail !{recruit.detail[lang].replace(/\n/g, '<br>')}
 
         include components/footer

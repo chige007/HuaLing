@@ -1,15 +1,22 @@
 extends layouts/base
 
 block head
-    link(rel="stylesheet", href="/stylesheets/image_text.css")
+    link(rel="stylesheet", href="/stylesheets/management_team.css")
 block body
     .container
         include components/header
-        .maxBox
+        .maxBox(style="max-width: 1020px")
             .g-bigTitle 
                 .text #{text.title[lang]}
-            p.g-normalText(style="text-align: center;") 我们是一家以目标为导向的集团，致力为业务相关社区作出有意义的贡献。我们的愿景是
+            p.g-normalText(style="text-align: center;") #{text.paragraph[lang]}
 
             #teamList
+                each team, index in text.teams
+                    .item
+                        img(src="/images/img_core_value_1.jpg", alt="image")
+                        p.mainText #{team.name[lang]}
+                        if (lang != 'en')
+                            p.subText #{team.name['en']}
+                        .redLine
 
         include components/footer

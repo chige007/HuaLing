@@ -1,0 +1,91 @@
+@import './util.less';
+
+#recruitments{
+    .clear;
+    margin: 50px 0px;
+    .item{
+        width: 50%;
+        float: left;
+        padding-bottom: 50px;
+        border-left: 1px solid #ddd;
+        &.recruit_0,
+        &.recruit_1{
+            &:after{
+                content: '';
+                position: absolute;
+                left: -6px;
+                top: -10px;
+                width: 9px;
+                height: 9px;
+                .radius(100px);
+                z-index: 1;
+                border: 1px solid @danger;
+            }
+        }
+        .wrap{
+            background-color: #f7f7f7;
+            .headline{
+                padding-top: 20px;
+                margin-bottom: 20px;
+                padding-left: 15px;
+                padding-bottom: 7px;
+                p.big{
+                    color: @danger;
+                    font-size: 26px;
+                    font-weight: bold;
+                    line-height: 1;
+                    margin-bottom: 5px;
+                }
+                p.small{
+                    color: @danger;
+                    font-size: 15px;
+                    font-weight: 200;
+                    line-height: 1;
+                }
+                .redLine{
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0px;
+                    border-bottom: 1px solid @danger;
+                    width: 150px;
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        left: -7px;
+                        top: -6px;
+                        width: 10px;
+                        height: 10px;
+                        .radius(100px);
+                        z-index: 1;
+                        border: 1px solid @danger;
+                    }
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        left: -4px;
+                        top: -3px;
+                        width: 6px;
+                        height: 6px;
+                        .radius(100px);
+                        z-index: 1;
+                        background-color: @danger;
+                    }
+                }
+            }
+            .content{
+                padding: 15px;
+                .label{
+                    font-size: 18px;
+                    color: #444;
+                    margin-bottom: 10px;
+                    font-weight: normal;
+                }
+                .detail{
+                    font-size: 14px;
+                    color: #666;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}

@@ -13,6 +13,7 @@ const text_group_business = require('./../json/group_business');
 const text_home = require('./../json/home');
 const text_innovate = require('./../json/innovate');
 const text_personnel = require('./../json/personnel');
+const text_join_us = require('./../json/join_us')
 const text_management_team = require('./../json/management_team')
 
 var https = require('https');
