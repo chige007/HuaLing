@@ -16,10 +16,11 @@ block body
                         .wrap
                             .headline
                                 p.big #{recruit.name[lang]}
-                                p.small #{recruit.name['en']}
+                                if (lang != 'en')
+                                    p.small #{recruit.name['en']}
                                 .redLine
                             .content
-                                p.label 职位信息
+                                p.label #{lang == 'cn' ? '职位信息' : lang == 'hk' ? '職位資訊' : 'Position Information'}
                                 p.detail !{recruit.detail[lang].replace(/\n/g, '<br>')}
 
         include components/footer

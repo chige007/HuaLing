@@ -13,7 +13,7 @@ block body
             #teamList
                 each team, index in text.teams
                     .item
-                        img(src="/images/img_core_value_1.jpg", alt="image")
+                        img(src="#{'/images/img_team_'+ (index + 1) +'.jpg'}", alt="image")
                         p.mainText #{team.name[lang]}
                         if (lang != 'en')
                             p.subText #{team.name['en']}
