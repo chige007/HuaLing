@@ -1,7 +1,7 @@
 const text = {
     title: {
         cn: '四大商品系列',
-        en: 'Four Commodity Series',
+        en: 'Four Sport Lines',
         hk: '四大商品系列'
     },
     business: [{

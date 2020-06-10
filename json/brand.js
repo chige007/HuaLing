@@ -1,7 +1,7 @@
 const text = {
     title: {
         cn: '品牌',
-        en: 'Brand',
+        en: 'Brands',
         hk: '品牌'
     }
 }

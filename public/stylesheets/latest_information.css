@@ -282,7 +282,7 @@
   margin-bottom: 20px;
 }
 .searcher * {
-  font-weight: 600;
+  font-weight: normal;
 }
 .searcher .br {
   display: none;

@@ -106,6 +106,7 @@
 
 #companyIntroduct{
     padding-bottom: 45px;
+    background-color: #f2f4f6;
     p.text{
         display: block;
         margin: 0px auto;
@@ -177,7 +178,6 @@
 
 #companyIntroduct_2{
     // margin-bottom: 30px;
-    background-color: #f2f4f6;
     .row{
         .clear;
         .imgWrap{
@@ -249,7 +249,7 @@
                     height: 50px;
                     color: @gray;
                     font-size: 22px;
-                    font-weight: bold;
+                    font-weight: normal;
                     text-align: center;
                     line-height: 1;
                     padding: 12px;
@@ -276,7 +276,7 @@
                     display: inline-block;
                     vertical-align: middle;
                     font-size: 16px;
-                    font-weight: bold;
+                    font-weight: normal;
                     color: @gray;
                     margin-left: 5px;
                 }
@@ -297,6 +297,7 @@
 }
 @media screen and (max-width: 650px) {
     #companyIntroduct_2{
+        margin-bottom: 40px;
         .row{
             .imgWrap{
                 width: 100%;
@@ -306,6 +307,9 @@
                 }
                 .linkWrap{
                     display: block;
+                    a{
+                        width: 240px;
+                    }
                 }
             }
             .contentWrap{

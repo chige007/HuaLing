@@ -5,9 +5,9 @@ const text = {
         hk: '招聘資訊'
     },
     paragraph: {
-        cn: '全球经济瞬息万变，桦岭不断求变求新，在危机中寻求机遇，携手全球合作伙伴，共同发展',
-        en: 'The global economy is changing rapidly, Hualing is constantly seeking change and innovation, seeking opportunities in the crisis, and working with global partners for common development',
-        hk: '全球經濟瞬息萬變，樺嶺不斷求變求新，在危機中尋求機遇，攜手全球合作夥伴，共同發展'
+        cn: '无论您有何梦想或抱负，桦岭运动的平台助您发展你的事业，欢迎加入我们。\n查看我们的职业发展机会：',
+        en: 'No matter your dreams and ambitions, WELON sports offer exciting platforms for you, welcome to join us.\nExplore career opportunities below:',
+        hk: '無論您有何夢想或抱負，樺嶺運動的平臺助您發展你的事業，歡迎加入我們。\n查看我們的職業發展機會：'
     },
     recruitments: [{
         name: {

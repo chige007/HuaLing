@@ -1,6 +1,7 @@
 extends layouts/base
 
 block head
+    link(rel="stylesheet", href="/stylesheets/business.css")
     link(rel="stylesheet", href="/stylesheets/four_commodity.css")
 block body
     .container
@@ -18,11 +19,13 @@ block body
                         .detail
                             i.icon.closeBtn &#xe65c;
                             .p.headline #{m_b.name[lang]}
+                            if (m_b.introduction)
+                                p.g-normalText.center(style="margin-top: -10px") #{m_b.introduction[lang]}
                             .detailList
                                 each s_b, s_index in m_b.sub
                                     .imageText
                                         .imgWrap
-                                            img.pic(src="/images/bg_business_#{m_index + 1}_#{s_index + 1}.jpg", alt="图片")
+                                            img.pic(src="/images/bg_commodity_#{m_index + 1}_#{s_index + 1}.jpg", alt="图片")
                                         .textWrap
                                             .title #{s_b.name[lang]}
                                             .redLine

@@ -9,10 +9,21 @@ block body
         .maxBox
             .g-bigTitle 
                 .text #{text.title[lang]}
-        .maxBox                
-            #map
+        .maxBox 
+            #contactUs
+                .left
+                    p.label #{text.contactLabel[lang]}
+                    p.phone !{text.phone[lang].replace(/\n/g, '<br>')}
+                        img(src="/images/icon_phone.png", alt="图标")
+                    p.email #{text.email}
+                        img(src="/images/icon_email.png", alt="图标")
+                    p.label #{text.addressLabel[lang]}
+                    p.address !{text.address[lang].replace(/\n/g, '<br>')}
+                        img(src="/images/icon_address.png", alt="图标")
+                .right               
+                    #map
         include components/footer
 
 block script
-    script(src="https://api.map.baidu.com/api?v=1.0&&type=webgl&ak=kGdcVw7mSGgbrBFQwiqfPe3ayWfX7irn")
+    script(src="//api.map.baidu.com/api?v=2.0&ak=kGdcVw7mSGgbrBFQwiqfPe3ayWfX7irn")
     script(src="/javascripts/contact_us.js")

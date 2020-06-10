@@ -1,7 +1,7 @@
 const text = {
     title: {
         cn: '集团业务',
-        en: 'Group Business',
+        en: 'Who we are',
         hk: '集團業務'
     },
     paragraph: [{

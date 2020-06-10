@@ -11,15 +11,15 @@ const text = {
     },
     business: [{
         name: {
-            cn: '创展运动',
-            en: 'Welon Creative Sport',
+            cn: ' 创展运动',
+            en: 'WELON CREATIVE SPORT',
             hk: '創展運動'
         },
         sub: [{
             name: {
-                cn: '创展运动',
-                en: 'Welon Creative Sport',
-                hk: '創展運動'
+                cn: ' 惠州创展运动器材有限公司',
+                en: 'Huizhou Creative Sporting Googs Co., Ltd',
+                hk: '惠州創展運動器材有限公司'
             },
             detail: {
                 cn: '主营飞镖运动产品，包括专业的飞镖、飞镖靶及飞镖运动周边产品\n中国最大飞镖生产商\n工厂位于惠州',
@@ -30,23 +30,16 @@ const text = {
         }]
     }, {
         name: {
-            cn: '整个团队含广州桦兴，旗下有两家工厂，以及水上运动品牌NEO-SPLASH',
-            en: 'Huaxing Sports contain Guangzhou Huaxing, Huizhou Huaxing, Hualixin and watersport brand , NEOSPLASH',
-            hk: '整個團隊含廣州樺興，旗下有兩家工廠，以及水上運動品牌NEO-SPLASH'
+            cn: '桦兴运动',
+            en: 'HUAXING SPORT ',
+            hk: '樺興運動'
         },
+		introduction: {
+			cn: '桦岭集团的重要组成部分，坐拥两家工厂，分别为惠州桦兴运动用品有限公司和常州桦利信体育用品有限公司',
+            en: 'One of the most essential departments of Welon, owns two factories Huizhou Huaxing Sports Goods Co.Ltd.& Hualixin Sports Goods Co.Ltd. ',
+            hk: '樺嶺集團的重要組成部分，坐擁兩家工廠，分別為惠州樺興運動用品有限公司和常州樺利信體育用品有限公司。'
+		},
         sub: [{
-            name: {
-                cn: '广州桦兴',
-                en: 'Guangzhou Huaxing',
-                hk: '廣州樺興'
-            },
-            detail: {
-                cn: '桦岭集团的重要组成部分，坐拥两家工厂，分别为惠州桦兴运动用品有限公司和常州桦利信体育用品有限公司',
-                en: 'One of the most essential departments of Welon, owns two factories Huizhou Huaxing Sports Goods Co.Ltd.& Hualixin Sports Goods Co.Ltd.',
-                hk: '樺嶺集團的重要組成部分，坐擁兩家工廠，分別為惠州樺興運動用品有限公司和常州樺利信體育用品有限公司'
-            },
-            web: '//www.welon-huahui.com.cn'
-        }, {
             name: {
                 cn: '惠州桦兴运动用品有限公司',
                 en: 'Huizhou Huaxing Sports Goods Ltd',
@@ -122,9 +115,9 @@ const text = {
         },
         sub: [{
             name: {
-                cn: '惠州威玛斯运动器材有限公司',
-                en: 'Huizhou Winmax Sport Ltd',
-                hk: '惠州威瑪斯運動器材有限公司'
+                cn: '威玛斯品牌',
+                en: 'WIN.MAX',
+                hk: '威瑪斯品牌'
             },
             detail: {
                 cn: '主打系列化的体育用品，旨在为全球体育用品零售商提供一站式服务。在欧美市场以直营线上零售终端为主，东南亚等国家以加盟代理线下实体店为主',
@@ -132,30 +125,30 @@ const text = {
                 hk: '主打系列化的體育用品，旨在為全球體育用品零售商提供一站式服務。在歐美市場以直營線上零售終端為主，東南亞等國家以加盟代理線下實體店為主'
             },
             web: '//www.winmaxsport.cn'
-        }, {
-            name: {
-                cn: '广州威玛斯体育零售有限公司',
-                en: 'Guangzhou Winmax Sport Retail Ltd.',
-                hk: '廣州威瑪斯體育零售有限公司'
-            },
-            detail: {
-                cn: '经营品牌实体零售店，利用线上线下平台，打造以专业运动教练引导销售的新零售',
-                en: 'Operate the Brand retail stores, and guide the retails with  professional sports coaches based on online & offline platforms',
-                hk: '經營品牌實體零售店，利用線上線下平臺，打造以專業運動教練引導銷售的新零售'
-            },
-            web: '//www.winmaxsport.cn'
-        }, {
-            name: {
-                cn: 'WINMAX品牌',
-                en: 'WINMAX',
-                hk: 'WINMAX品牌'
-            },
-            detail: {
-                cn: '主营WINMAX系列化体育用品品牌',
-                en: 'WINMAX brand focus on providing full range of high quality leisure sporting goods to the world.',
-                hk: '主營WINMAX系列化體育用品品牌'
-            },
-            web: '//www.winmaxsport.cn'
+        // }, {
+        //     name: {
+        //         cn: '广州威玛斯体育零售有限公司',
+        //         en: 'Guangzhou Winmax Sport Retail Ltd.',
+        //         hk: '廣州威瑪斯體育零售有限公司'
+        //     },
+        //     detail: {
+        //         cn: '经营品牌实体零售店，利用线上线下平台，打造以专业运动教练引导销售的新零售',
+        //         en: 'Operate the Brand retail stores, and guide the retails with  professional sports coaches based on online & offline platforms',
+        //         hk: '經營品牌實體零售店，利用線上線下平臺，打造以專業運動教練引導銷售的新零售'
+        //     },
+        //     web: '//www.winmaxsport.cn'
+        // }, {
+        //     name: {
+        //         cn: 'WINMAX品牌',
+        //         en: 'WINMAX',
+        //         hk: 'WINMAX品牌'
+        //     },
+        //     detail: {
+        //         cn: '主营WINMAX系列化体育用品品牌',
+        //         en: 'WINMAX brand focus on providing full range of high quality leisure sporting goods to the world.',
+        //         hk: '主營WINMAX系列化體育用品品牌'
+        //     },
+        //     web: '//www.winmaxsport.cn'
         }]
     }, {
         name: {

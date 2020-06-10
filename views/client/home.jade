@@ -63,7 +63,7 @@ block body
                         p.content #{text.section_3.content[lang]}
                         a.more(href="#{text.section_3.url + '/' + lang}")
                             img(src="/images/icon_plus.png", alt="+")/   
-                            span 了解更多
+                            span #{lang == 'cn' ? '了解更多' : lang == 'hk' ? '瞭解更多' : 'Explore More'}
                 .row.row-2
                     .imgWrap
                         img(src="/images/img_home_company_4.jpg", alt="img_home_4")/
@@ -76,7 +76,7 @@ block body
                         p.content #{text.section_4.content[lang]}
                         a.more(href="#{text.section_4.url + '/' + lang}")
                             img(src="/images/icon_plus.png", alt="+")/   
-                            span 了解更多
+                            span #{lang == 'cn' ? '了解更多' : lang == 'hk' ? '瞭解更多' : 'Explore More'}
         include components/footer
                     
 block script

@@ -1,9 +1,11 @@
-
 $(function(){
     $('#businessList .item').on('click', function(e) {
         e.stopPropagation();
         $(this).siblings().removeClass('open');
         $(this).addClass('open');
+        $('body').animate({
+            scrollTop: $('body').scrollTop() + $(this).offset().top
+        }, 300);
         // $(this).siblings().removeClass('open').find('.detail').slideUp(400);
         // $(this).addClass('open').find('.detail').slideDown(400);
     });

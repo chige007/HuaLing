@@ -317,18 +317,18 @@
   padding-top: 20px;
   margin-bottom: 20px;
   padding-left: 15px;
-  padding-bottom: 7px;
+  padding-bottom: 10px;
 }
 #recruitments .item .wrap .headline p.big {
   color: #DC3A3A;
-  font-size: 26px;
-  font-weight: bold;
+  font-size: 22px;
+  font-weight: normal;
   line-height: 1;
   margin-bottom: 5px;
 }
 #recruitments .item .wrap .headline p.small {
   color: #DC3A3A;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 200;
   line-height: 1;
 }
@@ -373,13 +373,13 @@
   padding: 15px;
 }
 #recruitments .item .wrap .content .label {
-  font-size: 18px;
+  font-size: 16px;
   color: #444;
   margin-bottom: 10px;
   font-weight: normal;
 }
 #recruitments .item .wrap .content .detail {
-  font-size: 14px;
+  font-size: 13px;
   color: #666;
   line-height: 30px;
 }

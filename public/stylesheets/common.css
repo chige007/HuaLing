@@ -280,7 +280,7 @@
 * {
   box-sizing: border-box;
   position: relative;
-  font-family: sans-serif, 'Microsoft YaHei', Helvetica, Arial;
+  font-family: Helvetica, sans-serif, 'Microsoft YaHei', Arial;
   font-weight: 200;
 }
 html,
@@ -563,6 +563,7 @@ textarea:-ms-input-placeholder {
     width: 100%;
     border-bottom: 2px solid #fff;
     letter-spacing: 1px;
+    display: block;
   }
   #HEADER .maxBox .nav .menu .mainMenu .arrow {
     display: inline-block;
@@ -660,7 +661,7 @@ textarea:-ms-input-placeholder {
   margin: 40px 0px;
 }
 .g-bigTitle .text {
-  font-size: 22px;
+  font-size: 20px;
   padding: 12px 15px;
   line-height: 1;
   min-width: 230px;
@@ -680,6 +681,9 @@ textarea:-ms-input-placeholder {
 }
 .g-normalText .bold {
   font-weight: bold;
+}
+.g-normalText.center {
+  text-align: center;
 }
 @media screen and (max-width: 650px) {
   .g-bigTitle .text {

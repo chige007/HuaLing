@@ -1,7 +1,7 @@
 const text = {
     title: {
         cn: '桦岭团队',
-        en: 'Welon Team',
+        en: 'Our Teams',
         hk: '樺嶺團隊'
     },
     paragraph: {

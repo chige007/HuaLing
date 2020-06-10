@@ -1,6 +1,7 @@
 extends layouts/base
 
 block head
+    link(rel="stylesheet", href="/stylesheets/business.css")
     link(rel="stylesheet", href="/stylesheets/seven_business.css")
 block body
     .container
@@ -17,7 +18,9 @@ block body
                             .text #{m_b.name[lang]}
                         .detail
                             i.icon.closeBtn &#xe65c;
-                            .p.headline #{(m_b.openName && m_b.openName[lang]) || m_b.name[lang]}
+                            .p.headline #{m_b.name[lang]}
+                            if (m_b.introduction)
+                                p.g-normalText.center(style="margin-top: -10px") #{m_b.introduction[lang]}
                             .detailList
                                 each s_b, s_index in m_b.sub
                                     .imageText

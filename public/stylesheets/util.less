@@ -145,7 +145,7 @@
             color: @gray;
         }
         a.website{
-            display: block;
+            display: inline-block;
             margin-top: 10px;
             >img.icon{
                 margin-right: 5px;
@@ -157,6 +157,14 @@
                 color: #5b92a1;
                 font-size: 16px;
                 display: inline-block;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            &:hover{
+                span{
+                    text-decoration: underline;
+                }
             }
         }
     }

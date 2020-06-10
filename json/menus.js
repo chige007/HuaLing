@@ -1,15 +1,22 @@
 const menus = [{
+    url: '/home',
+    name: {
+        cn: '首页',
+        en: 'Home',
+        hk: '首頁'
+    }
+}, {
     url: '',
     name: {
         cn: '集团简介',
-        en: 'Group Profile',
+        en: 'About us',
         hk: '集團簡介'
     },
     sub: [{
         url: '/group_business',
         name: {
             cn: '集团业务',
-            en: 'Group Business',
+            en: 'Who we are',
             hk: '集團業務'
         }
     // }, {
@@ -23,14 +30,14 @@ const menus = [{
         url: '/development_history',
         name: {
             cn: '发展历程',
-            en: 'Development History',
+            en: 'Our Journey',
             hk: '發展歷程'
         },
     }, {
         url: '/management_team',
         name: {
             cn: '桦岭团队',
-            en: 'Welon Team',
+            en: 'Our Teams',
             hk: '樺嶺團隊'
         },
     }]
@@ -45,14 +52,14 @@ const menus = [{
         url: '/seven_business',
         name: {
             cn: '七大板块业务',
-            en: 'Seven Business Sectors',
+            en: 'Business Sectores',
             hk: '七大板塊業務'
         }
     }, {
         url: '/cooperation_mode',
         name: {
             cn: '合作模式',
-            en: 'Cooperation Mode',
+            en: 'Our Services',
             hk: '合作模式'
         }
     }]
@@ -60,21 +67,21 @@ const menus = [{
     url: '',
     name: {
         cn: '产品线',
-        en: 'Product Line',
+        en: 'Our lines',
         hk: '產品線'
     },
     sub: [{
         url: '/four_commodity',
         name: {
             cn: '四大商品系列',
-            en: 'Four Commodity Series',
+            en: 'Four Sport Lines',
             hk: '四大商品系列'
         }
     }, {
         url: '/brand',
         name: {
             cn: '品牌',
-            en: 'Brand',
+            en: 'Brands',
             hk: '品牌'
         }
     }]
@@ -82,7 +89,7 @@ const menus = [{
     url: '/latest_information',
     name: {
         cn: '最新资讯',
-        en: 'Latest information',
+        en: 'News',
         hk: '最新資訊'
     }
 }, {

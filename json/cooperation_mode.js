@@ -1,7 +1,7 @@
 const text = {
     title: {
         cn: '合作模式',
-        en: 'Cooperation Mode',
+        en: 'Our Services',
         hk: '合作模式'
     }
 }

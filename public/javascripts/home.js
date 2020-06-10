@@ -46,7 +46,7 @@ $(function(){
     var resizeWin = function() {
         GLOBAL.resizeWin(function(type) {
             if (type == 'mobile') {
-                slide(0);
+                // slide(0);
             } else {
                 $('#workImgs').find('.imgsWrap').css({
                     'margin-left': '0px'

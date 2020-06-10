@@ -299,13 +299,13 @@
   margin-bottom: 15px;
 }
 #teamList .item p.mainText {
-  font-size: 21px;
+  font-size: 18px;
   color: #464646;
   line-height: 1;
   margin-bottom: 10px;
 }
 #teamList .item p.subText {
-  font-size: 16px;
+  font-size: 14px;
   color: #666666;
   line-height: 1;
 }
@@ -313,4 +313,9 @@
   margin-top: 10px;
   width: 60px;
   border-bottom: 4px solid #DC3A3A;
+}
+@media screen and (max-width: 650px) {
+  #teamList .item {
+    width: 100%;
+  }
 }

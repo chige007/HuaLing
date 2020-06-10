@@ -37,7 +37,7 @@ router.get('/group_business/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/group_business', {
         menus,
         lang: req.params.lang,
-        currentMenu: 0,
+        currentMenu: 1,
         text: text_group_business
     });
 });
@@ -47,7 +47,7 @@ router.get('/core_value/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/core_value', {
         menus,
         lang: req.params.lang,
-        currentMenu: 0,
+        currentMenu: 1,
         text: text_core_value
     });
 });
@@ -57,7 +57,7 @@ router.get('/development_history/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/development_history', {
         menus,
         lang: req.params.lang,
-        currentMenu: 0,
+        currentMenu: 1,
         text: text_development_history
     });
 });
@@ -67,7 +67,7 @@ router.get('/management_team/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/management_team', {
         menus,
         lang: req.params.lang,
-        currentMenu: 0,
+        currentMenu: 1,
         text: text_management_team
     });
 });
@@ -77,7 +77,7 @@ router.get('/seven_business/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/seven_business', {
         menus,
         lang: req.params.lang,
-        currentMenu: 1,
+        currentMenu: 2,
         text: text_seven_business
     });
 });
@@ -87,7 +87,7 @@ router.get('/cooperation_mode/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/cooperation_mode', {
         menus,
         lang: req.params.lang,
-        currentMenu: 1,
+        currentMenu: 2,
         text: text_cooperation_mode
     });
 });
@@ -97,7 +97,7 @@ router.get('/four_commodity/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/four_commodity', {
         menus,
         lang: req.params.lang,
-        currentMenu: 2,
+        currentMenu: 3,
         text: text_four_commodity
     });
 });
@@ -107,7 +107,7 @@ router.get('/brand/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/brand', {
         menus,
         lang: req.params.lang,
-        currentMenu: 2,
+        currentMenu: 3,
         text: text_brand
     });
 });
@@ -117,7 +117,7 @@ router.get('/latest_information/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/latest_information', {
         menus,
         lang: req.params.lang,
-        currentMenu: 3,
+        currentMenu: 4,
         text: text_latest_information
     });
 });
@@ -137,7 +137,7 @@ router.get('/join_us/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/join_us', {
         menus,
         lang: req.params.lang,
-        currentMenu: 4,
+        currentMenu: 5,
         text: text_join_us
     });
 });
@@ -147,7 +147,7 @@ router.get('/contact_us/:lang(en|cn|hk)', function (req, res, next) {
     res.render('client/contact_us', {
         menus,
         lang: req.params.lang,
-        currentMenu: 5,
+        currentMenu: 6,
         text: text_contact_us
     });
 });

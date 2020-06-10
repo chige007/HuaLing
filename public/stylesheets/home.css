@@ -280,7 +280,7 @@
 * {
   box-sizing: border-box;
   position: relative;
-  font-family: sans-serif, 'Microsoft YaHei', Helvetica, Arial;
+  font-family: Helvetica, sans-serif, 'Microsoft YaHei', Arial;
   font-weight: 200;
 }
 html,
@@ -528,6 +528,7 @@ textarea:-ms-input-placeholder {
 }
 #companyIntroduct {
   padding-bottom: 45px;
+  background-color: #f2f4f6;
 }
 #companyIntroduct p.text {
   display: block;
@@ -594,9 +595,6 @@ textarea:-ms-input-placeholder {
     top: 10px;
     bottom: 10px;
   }
-}
-#companyIntroduct_2 {
-  background-color: #f2f4f6;
 }
 #companyIntroduct_2 .row:before,
 #companyIntroduct_2 .row:after {
@@ -677,7 +675,7 @@ textarea:-ms-input-placeholder {
   height: 50px;
   color: #646464;
   font-size: 22px;
-  font-weight: bold;
+  font-weight: normal;
   text-align: center;
   line-height: 1;
   padding: 12px;
@@ -704,7 +702,7 @@ textarea:-ms-input-placeholder {
   display: inline-block;
   vertical-align: middle;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: normal;
   color: #646464;
   margin-left: 5px;
 }
@@ -716,6 +714,9 @@ textarea:-ms-input-placeholder {
   float: right;
 }
 @media screen and (max-width: 650px) {
+  #companyIntroduct_2 {
+    margin-bottom: 40px;
+  }
   #companyIntroduct_2 .row .imgWrap {
     width: 100%;
     padding: 20px;
@@ -725,6 +726,9 @@ textarea:-ms-input-placeholder {
   }
   #companyIntroduct_2 .row .imgWrap .linkWrap {
     display: block;
+  }
+  #companyIntroduct_2 .row .imgWrap .linkWrap a {
+    width: 240px;
   }
   #companyIntroduct_2 .row .contentWrap {
     width: 100%;

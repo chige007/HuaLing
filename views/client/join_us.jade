@@ -8,7 +8,7 @@ block body
         .maxBox
             .g-bigTitle 
                 .text #{text.title[lang]}
-            p.g-normalText(style="text-align: center;") #{text.paragraph[lang]}
+            p.g-normalText(style="text-align: center;") !{text.paragraph[lang].replace(/\n/g, '<br>')}
 
             #recruitments
                 each recruit, index in text.recruitments
