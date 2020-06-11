@@ -383,3 +383,42 @@
   color: #666;
   line-height: 30px;
 }
+@media screen and (max-width: 650px) {
+  #recruitments {
+    padding: 0px 20px 0px 30px;
+    margin-bottom: 10px;
+  }
+  #recruitments .item {
+    width: 100%;
+    padding-bottom: 0px;
+    margin-bottom: 40px;
+  }
+  #recruitments .item .wrap {
+    background-color: #fff;
+  }
+  #recruitments .item .wrap .headline {
+    margin-bottom: 0px;
+    padding-top: 10px;
+  }
+  #recruitments .item .wrap .headline p.big {
+    font-size: 18px;
+  }
+  #recruitments .item .wrap .headline p.small {
+    font-weight: 200;
+  }
+  #recruitments .item:after {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: -10px;
+    width: 9px;
+    height: 9px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    z-index: 1;
+    border: 1px solid #DC3A3A;
+  }
+}

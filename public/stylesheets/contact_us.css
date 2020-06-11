@@ -278,6 +278,8 @@
   }
 }
 #contactUs {
+  width: 94%;
+  margin: 0px auto;
   height: 430px;
   border: 2px solid #d3d6d7;
   margin-bottom: 60px;
@@ -299,7 +301,7 @@
   height: 100%;
   width: 40%;
   float: left;
-  padding: 20px 60px 0px 80px;
+  padding: 20px 20px 0px 80px;
 }
 #contactUs .left p {
   display: block;
@@ -331,7 +333,10 @@
 }
 @media screen and (max-width: 650px) {
   #contactUs {
+    width: 100%;
     height: auto;
+    border: none;
+    margin-bottom: 0px;
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -343,7 +348,31 @@
     width: 100%;
   }
   #contactUs .left {
-    padding-bottom: 50px;
+    padding: 0px 20px 40px 20px;
+    text-align: center;
+  }
+  #contactUs .left p {
+    margin: 0px;
+  }
+  #contactUs .left p.label {
+    margin: 0px;
+    font-size: 15px;
+  }
+  #contactUs .left p.phone,
+  #contactUs .left p.email,
+  #contactUs .left p.address {
+    padding-top: 60px;
+  }
+  #contactUs .left p.phone img,
+  #contactUs .left p.email img,
+  #contactUs .left p.address img {
+    top: 30px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+  }
+  #contactUs .left p.email {
+    margin-bottom: 40px;
   }
   #map {
     height: 300px;

@@ -2,6 +2,8 @@
 
 
 #contactUs{
+    width: 94%;
+    margin: 0px auto;
     height: 430px;
     border: 2px solid #d3d6d7;
     margin-bottom: 60px;
@@ -11,7 +13,7 @@
         height: 100%;
         width: 40%;
         float: left;
-        padding: 20px 60px 0px 80px;
+        padding: 20px 20px 0px 80px;
         p{
             display: block;
             line-height: 20px;
@@ -47,14 +49,39 @@
 
 @media screen and (max-width: 650px) {
     #contactUs{
+        width: 100%;
         height: auto;
+        border: none;
+        margin-bottom: 0px;
         .boxShadow(none);
         .left,
         .right{
             width: 100%;
         }
         .left{
-            padding-bottom: 50px;
+            padding: 0px 20px 40px 20px;
+            text-align: center;
+            p{
+                margin: 0px;
+                &.label{
+                    margin: 0px;
+                    font-size: 15px;
+                }
+                &.phone,
+                &.email,
+                &.address{
+                    padding-top: 60px;
+                    img{
+                        top: 30px;
+                        left: 0px;
+                        right: 0px;
+                        margin: auto;
+                    }
+                }
+                &.email{
+                    margin-bottom: 40px;
+                }
+            }
         }
     }
     #map{

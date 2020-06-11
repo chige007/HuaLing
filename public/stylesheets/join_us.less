@@ -89,3 +89,39 @@
         }
     }
 }
+
+@media screen and (max-width: 650px) {
+    #recruitments{
+        padding: 0px 20px 0px 30px;
+        margin-bottom: 10px;
+        .item{
+            width: 100%;
+            padding-bottom: 0px;
+            margin-bottom: 40px;
+            .wrap{
+                background-color: #fff;
+                .headline{
+                    margin-bottom: 0px;
+                    padding-top: 10px;
+                    p.big{
+                        font-size: 18px;
+                    }
+                    p.small{
+                        font-weight: 200;
+                    }
+                }
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                left: -6px;
+                top: -10px;
+                width: 9px;
+                height: 9px;
+                .radius(100px);
+                z-index: 1;
+                border: 1px solid @danger;
+            }
+        }
+    }
+}
