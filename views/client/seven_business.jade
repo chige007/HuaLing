@@ -20,7 +20,7 @@ block body
                             i.icon.closeBtn &#xe65c;
                             .p.headline #{m_b.name[lang]}
                             if (m_b.introduction)
-                                p.g-normalText.center(style="margin-top: -10px") #{m_b.introduction[lang]}
+                                p.g-normalText.introduction.center #{m_b.introduction[lang]}
                             .detailList
                                 each s_b, s_index in m_b.sub
                                     .imageText

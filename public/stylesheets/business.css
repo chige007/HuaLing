@@ -379,6 +379,9 @@
   -o-transition: all 0.4s;
   -ms-transition: all 0.4s;
 }
+#businessList .item .detail .introduction {
+  margin-top: -10px;
+}
 #businessList .item .detail .detailList {
   padding: 0px 80px;
 }
@@ -937,6 +940,9 @@
     font-size: 22px;
     font-weight: normal;
     padding-bottom: 0px;
+  }
+  #businessList .item .detail .introduction {
+    margin-top: 5px;
   }
   #businessList .item .detail .detailList {
     padding: 0px 20px;

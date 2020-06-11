@@ -607,7 +607,6 @@ textarea:-ms-input-placeholder {
 #companyIntroduct_2 .row .imgWrap {
   float: left;
   width: 50%;
-  height: 300px;
   overflow: hidden;
 }
 #companyIntroduct_2 .row .imgWrap img {
@@ -720,6 +719,7 @@ textarea:-ms-input-placeholder {
   #companyIntroduct_2 .row .imgWrap {
     width: 100%;
     padding: 20px;
+    padding-bottom: 0px;
   }
   #companyIntroduct_2 .row .imgWrap .arrow {
     display: none;

@@ -52,7 +52,7 @@ const menus = [{
         url: '/seven_business',
         name: {
             cn: '七大板块业务',
-            en: 'Business Sectores',
+            en: 'Business Sectors',
             hk: '七大板塊業務'
         }
     }, {
