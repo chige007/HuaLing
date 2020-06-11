@@ -429,7 +429,7 @@ textarea:-ms-input-placeholder {
 }
 #APP .container .loginBox .left .logo p {
   color: #fff;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 22px;
   letter-spacing: 1px;
   margin-top: 10px;
@@ -452,7 +452,7 @@ textarea:-ms-input-placeholder {
   font-size: 20px;
   letter-spacing: 1px;
   margin-bottom: 20px;
-  font-weight: normal;
+  font-weight: 300;
 }
 #APP .container .loginBox .right .wrap .inputGroup {
   margin-top: 25px;

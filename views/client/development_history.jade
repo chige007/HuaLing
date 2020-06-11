@@ -10,11 +10,11 @@ block body
                 .text #{text.title[lang]}
 
             p.g-normalText.center(style="margin-bottom: 60px;") #{text.content[lang]}
-            
+                        
             - var i = 1
-            - var length = 8
-            if (lang == 'en') 
-                -length = 6
+            - var length = 6
+            //- if (lang == 'en') 
+            //-     -length = 6
             while i < length
                 img(src="/images/img_fzlc_pc_#{lang == 'hk' ? 'cn' : lang}_#{i}.jpg", alt="发展历程", style="width: 100%; display: block;")
                 - i += 1

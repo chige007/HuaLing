@@ -327,11 +327,11 @@
   letter-spacing: 1px;
   line-height: 28px;
   padding-right: 30px;
-  font-weight: 200;
+  font-weight: 300;
   color: #646464;
 }
 .imageText .textWrap a.website {
-  display: block;
+  display: inline-block;
   margin-top: 10px;
 }
 .imageText .textWrap a.website > img.icon {
@@ -340,16 +340,26 @@
   vertical-align: middle;
 }
 .imageText .textWrap a.website span {
-  font-weight: normal;
+  font-weight: 300;
   color: #5b92a1;
   font-size: 16px;
   display: inline-block;
+}
+.imageText .textWrap a.website span:hover {
+  text-decoration: underline;
+}
+.imageText .textWrap a.website:hover span {
+  text-decoration: underline;
 }
 @media screen and (max-width: 650px) {
   .imageText .imgWrap,
   .imageText .textWrap {
     width: 100%;
     float: none;
+  }
+  .imageText .imgWrap .text,
+  .imageText .textWrap .text {
+    font-weight: 300;
   }
   .imageText .imgWrap img {
     height: auto;

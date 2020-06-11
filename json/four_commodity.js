@@ -4,6 +4,11 @@ const text = {
         en: 'Four Sport Lines',
         hk: '四大商品系列'
     },
+    paragraph: {
+        cn: '根据客户的不同需求，为其订制符合不同层级供应链解决方案',
+        en: 'Offer differnet levels of supply chain solutions',
+        hk: '根據客戶的不同需求，為其訂制符合不同層級供應鏈解決方案'
+    },
     business: [{
         name: {
             cn: '室内运动用品系列',
@@ -21,7 +26,8 @@ const text = {
                 en: 'Darts, Dartboard, Electronic Dartboard, Dart Accessories.',
                 hk: '飛鏢，飛鏢靶，電子靶，飛鏢配件'
             },
-            web: '//www.winmaxsport.com'
+            web: '//www.winmaxsport.com',
+            web2: '//www.chinadartsfactory.com'
         }, {
             name: {
                 cn: '球台',
@@ -50,7 +56,7 @@ const text = {
     }, {
         name: {
             cn: '水上运动用品系列',
-            en: 'WATER SPORTING',
+            en: 'WATER SPORT',
             hk: '水上運動用品系列'
         },
         sub: [{
@@ -68,7 +74,7 @@ const text = {
         }, {
             name: {
                 cn: '沙滩泳池玩具',
-                en: 'TABLE GAME',
+                en: 'Beach & Pool Recreation',
                 hk: '沙灘泳池玩具'
             },
             detail: {
@@ -147,9 +153,9 @@ const text = {
         }]
     }, {
         name: {
-            cn: '休闲运动着装系列',
+            cn: '运动时尚着装系列',
             en: 'SPORTSWEAR',
-            hk: '休閒運動著裝系列'
+            hk: '運動時尚著裝系列'
         },
         sub: [{
             name: {

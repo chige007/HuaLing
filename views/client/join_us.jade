@@ -8,7 +8,11 @@ block body
         .maxBox
             .g-bigTitle 
                 .text #{text.title[lang]}
-            p.g-normalText(style="text-align: center;") !{text.paragraph[lang].replace(/\n/g, '<br>')}
+            p.g-normalText(style="text-align: center;") #{text.paragraph[lang]}
+
+            img(src="/images/img_joinus.jpg", alt="华岭图片", style="display: block; margin: 10px auto;")
+
+            p.g-normalText(style="text-align: center;") #{text.paragraph2[lang]}
 
             #recruitments
                 each recruit, index in text.recruitments

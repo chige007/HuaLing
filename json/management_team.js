@@ -5,9 +5,9 @@ const text = {
         hk: '樺嶺團隊'
     },
     paragraph: {
-        cn: '我们是一家以目标为导向的集团，致力为业务相关社区作出有意义的贡献。我们的愿景是',
-        en: 'We are a goal oriented group committed to making a meaningful contribution to the relevant communities of the business. Our vision is',
-        hk: '我們是一家以目標為導向的集團，致力為業務相關社區作出有意義的貢獻。我們的願景是',
+        cn: '桦岭拥有专业和经验丰富的团队服务于各个业务环节',
+        en: 'Hualing has a professional and experienced team to serve all business links',
+        hk: '樺嶺擁有專業和經驗豐富的團隊服務於各個業務環節',
     },
     teams: [{
         name: {
@@ -17,44 +17,44 @@ const text = {
         }
     }, {
         name: {
-            cn: '设计团队',
-            en: 'Design team',
-            hk: '設計團隊'
+            cn: '设计创新团队',
+            en: 'Design & innovation team',
+            hk: '設計創新團隊'
         }
     }, {
         name: {
-            cn: '产品研发',
-            en: 'Product development',
-            hk: '產品研發'
+            cn: '产品研发团队',
+            en: 'Products R&D team',
+            hk: '產品研發團隊'
         }
     }, {
         name: {
-            cn: '业务销售',
-            en: 'Business sales',
-            hk: '業務銷售'
+            cn: '业务销售客服团队',
+            en: 'Sales and customer service team',
+            hk: '業務銷售客服團隊'
         }
     }, {
         name: {
-            cn: '电子商务',
-            en: 'Electronic Commerce',
-            hk: '電子商務'
+            cn: '电子商务团队',
+            en: 'E-commerce team',
+            hk: '電子商務團隊'
         }
     }, {
         name: {
-            cn: '仓库物流',
-            en: 'Warehouse logistics',
-            hk: '倉庫物流'
+            cn: '仓库物流团队',
+            en: 'Logistic team',
+            hk: '倉庫物流團隊'
         }
     }, {
         name: {
             cn: '品牌管理、国内零售团队',
-            en: 'Brand management, domestic retail team',
+            en: 'Brand management，domestic retail team',
             hk: '品牌管理、國內零售團隊'
         }
     }, {
         name: {
             cn: '运动培训',
-            en: 'Sports training',
+            en: 'Sport training team',
             hk: '運動培訓'
         }
     }]

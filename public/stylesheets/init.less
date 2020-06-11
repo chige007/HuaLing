@@ -18,6 +18,7 @@ html,body{
 }
 body{
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 a,span,input,button,textarea,i{
 	text-decoration: none;
@@ -69,4 +70,10 @@ textarea{
     width: 8px;
     background-color: rgba(220, 220, 220, 0.5);
     border-radius: 10px;
+}
+
+@media screen and (max-width: 650px) {
+    *{
+        font-weight: 300;
+    }
 }

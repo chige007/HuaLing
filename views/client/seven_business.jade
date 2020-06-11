@@ -12,7 +12,7 @@ block body
             p.g-normalText(style="text-align: center") #{text.paragraph[lang]}
             #businessList
                 each m_b, m_index in text.business
-                    .item(class="business-#{m_index + 1}")
+                    .item(class="business-#{m_index + 1}", id="#{'business_' + (m_index + 1)}")
                         .bgImg
                         .maskTitle
                             .text #{m_b.name[lang]}
@@ -25,7 +25,7 @@ block body
                                 each s_b, s_index in m_b.sub
                                     .imageText
                                         .imgWrap
-                                            img.pic(src="/images/bg_business_#{m_index + 1}_#{s_index + 1}.jpg", alt="图片")
+                                            img.pic(src="/images/bg_business_#{m_index + 1}_#{s_index + 1}.jpg", alt="华岭图片")
                                         .textWrap
                                             .title #{s_b.name[lang]}
                                             .redLine

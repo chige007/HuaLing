@@ -14,12 +14,12 @@ block body
                 .left
                     p.label #{text.contactLabel[lang]}
                     p.phone !{text.phone[lang].replace(/\n/g, '<br>')}
-                        img(src="/images/icon_phone.png", alt="图标")
+                        img(src="/images/icon_phone.png", alt="华岭图标")
                     p.email #{text.email}
-                        img(src="/images/icon_email.png", alt="图标")
+                        img(src="/images/icon_email.png", alt="华岭图标")
                     p.label #{text.addressLabel[lang]}
                     p.address !{text.address[lang].replace(/\n/g, '<br>')}
-                        img(src="/images/icon_address.png", alt="图标")
+                        img(src="/images/icon_address.png", alt="华岭图标")
                 .right               
                     #map
         include components/footer

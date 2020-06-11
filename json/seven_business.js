@@ -26,7 +26,7 @@ const text = {
                 en: 'Professional dart sport games manufacturer located in Huizhou ChinaIncluding darts, dartboards and dart games accessories.\nBiggest bristle dartboard factory in China',
                 hk: '主營飛鏢運動產品，包括專業的飛鏢、飛鏢靶及飛鏢運動周邊產品\n中國最大飛鏢生產商\n工廠位於惠州'
             },
-            web: '//www.weloncreative.com'
+            web: '//www.chinadartsfactory.com'
         }]
     }, {
         name: {
@@ -89,9 +89,9 @@ const text = {
                 hk: '樺嶺運動時尚集團有限公司'
             },
             detail: {
-                cn: '主营泳衣和泳池、沙滩配套服饰，包括时尚泳衣、专业运动泳衣、防晒衣、沙滩裤、沙滩装、瑜伽健身服等，主要市场：欧洲、澳洲、美国\n旗下两家工厂：佛山市海源发制衣有限公司、印尼红龙制衣',
-                en: 'Specialize in swimwear including fashion swimwear, sports swimwear, rash guard,board shorts,beach wear, activewear, etc. Main market is in Europe, Australia, U.S. etc. Have two own factories: FOSHAN HAIYUANFA GARMENT CO.,LTD and  PI GAGAGLO-INDONESIA',
-                hk: '樺嶺運動時尚集團有限公司主營泳衣和泳池、沙灘配套服飾，包括時尚泳衣、專業運動泳衣、防曬衣、沙灘褲、沙灘裝、瑜伽健身服等，主要市場：歐洲、澳大利亞、美國\n旗下兩家工廠:佛山市海源發制衣有限公司、印尼紅龍制衣'
+                cn: '主营泳衣和泳池、沙滩配套服饰，包括时尚泳衣、专业运动泳衣、防晒衣、沙滩裤、沙滩装、瑜伽健身服等，主要市场：欧洲、澳洲、美国\n旗下两家工厂：\n佛山市海源发制衣有限公司\n印尼红龙制衣',
+                en: 'Specialize in swimwear including fashion swimwear, sports swimwear, rash guard,board shorts,beach wear, activewear, etc. Main market is in Europe, Australia, U.S. etc. Have two own factories:\nFOSHAN HAIYUANFA GARMENT CO.,LTD\nPI GAGAGLO-INDONESIA',
+                hk: '主營泳衣和泳池、沙灘配套服飾，包括時尚泳衣、專業運動泳衣、防曬衣、沙灘褲、沙灘裝、瑜伽健身服等，主要市場：歐洲、澳大利亞、美國\n旗下兩家工廠:\n佛山市海源發制衣有限公司\n印尼紅龍制衣'
             },
             web: '//www.welon-swimwear.com.cn'
         }, {
@@ -163,14 +163,19 @@ const text = {
                 hk: '互聯網商務'
             },
             detail: {
-                cn: '专业电子商务团队运营亚马逊、Ebay、阿里国际站、速卖通、Lazada等全球跨境电商以及天猫、京东、唯品会、拼多多等国内各大电商平台\n广州威里电子商务有限公司VIGOR SPORT GmbH（Frankfurt, Germany）',
-                en: 'Our professional e-commerce team specialize in Amazon, Ebay, Ali international，AliExpress, LAZADA, built up global e-commerce sales channels for our sporting goods.\nGuangzhou Weili e-commerce Co., LtdVIGOR SPORT（Frankfurt, Germany）',
-                hk: '專業電子商務團隊運營亞馬遜、Ebay、阿裡國際站、速賣通、Lazada等全球跨境電商以及天猫、京東、唯品會、拼多多等國內各大電商平臺\n廣州威裡電子商務有限公司VIGOR SPORT GmbH（Frankfurt，Germany）'
+                cn: '专业电子商务团队运营亚马逊、Ebay、阿里国际站、速卖通、Lazada等全球跨境电商以及天猫、京东、唯品会、拼多多等国内各大电商平台\n广州威里电子商务有限公司\nVIGOR SPORT GmbH（Frankfurt, Germany）',
+                en: 'Our professional e-commerce team specialize in Amazon, Ebay, Ali international，AliExpress, LAZADA, built up global e-commerce sales channels for our sporting goods.\nGuangzhou Weili e-commerce Co., Ltd\nVIGOR SPORT（Frankfurt, Germany）',
+                hk: '專業電子商務團隊運營亞馬遜、Ebay、阿裡國際站、速賣通、Lazada等全球跨境電商以及天猫、京東、唯品會、拼多多等國內各大電商平臺\n廣州威裡電子商務有限公司\nVIGOR SPORT GmbH（Frankfurt，Germany）'
             },
             web: ''
         }]
     }, {
         name: {
+            cn: '品牌',
+            en: 'Brands',
+            hk: '品牌'
+        },
+        introduction: {
             cn: '自有品牌及进口品牌线下线上零售',
             en: 'Private labels and imported labels retail in China',
             hk: '自有品牌及進口品牌線下線上零售'

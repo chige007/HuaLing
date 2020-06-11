@@ -282,7 +282,7 @@
   margin-bottom: 20px;
 }
 .searcher * {
-  font-weight: normal;
+  font-weight: 300;
 }
 .searcher .br {
   display: none;
@@ -321,7 +321,7 @@
   font-size: 19px;
   color: #3e3e3e;
   margin-bottom: 10px;
-  font-weight: normal;
+  font-weight: 300;
   line-height: 28px;
 }
 #newList .item p.content {

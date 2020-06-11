@@ -9,7 +9,7 @@ block body
         .maxBox
             .g-bigTitle 
                 .text #{text.title[lang]}
-            p.g-normalText 冯氏集团的业务涵盖全球消费品供应链的每个环节，包括贸易、物流、分销及零售。以下提供更多有关我们旗下公司和品牌的资料。
+            p.g-normalText.center #{text.paragraph[lang]}
             #businessList
                 each m_b, m_index in text.business
                     .item(class="business-#{m_index + 1}")
@@ -25,7 +25,7 @@ block body
                                 each s_b, s_index in m_b.sub
                                     .imageText
                                         .imgWrap
-                                            img.pic(src="/images/bg_commodity_#{m_index + 1}_#{s_index + 1}.jpg", alt="图片")
+                                            img.pic(src="/images/bg_commodity_#{m_index + 1}_#{s_index + 1}.jpg", alt="华岭图片")
                                         .textWrap
                                             .title #{s_b.name[lang]}
                                             .redLine
@@ -33,6 +33,11 @@ block body
                                             a(href="#{s_b.web}", target="_blank").website 
                                                 img.icon(src="/images/icon_website.png", alt="icon")
                                                 span #{s_b.web}
+                                            if (s_b.web2)
+                                                br
+                                                a(href="#{s_b.web2}", target="_blank").website 
+                                                    img.icon(src="/images/icon_website.png", alt="icon")
+                                                    span #{s_b.web2}
 
         include components/footer
                     

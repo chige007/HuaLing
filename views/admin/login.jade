@@ -8,16 +8,16 @@ block body
             .loginBox
                 .left
                     .logo
-                        img(src="/images/icon_logo_b.png", alt="logo")
+                        img(src="/images/icon_logo_b.png", alt="华岭logo")
                         p 官网后台管理系统
                 .right
                     .wrap
                         .title 用户登录
                         .inputGroup
-                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAPFBMVEUAAACZmZmampqZmZmXl5eXl5eZmZmZmZmZmZmZmZmfn5+YmJiZmZmXl5eYmJiZmZmZmZmZmZmYmJiZmZnHKcGcAAAAE3RSTlMA4DDwQCDAoE/PENCAXpBw77GUP8a+nwAAAJJJREFUGNNdj1sOxCAIRUVBfLS1Lfvf6xhHhfR8GHJDrhw3ObNIRGcpUbg1lqeYkMNYwnBohpL+QxLa4QFrMqsx6qSVeU312uG5qqiXbyCWcVmuTvEBElGC4J3hBOlAsotZ6vO+XCXTzm7w0wJuXD68lQuLn1/b9jpuboFsSMMUhoRyQX9UQvVwNut9gl3GfQj+B+T4BGteRKWaAAAAAElFTkSuQmCC", alt="", srcset="")
+                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAPFBMVEUAAACZmZmampqZmZmXl5eXl5eZmZmZmZmZmZmZmZmfn5+YmJiZmZmXl5eYmJiZmZmZmZmZmZmYmJiZmZnHKcGcAAAAE3RSTlMA4DDwQCDAoE/PENCAXpBw77GUP8a+nwAAAJJJREFUGNNdj1sOxCAIRUVBfLS1Lfvf6xhHhfR8GHJDrhw3ObNIRGcpUbg1lqeYkMNYwnBohpL+QxLa4QFrMqsx6qSVeU312uG5qqiXbyCWcVmuTvEBElGC4J3hBOlAsotZ6vO+XCXTzm7w0wJuXD68lQuLn1/b9jpuboFsSMMUhoRyQX9UQvVwNut9gl3GfQj+B+T4BGteRKWaAAAAAElFTkSuQmCC", alt="华岭图片", srcset="")
                             input(type="text", v-model="username", autofocus, placeholder="请输入用户名", @keyup.13="login")
                         .inputGroup
-                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAMAAADzapwJAAAAOVBMVEUAAACXl5eZmZmYmJiYmJiXl5eZmZmampqYmJiZmZmYmJiZmZmYmJiZmZmYmJiZmZmfn5+ZmZmZmZkK8frLAAAAEnRSTlMAQIC/nyDwMJDgYFDf0LBwEKCZBaiTAAAAfUlEQVQY053P2Q7CIBCFYYad0s3//R/WhpJ00BqN54YzHwmL6Qne4XwwY2qkuEKcBk1EORYpJM1LHxOL0p1Hb5n9YmHrbUM0y9W+sFiPty2tnRuB17RPWazR6bNFBpafuObphgMQ3jkBcnPIyvrhyv+5MjudmfOhOaIT82FPsEMHdtuIZP8AAAAASUVORK5CYII=", alt="", srcset="")
+                            img(src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAMAAADzapwJAAAAOVBMVEUAAACXl5eZmZmYmJiYmJiXl5eZmZmampqYmJiZmZmYmJiZmZmYmJiZmZmYmJiZmZmfn5+ZmZmZmZkK8frLAAAAEnRSTlMAQIC/nyDwMJDgYFDf0LBwEKCZBaiTAAAAfUlEQVQY053P2Q7CIBCFYYad0s3//R/WhpJ00BqN54YzHwmL6Qne4XwwY2qkuEKcBk1EORYpJM1LHxOL0p1Hb5n9YmHrbUM0y9W+sFiPty2tnRuB17RPWazR6bNFBpafuObphgMQ3jkBcnPIyvrhyv+5MjudmfOhOaIT82FPsEMHdtuIZP8AAAAASUVORK5CYII=", alt="华岭图片", srcset="")
                             input(type="password", v-model="password", placeholder="请输入密码", @keyup.13="login")
                         .passwordOpt
                             label.remember

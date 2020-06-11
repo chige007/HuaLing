@@ -303,6 +303,7 @@ body {
 }
 body {
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 a,
 span,
@@ -385,6 +386,11 @@ textarea:-ms-input-placeholder {
   background-color: rgba(220, 220, 220, 0.5);
   border-radius: 10px;
 }
+@media screen and (max-width: 650px) {
+  * {
+    font-weight: 300;
+  }
+}
 #videoWrap video {
   display: block;
 }
@@ -446,7 +452,7 @@ textarea:-ms-input-placeholder {
   color: #646464;
   margin-top: 5px;
   text-align: center;
-  font-weight: normal;
+  font-weight: 300;
 }
 #workImgs .imgsWrap .imgWrap a:hover p {
   color: #ec2127;
@@ -574,7 +580,7 @@ textarea:-ms-input-placeholder {
   line-height: 45px;
   color: #fff;
   font-size: 20px;
-  font-weight: normal;
+  font-weight: 300;
   text-align: center;
   background-color: rgba(50, 50, 50, 0.4);
 }
@@ -656,7 +662,7 @@ textarea:-ms-input-placeholder {
   line-height: 45px;
   color: #fff;
   font-size: 20px;
-  font-weight: normal;
+  font-weight: 300;
   text-align: center;
   background-color: rgba(50, 50, 50, 0.4);
 }
@@ -674,7 +680,7 @@ textarea:-ms-input-placeholder {
   height: 50px;
   color: #646464;
   font-size: 22px;
-  font-weight: normal;
+  font-weight: 300;
   text-align: center;
   line-height: 1;
   padding: 12px;
@@ -701,7 +707,7 @@ textarea:-ms-input-placeholder {
   display: inline-block;
   vertical-align: middle;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 300;
   color: #646464;
   margin-left: 5px;
 }

@@ -303,6 +303,7 @@ body {
 }
 body {
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 a,
 span,
@@ -384,6 +385,11 @@ textarea:-ms-input-placeholder {
   width: 8px;
   background-color: rgba(220, 220, 220, 0.5);
   border-radius: 10px;
+}
+@media screen and (max-width: 650px) {
+  * {
+    font-weight: 300;
+  }
 }
 .maxBox {
   margin: 0px auto;
@@ -622,14 +628,14 @@ textarea:-ms-input-placeholder {
   font-size: 13px;
 }
 #FOOTER span {
-  font-weight: normal;
+  font-weight: 300;
   margin-right: 10px;
 }
 #FOOTER .br {
   display: none;
 }
 #FOOTER a {
-  font-weight: normal;
+  font-weight: 300;
   padding: 0px 10px;
   display: inline-block;
   border-left: 1px solid #fff;
@@ -680,7 +686,7 @@ textarea:-ms-input-placeholder {
   color: #646464;
 }
 .g-normalText .bold {
-  font-weight: bold;
+  font-weight: bolder;
 }
 .g-normalText.center {
   text-align: center;

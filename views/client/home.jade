@@ -12,27 +12,27 @@ block body
         //-         .imgsWrap
         //-             .imgWrap
         //-                 a(href="#") 
-        //-                     img(src="/images/img_work_1.jpg", alt="workImg")/
+        //-                     img(src="/images/img_work_1.jpg", alt="华岭图片")/
         //-                     p 携手合作 
         //-             .imgWrap
         //-                 a(href="#") 
-        //-                     img(src="/images/img_work_2.jpg", alt="workImg")/
+        //-                     img(src="/images/img_work_2.jpg", alt="华岭图片")/
         //-                     p 携手合作 
         //-             .imgWrap
         //-                 a(href="#") 
-        //-                     img(src="/images/img_work_3.jpg", alt="workImg")/
+        //-                     img(src="/images/img_work_3.jpg", alt="华岭图片")/
         //-                     p 携手合作 
         //-             .imgWrap
         //-                 a(href="#") 
-        //-                     img(src="/images/img_work_4.jpg", alt="workImg")/
+        //-                     img(src="/images/img_work_4.jpg", alt="华岭图片")/
         //-                     p 携手合作 
         //-             .imgWrap
         //-                 a(href="#") 
-        //-                     img(src="/images/img_work_5.jpg", alt="workImg")/
+        //-                     img(src="/images/img_work_5.jpg", alt="华岭图片")/
         //-                     p 携手合作 
         //-             .imgWrap
         //-                 a(href="#") 
-        //-                     img(src="/images/img_work_6.png", alt="workImg")/
+        //-                     img(src="/images/img_work_6.png", alt="华岭图片")/
         //-                     p 携手合作 
         //-     .prevBtn
         //-         i.icon &#xe6b1;
@@ -40,7 +40,7 @@ block body
         //-         i.icon &#xe6b2;
         #companyIntroduct
             .maxBox.clear(style="max-width: 1020px")
-                p.text #{text.introduction[lang]}
+                p.text !{text.introduction[lang].replace(/\n/g, '<br/>')}
                 .introductEntry.devHistory
                     img(src="/images/img_home_company_1.jpg", alt="img_home_company_1")/
                     .linkWrap

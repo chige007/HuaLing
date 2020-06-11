@@ -321,15 +321,15 @@
 }
 #recruitments .item .wrap .headline p.big {
   color: #DC3A3A;
-  font-size: 22px;
-  font-weight: normal;
+  font-size: 20px;
+  font-weight: 300;
   line-height: 1;
   margin-bottom: 5px;
 }
 #recruitments .item .wrap .headline p.small {
   color: #DC3A3A;
-  font-size: 14px;
-  font-weight: 200;
+  font-size: 13px;
+  font-weight: 300;
   line-height: 1;
 }
 #recruitments .item .wrap .headline .redLine {
@@ -373,15 +373,15 @@
   padding: 15px;
 }
 #recruitments .item .wrap .content .label {
-  font-size: 16px;
+  font-size: 15px;
   color: #444;
   margin-bottom: 10px;
-  font-weight: normal;
+  font-weight: 300;
 }
 #recruitments .item .wrap .content .detail {
-  font-size: 13px;
+  font-size: 14px;
   color: #666;
-  line-height: 30px;
+  line-height: 26px;
 }
 @media screen and (max-width: 650px) {
   #recruitments {
@@ -401,10 +401,10 @@
     padding-top: 10px;
   }
   #recruitments .item .wrap .headline p.big {
-    font-size: 18px;
+    font-size: 16px;
   }
   #recruitments .item .wrap .headline p.small {
-    font-weight: 200;
+    font-weight: 300;
   }
   #recruitments .item:after {
     content: '';

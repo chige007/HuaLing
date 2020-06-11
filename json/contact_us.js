@@ -10,19 +10,19 @@ const text = {
         hk: '聯繫方式'
     },
     addressLabel: {
-        cn: '地址',
-        en: 'ADDRESS',
-        hk: '地址'
+        cn: '广州公司地址',
+        en: 'GUANGZHOU ADDRESS',
+        hk: '廣州公司地址'
     },
     phone: {
-        cn: '020-81031628\n9:00am-4:30pm PST\n星期一 至 星期五',
-        en: '020-81031628\n9:00am-4:30pm PST\nMonday - Friday',
-        hk: '020-81031628\n9:00am-4:30pm PST\n星期一 至 星期五'
+        cn: '020-81031628',
+        en: '020-81031628',
+        hk: '020-81031628'
     },
     email: 'master@welon-cn.com',
     address: {
         cn: '广州市番禺区大石镇工业二路1号之一\n华美国际1栋3楼',
-        en: '5/fl,block 8,no.9zhoumen Lu,\nLiwan District,guangzhou,\nChina',
+        en: '3/F,Block 1,Nimble Huamei International,\nNo.1-1,Gongye Er Lu,Dashi,Panyu,\nGuangzhou,Guangdong,China ',
         hk: '廣州市番禺區大石鎮工業二路1號之一\n華美國際1棟3樓'
     }
 }

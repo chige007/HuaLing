@@ -291,10 +291,10 @@
   margin-top: 20px;
   margin-bottom: 18px;
   line-height: 26px;
-  font-weight: normal;
+  font-weight: 300;
 }
 .paragraph .b {
-  font-weight: bold;
+  font-weight: bolder;
 }
 .paragraph .indent-2 {
   text-indent: 2em;
