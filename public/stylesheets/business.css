@@ -954,10 +954,10 @@
 }
 @media screen and (max-width: 650px) {
   #businessList .item .maskTitle .text {
-    font-size: 24px;
+    font-size: 20px;
   }
   #businessList .item .detail .headline {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 300;
     padding-bottom: 0px;
   }
