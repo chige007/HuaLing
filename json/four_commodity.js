@@ -160,7 +160,7 @@ const text = {
         sub: [{
             name: {
                 cn: '时尚泳衣',
-                en: 'fashion designed swimwear',
+                en: 'fashion swimwear',
                 hk: '時尚泳衣'
             },
             detail: {
@@ -172,7 +172,7 @@ const text = {
         }, {
             name: {
                 cn: '专业运动泳衣',
-                en: 'Sports swimwear',
+                en: 'Sport swimwear',
                 hk: '專業運動泳衣'
             },
             detail: {
