@@ -2,5 +2,8 @@
     .maxBox
         span Copyright © 2020 Welon China Ltd. All rights reserved.
         br.br
-        a(href="/group_business/#{lang}") 关于我们
-        a(href="/contact_information/#{lang}") 联络我们
+        if (lang == 'cn')
+            a(href="//www.beian.miit.gov.cn/" style="margin-top: 5px;") 粤ICP备07510607号
+        br.br
+        a.link(href="/group_business/#{lang}") #{lang == 'cn' ? '关于我们' : lang == 'hk' ? '關於我們' : 'About us'}
+        a.link(href="/contact_us/#{lang}") #{lang == 'cn' ? '联系我们' : lang == 'hk' ? '聯繫我們' : 'Contact us'}

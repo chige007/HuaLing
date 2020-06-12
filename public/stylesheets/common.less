@@ -230,16 +230,16 @@
     background-color: #e30917;
     text-align: center;
     padding: 15px 0px;
-    color: #fff;
-    font-size: 13px;
-    span{
+    span, a{
+        font-size: 13px;
+        color: #fff;
         font-weight: 300;
         margin-right: 10px;
     }
     .br{
         display: none;
     }
-    a{
+    a.link{
         font-weight: 300;
         padding: 0px 10px;
         display: inline-block;
@@ -247,6 +247,7 @@
         height: 14px;
         line-height: 14px;
         color: #fff;
+        text-decoration: none;
         &:hover{
             cursor: pointer;
         }
@@ -258,7 +259,7 @@
         .br{
             display: block;
         }
-        a{
+        a.link{
             margin-top: 12px;
             border-right: 1px solid #fff;
             border-left: none;

@@ -624,17 +624,18 @@ textarea:-ms-input-placeholder {
   background-color: #e30917;
   text-align: center;
   padding: 15px 0px;
-  color: #fff;
-  font-size: 13px;
 }
-#FOOTER span {
+#FOOTER span,
+#FOOTER a {
+  font-size: 13px;
+  color: #fff;
   font-weight: 300;
   margin-right: 10px;
 }
 #FOOTER .br {
   display: none;
 }
-#FOOTER a {
+#FOOTER a.link {
   font-weight: 300;
   padding: 0px 10px;
   display: inline-block;
@@ -642,8 +643,9 @@ textarea:-ms-input-placeholder {
   height: 14px;
   line-height: 14px;
   color: #fff;
+  text-decoration: none;
 }
-#FOOTER a:hover {
+#FOOTER a.link:hover {
   cursor: pointer;
 }
 @media screen and (max-width: 650px) {
@@ -653,12 +655,12 @@ textarea:-ms-input-placeholder {
   #FOOTER .br {
     display: block;
   }
-  #FOOTER a {
+  #FOOTER a.link {
     margin-top: 12px;
     border-right: 1px solid #fff;
     border-left: none;
   }
-  #FOOTER a:last-child {
+  #FOOTER a.link:last-child {
     border-right: none;
   }
 }
