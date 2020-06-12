@@ -1,4 +1,5 @@
 $(function(){
+    // 产品业务点击展开详情
     $('#businessList .item').on('click', function(e) {
         e.stopPropagation();
         $(this).siblings().removeClass('open');
@@ -14,7 +15,7 @@ $(function(){
         // $(this).siblings().removeClass('open').find('.detail').slideUp(400);
         // $(this).addClass('open').find('.detail').slideDown(400);
     });
-
+    // 产品业务点击关闭展开详情
     $('#businessList .item .detail .closeBtn').on('click', function(e) {
         e.stopPropagation();
         $(this).parent().parent().removeClass('open');

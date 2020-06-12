@@ -1,16 +1,23 @@
 $(function() {
+    // 当前页码
     var page = 1;
+    // 当前一页条数
     var pageSize = 5;
+    // 滚动加载锁
     var scrollLock = true;
+    // 加载中效果
     var loading = {
+        // 显示
         show: function(tips) {
             $('<div class="loading">'+ tips +'</div>').appendTo($('#newList'));
         },
+        // 隐藏
         hide: function() {
             $('#newList .loading').remove();
         }
     }
-    function getNewsList(year) {
+    // 获取新闻列表
+    function getNewsList(year) {// 年份
         scrollLock = false;
         if (page == 1) {
             $('#newList').empty();
@@ -63,11 +70,13 @@ $(function() {
         })
     }
 
+    // 根据年份查询
     $('#yearSelector').on('change', function() {
         page = 1;
         getNewsList(this.value);
     });
 
+    // 窗口滚动事件
     $('body').scroll(function(e) {
         if ($(this).scrollTop() >= $('#newList').outerHeight() - 400 && scrollLock) {
             page++;
@@ -75,5 +84,6 @@ $(function() {
         }
     });
 
+    // 获取所有新闻
     getNewsList('');
 });
