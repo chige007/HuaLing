@@ -684,6 +684,7 @@ textarea:-ms-input-placeholder {
   margin-bottom: 15px;
   display: block;
   color: #646464;
+  word-break: break-all;
 }
 .g-normalText .bold {
   font-weight: bolder;

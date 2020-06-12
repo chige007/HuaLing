@@ -12,7 +12,7 @@ block body
             p.g-normalText.center #{text.paragraph[lang]}
             #businessList
                 each m_b, m_index in text.business
-                    .item(class="business-#{m_index + 1}")
+                    .item(class="business-#{m_index + 1}", id="#{'business_' + (m_index + 1)}")
                         .bgImg
                         .maskTitle
                             .text #{m_b.name[lang]}

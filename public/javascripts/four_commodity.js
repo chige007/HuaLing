@@ -3,9 +3,14 @@ $(function(){
         e.stopPropagation();
         $(this).siblings().removeClass('open');
         $(this).addClass('open');
-        $('body').animate({
-            scrollTop: $('body').scrollTop() + $(this).offset().top
-        }, 300);
+        if (GLOBAL.getDeviceType() != 'mobile') {
+            $('body').animate({
+                scrollTop: $('body').scrollTop() + $(this).offset().top
+            }, 300);
+        } else {
+            var hock = $(this).attr('id');
+            window.location.hash = '#' + hock;
+        }
         // $(this).siblings().removeClass('open').find('.detail').slideUp(400);
         // $(this).addClass('open').find('.detail').slideDown(400);
     });

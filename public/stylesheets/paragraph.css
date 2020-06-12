@@ -284,6 +284,7 @@
   line-height: 30px;
   margin-bottom: 14px;
   color: #646464;
+  word-break: break-all;
 }
 .paragraph .h {
   font-size: 18px;
