@@ -10,16 +10,10 @@ block body
                 .text #{text.title[lang]}
             //- p.g-normalText 冯氏集团的业务涵盖全球消费品供应链的每个环节，包括贸易、物流、分销及零售。以下提供更多有关我们旗下公司和品牌的资料。
             #businessList
-                a.item(href="#", class="brand-1")
-                    .bgImg
-                a.item(href="#", class="brand-2")
-                    .bgImg
-                a.item(href="#", class="brand-3")
-                    .bgImg
-                a.item(href="#", class="brand-4")
-                    .bgImg
-                a.item(href="#", class="brand-5")
-                    .bgImg
+                each brand in text.brands
+                    a.item(href="#{brand.link}", target="_blank")
+                        .bgImg
+                            img(src="#{brand.bg}", alt="华岭图片")
 
         include components/footer
                     

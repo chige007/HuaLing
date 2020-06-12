@@ -306,20 +306,8 @@
   -o-transition: all 0.4s;
   -ms-transition: all 0.4s;
 }
-#businessList .item.brand-1 .bgImg {
-  background-image: url(/images/bg_brand_1.jpg);
-}
-#businessList .item.brand-2 .bgImg {
-  background-image: url(/images/bg_brand_2.jpg);
-}
-#businessList .item.brand-3 .bgImg {
-  background-image: url(/images/bg_brand_3.jpg);
-}
-#businessList .item.brand-4 .bgImg {
-  background-image: url(/images/bg_brand_4.jpg);
-}
-#businessList .item.brand-5 .bgImg {
-  background-image: url(/images/bg_brand_5.jpg);
+#businessList .item .bgImg img {
+  width: 100%;
 }
 #businessList .item:hover {
   cursor: pointer;
