@@ -6,7 +6,7 @@ const text = {
     },
     paragraph: {
         cn: '桦岭，用运动与世界交往。无论您有何梦想或抱负，桦岭运动的平台助您发展你的事业，欢迎加入我们。',
-        en: 'Connecting The World Through Sports, No matter your dreams and ambitions, WELON sports offer exciting platforms for you, welcome to join us. q	',
+        en: 'Connecting The World Through Sports, No matter your dreams and ambitions, WELON sports offer exciting platforms for you, welcome to join us',
         hk: '樺嶺，用運動與世界交往。無論您有何夢想或抱負，樺嶺運動的平臺助您發展你的事業，歡迎加入我們。'
     },
     paragraph2: {
