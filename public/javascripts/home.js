@@ -61,7 +61,12 @@ $(function(){
     }
     resizeWin();
 
-    $('#videoWrap').vidbacking();
+    // $('#videoWrap').vidbacking();
+    var video = document.getElementById('myVideo');
+    video.addEventListener('canplay', function(e) {
+        this.pause();
+        this.play();
+    })
 
     $('#workImgs').find('.nextBtn').on('click', function() {
         slide(currentIndex + 1);

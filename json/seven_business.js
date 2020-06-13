@@ -171,19 +171,19 @@ const text = {
         }]
     }, {
         name: {
-            cn: '品牌',
-            en: 'Brands',
-            hk: '品牌'
+            cn: '品牌零售',
+            en: 'Brand Retail',
+            hk: '品牌零售'
         },
         introduction: {
             cn: '自有品牌及进口品牌线下线上零售',
-            en: 'Private labels and imported labels retail in China',
+            en: 'Proprietary brands and imported brands retail in China',
             hk: '自有品牌及進口品牌線下線上零售'
         },
         sub: [{
             name: {
                 cn: '威玛斯运动零售公司',
-                en: 'Winmax Sport Retail Lid',
+                en: 'Winmax Sport Retail Ltd.',
                 hk: '威瑪斯運動零售公司'
             },
             detail: {
@@ -195,7 +195,7 @@ const text = {
         }, {
             name: {
                 cn: '蓝色极限',
-                en: 'BLUE HAWAII SURF',
+                en: 'Blue Hawii Surf (China) Ltd.',
                 hk: '藍色極限'
             },
             detail: {
@@ -207,7 +207,7 @@ const text = {
         }, {
             name: {
                 cn: '颖尚服饰',
-                en: 'INSTYLE',
+                en: 'Instyle Beach Clothing Ltd.',
                 hk: '穎尚服飾'
             },
             detail: {

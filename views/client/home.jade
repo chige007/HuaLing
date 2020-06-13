@@ -7,12 +7,12 @@ block body
     .container
         include components/header
         #videoWrap
-            video#myVideo(autoplay="autoplay", loop="loop", width="100%")
+            video#myVideo(autoplay, controls, loop, width="100%")
                 source(src="/videos/demo.mp4", type="video/mp4")
+            img#videoImg(src="/images/img_video.png")
             //- video#myVideo(class="vidbacking", poster="/images/icon_video.png", autoplay="autoplay", loop="loop", muted="muted", width="100%")
                 //- source(src="/videos/demo.webm" type="video/webm")
                 //- source(src="http://www.jplayer.org/video/m4v/Incredibles_Teaser.m4v", type="video/mp4")
-
 
         //- #workImgs
         //-     .maxBox(style="max-width: 1020px")

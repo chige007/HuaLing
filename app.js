@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // 使用 session 中间件
 app.use(session({
-    secret :  'hualing2020', // 对session id 相关的cookie 进行签名
+    secret : 'hualing2020', // 对session id 相关的cookie 进行签名
     name: 'sessionKey',
     resave : false,
     saveUninitialized: true, // 是否保存未初始化的会话

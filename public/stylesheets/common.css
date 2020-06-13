@@ -547,6 +547,7 @@ textarea:-ms-input-placeholder {
   #HEADER {
     padding: 12px 0px;
     height: 50px;
+    z-index: 999999999999;
   }
   #HEADER .maxBox {
     height: 100%;
@@ -570,7 +571,7 @@ textarea:-ms-input-placeholder {
     height: 100%;
     top: 50px;
     bottom: 0px;
-    z-index: 999;
+    z-index: 999999999999;
     margin: 0px;
     background-color: rgba(244, 244, 244, 0.98);
   }

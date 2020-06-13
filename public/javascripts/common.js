@@ -70,6 +70,16 @@ $(function(){
     $('#HEADER .menuEntry_mobile').on('click', function() {
         $(this).toggleClass('open');
         $('#HEADER .nav').toggleClass('show');
+        var video = document.getElementById('myVideo');
+        if ($(this).hasClass('open')) {
+            video.pause();
+            $('#myVideo').css('display', 'none');
+            $('#videoImg').css('display', 'block');
+        } else {
+            // video.play();
+            $('#myVideo').css('display', 'block');
+            $('#videoImg').css('display', 'none');
+        }
     });
 
 

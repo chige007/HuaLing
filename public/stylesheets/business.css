@@ -930,6 +930,22 @@
   -webkit-animation-direction: normal;
   animation-direction: normal;
 }
+#businessList .item.open .detail .introduction {
+  -webkit-animation-name: upShow-animation;
+  animation-name: upShow-animation;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+}
 #businessList .item.open .detail .detailList {
   -webkit-animation-name: upShow-animation;
   animation-name: upShow-animation;

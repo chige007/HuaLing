@@ -396,6 +396,10 @@ textarea:-ms-input-placeholder {
   display: block;
   z-index: 0;
 }
+#videoImg {
+  display: none;
+  width: 100%;
+}
 #workImgs {
   padding-top: 30px;
   padding-bottom: 30px;

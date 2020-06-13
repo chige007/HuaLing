@@ -5,8 +5,8 @@ $(function(){
         $(this).siblings().removeClass('open');
         $(this).addClass('open');
         if (GLOBAL.getDeviceType() != 'mobile') {
-            $('body').animate({
-                scrollTop: $('body').scrollTop() + $(this).offset().top
+            $('#container').animate({
+                scrollTop: $('#container').scrollTop() + $(this).offset().top
             }, 300);
         } else {
             var hock = $(this).attr('id');
