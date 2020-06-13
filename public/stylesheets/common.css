@@ -782,6 +782,7 @@ textarea:-ms-input-placeholder {
     right: 10px;
     bottom: 50px;
     width: 50px;
+    display: none;
   }
   #FLOATSITE .top {
     margin-bottom: 10px;
