@@ -22,8 +22,12 @@ block body
                         img(src="/images/icon_address.png", alt="华岭图标")
                 .right               
                     #map
+                    #gotoWelon 
+                        img(src="/images/icon_focus.png", alt="")
+                        span #{lang == 'cn' ? '桦岭' : lang == 'hk' ? '樺嶺' : 'Welon'}
         include components/footer
 
 block script
-    script(src="//api.map.baidu.com/api?v=2.0&ak=kGdcVw7mSGgbrBFQwiqfPe3ayWfX7irn")
+    //- script(src="//api.map.baidu.com/api?v=2.0&ak=kGdcVw7mSGgbrBFQwiqfPe3ayWfX7irn")
+    script(src="https://webapi.amap.com/maps?v=1.4.15&key=4a358cc6d2b7a50d3e299e79712ba0a0")
     script(src="/javascripts/contact_us.js")

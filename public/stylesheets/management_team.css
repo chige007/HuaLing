@@ -291,7 +291,16 @@
 #teamList .item {
   width: 50%;
   padding: 10px;
-  float: left;
+  display: inline-block;
+  vertical-align: top;
+}
+#teamList .item:before,
+#teamList .item:after {
+  display: table;
+  content: " ";
+}
+#teamList .item:after {
+  clear: both;
 }
 #teamList .item img {
   width: 100%;
@@ -303,6 +312,7 @@
   color: #464646;
   line-height: 1;
   margin-bottom: 10px;
+  font-weight: 300;
 }
 #teamList .item p.subText {
   font-size: 14px;
@@ -313,6 +323,12 @@
   margin-top: 10px;
   width: 60px;
   border-bottom: 4px solid #DC3A3A;
+}
+#teamList .item p.introduction {
+  font-size: 14px;
+  color: #666666;
+  line-height: 18px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 650px) {
   #teamList .item {

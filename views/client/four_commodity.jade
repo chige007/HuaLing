@@ -27,9 +27,9 @@ block body
                                         .imgWrap
                                             img.pic(src="/images/bg_commodity_#{m_index + 1}_#{s_index + 1}.jpg", alt="华岭图片")
                                         .textWrap
-                                            .title #{s_b.name[lang]}
+                                            .title !{s_b.name[lang].replace(/\n/g, '<br/>')}
                                             .redLine
-                                            .text #{s_b.detail[lang]}
+                                            .text !{s_b.detail[lang].replace(/\n/g, '<br/>')}
                                             a(href="#{s_b.web}", target="_blank").website 
                                                 img.icon(src="/images/icon_website.png", alt="icon")
                                                 span #{s_b.web}

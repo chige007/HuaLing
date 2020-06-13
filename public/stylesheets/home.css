@@ -393,6 +393,7 @@ textarea:-ms-input-placeholder {
 }
 #videoWrap video {
   display: block;
+  z-index: 0;
 }
 #workImgs {
   padding-top: 30px;

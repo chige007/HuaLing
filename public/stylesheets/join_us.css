@@ -310,12 +310,9 @@
   z-index: 1;
   border: 1px solid #DC3A3A;
 }
-#recruitments .item .wrap {
-  background-color: #f7f7f7;
-}
 #recruitments .item .wrap .headline {
   padding-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   padding-left: 15px;
   padding-bottom: 10px;
 }

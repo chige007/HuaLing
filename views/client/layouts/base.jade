@@ -14,9 +14,10 @@ html
     link(rel="stylesheet", href="/fonts/iconfont/iconfont.css")
     link(rel="shortcut icon", href="/images/favicon.ico", type="image/x-icon")
     block head
-  body
+  body(data-lang="#{lang}")
     block body
 
     script(src="/javascripts/jquery/jquery-3.5.0.min.js")
+    //- script(src="/javascripts/jquery/jquery-1.12.4.min.js")
     script(src="/javascripts/common.js")
     block script

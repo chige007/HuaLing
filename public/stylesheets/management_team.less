@@ -6,7 +6,10 @@
     .item{
         width: 50%;
         padding: 10px;
-        float: left;
+        display: inline-block;
+        vertical-align: top;
+        // float: left;
+        .clear;
         img{
             width: 100%;
             display: block;
@@ -17,6 +20,7 @@
             color: #464646;
             line-height: 1;
             margin-bottom: 10px;
+            font-weight: 300;
         }
         p.subText{
             font-size: 14px;
@@ -27,6 +31,12 @@
             margin-top: 10px;
             width: 60px;
             border-bottom: 4px solid @danger;
+        }
+        p.introduction{
+            font-size: 14px;
+            color: #666666;
+            line-height: 18px;
+            margin-top: 10px;
         }
     }
 }

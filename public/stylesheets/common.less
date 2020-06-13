@@ -7,6 +7,9 @@
     width: 100%;
     .clear;
 }
+.clear{
+    .clear;
+}
 
 #HEADER{
     padding: 18px 18px 0px 18px;
@@ -159,7 +162,7 @@
                 height: 100%;
                 top: 50px;
                 bottom: 0px;
-                z-index: 99;
+                z-index: 999;
                 margin: 0px;
                 background-color: rgba(244, 244, 244, 0.98);
                 .menu{
@@ -292,7 +295,7 @@
     margin-bottom: 15px;
     display: block;
     color: @gray;
-    word-break: break-all;
+    // word-break: break-all;
     .bold{
         font-weight: bolder;
     }
@@ -317,7 +320,7 @@
     position: fixed;
     right: 30px;
     bottom: 100px;
-    width: 60px;
+    width: 65px;
     text-align: center;
     z-index: 999;
     .top,
@@ -358,5 +361,22 @@
     }
     .next{
         margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #FLOATSITE{
+        right: 10px;
+        bottom: 50px;
+        width: 50px;
+        .top{
+            margin-bottom: 10px;
+            .wrap{
+                display: block;
+            }
+        }
+        .tips{
+            display: none;
+        }
     }
 }

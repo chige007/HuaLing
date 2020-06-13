@@ -5,9 +5,9 @@ const text = {
         hk: '四大商品系列'
     },
     paragraph: {
-        cn: '根据客户的不同需求，为其订制符合不同层级供应链解决方案',
-        en: 'Offer differnet levels of supply chain solutions',
-        hk: '根據客戶的不同需求，為其訂制符合不同層級供應鏈解決方案'
+        cn: '以核心产品为中心，形成四大运动系列产品',
+        en: 'Revolving around core products, Welon has developed full product lines for four major sports.',
+        hk: '以覈心產品為中心，形成四大運動系列產品'
     },
     business: [{
         name: {
@@ -18,7 +18,7 @@ const text = {
         sub: [{
             name: {
                 cn: '飞镖产品',
-                en: 'DART GAME',
+                en: 'Dart Game',
                 hk: '飛鏢產品'
             },
             detail: {
@@ -31,7 +31,7 @@ const text = {
         }, {
             name: {
                 cn: '球台',
-                en: 'TABLE GAME',
+                en: 'Table Game',
                 hk: '球臺'
             },
             detail: {
@@ -43,7 +43,7 @@ const text = {
         }, {
             name: {
                 cn: '健身产品',
-                en: 'FITNESS SPORT',
+                en: 'Fitness Sport',
                 hk: '健身產品'
             },
             detail: {
@@ -67,10 +67,10 @@ const text = {
             },
             detail: {
                 cn: '产品包含潜水衣/冲浪衣/潜水、皮艇、冲浪、划水装备/铁人三项/游泳、水上运动保护装备/专业救生衣',
-                en: 'Wetsuit for Diving/Surf/Sub/Paddle/Sail/Water-Ski/Triathlon/Swim-protection Wear for Watersports, Swim Float, Life Jacket.',
+                en: 'Wetsuits for Diving/Surf/Sub/Paddle/Sail/Water-Ski/Triathlon/Swim-protection Wear for Watersports, Swim Vests, Life Jackets.',
                 hk: '產品包含潜水衣/衝浪衣/潜水、皮艇、衝浪、劃水裝備/鐵人三項/游泳、水上運動保護裝備/專業救生衣'
             },
-            web: '//www.neo-splash.com'
+            web: '//www.welon-huahui.com.cn'
         }, {
             name: {
                 cn: '沙滩泳池玩具',
@@ -79,20 +79,20 @@ const text = {
             },
             detail: {
                 cn: '产品包含泳池玩具， 游泳训练，浮力背心，沙滩娱乐玩具/沙滩球',
-                en: 'Pool Toys, Swim Training, Swim Vests, Beach Toys/Beach Balls',
+                en: ' Pool Toys, Swim Training Products,Swim Vests, Beach Toys/Beach Balls',
                 hk: '產品包含泳池玩具，游泳訓練，浮力背心，沙灘娛樂玩具/沙灘球'
             },
             web: '//www.welon-huahui.com.cn'
         }, {
             name: {
-                cn: '潜水料周边小产品',
-                en: 'Neoprene Accessories (non-sport items)',
-                hk: '潜水料周邊小產品'
+                cn: '礼品及促销产品',
+                en: 'Gifts & Promotion Items',
+                hk: '禮品及促銷產品'
             },
             detail: {
-                cn: '其他产品，非运动产品, 潜水料儿童背包； 适合促销的产品如潜水料杯套瓶套，电脑保护套',
-                en: "Neoprene Kid's Bag, Promotion items",
-                hk: '潜水料周邊小產品其他產品，非運動產品，潜水料兒童背包；適合促銷的產品如潜水料杯套瓶套，電腦保護套'
+                cn: '潜水料材质促销产品和礼品如儿童背包，杯套瓶套，电脑保护套等等',
+                en: "Neoprene Kid's Bags, Promotion items",
+                hk: '潜水料材質促銷產品和禮品如兒童背包，杯套瓶套，電腦保護套等等'
             },
             web: '//www.welon-huahui.com.cn'
         }]
@@ -105,7 +105,7 @@ const text = {
         sub: [{
             name: {
                 cn: '球类',
-                en: 'BALLS',
+                en: 'Balls',
                 hk: '球類'
             },
             detail: {
@@ -117,7 +117,7 @@ const text = {
         }, {
             name: {
                 cn: '滑板',
-                en: 'SKATEBOARD',
+                en: 'Skateboard',
                 hk: '滑板'
             },
             detail: {
@@ -129,7 +129,7 @@ const text = {
         }, {
             name: {
                 cn: '皮划艇',
-                en: 'KAYAK',
+                en: 'Kayak',
                 hk: '皮划艇'
             },
             detail: {
@@ -160,49 +160,49 @@ const text = {
         sub: [{
             name: {
                 cn: '时尚泳衣',
-                en: 'fashion swimwear',
+                en: 'Fashion Swimwear',
                 hk: '時尚泳衣'
             },
             detail: {
-                cn: '女装泳衣/男装泳裤/童装泳衣',
-                en: 'women/men/kids fashion swimwear',
-                hk: '女裝泳衣/男裝泳褲/童裝泳衣'
+                cn: '度假时尚泳衣\n女士比基尼、连体泳衣、分体泳衣等\n男士泳裤\n儿童泳衣、泳裤',
+                en: "Fashion swimwear for beach and resort\nWomen bikini,one piece,tankini,monokini\nMen's trucks\nKid's swimwear",
+                hk: '度假時尚泳衣\n女士比基尼、連體泳衣、分體泳衣等\n男士泳褲\n兒童泳衣、泳褲'
             },
             web: '//www.welon-swimwear.com.cn'
         }, {
             name: {
                 cn: '专业运动泳衣',
-                en: 'Sport swimwear',
+                en: 'Sports Swimwear',
                 hk: '專業運動泳衣'
             },
             detail: {
-                cn: '运动泳衣/冲浪服',
-                en: 'sports swimwear/ rash guards',
-                hk: '運動泳衣/衝浪服'
+                cn: '竞技泳衣、运动泳衣\n防晒衣、儿童防晒服饰',
+                en: 'Competition swimwear\nSports swimwear for pool\nRash guards\nSun-protective swimsuit',
+                hk: '競技泳衣、運動泳衣\n防曬衣、兒童防曬服飾'
             },
             web: '//www.welon-swimwear.com.cn'
         }, {
             name: {
                 cn: '沙滩泳池搭配服饰',
-                en: 'beachwear&accessories',
+                en: 'Beachwear & Accessories',
                 hk: '沙灘泳池搭配服飾'
             },
             detail: {
-                cn: '罩衫/沙滩裤',
-                en: 'coverups/beach shorts',
-                hk: '罩衫/沙灘褲'
+                cn: '罩衫、防晒泳衣、沙滩巾、沙滩裤等',
+                en: 'Coverups,Rash vest,Sarong,Boardshorts',
+                hk: '罩衫、防曬泳衣、沙灘巾、沙灘褲等'
             },
             web: '//www.welon-swimwear.com.cn'
         }, {
             name: {
                 cn: '瑜伽健身服',
-                en: 'Yoga &gym wear',
+                en: 'Activewear',
                 hk: '瑜伽健身服'
             },
             detail: {
-                cn: '瑜伽服/健身服',
-                en: 'Yoga wear/ gym wear',
-                hk: '瑜伽服/健身服'
+                cn: '瑜伽、健身、运动服饰',
+                en: 'Yoga wear,Fitness wear,Sportswear',
+                hk: '瑜伽、健身、運動服飾'
             },
             web: '//www.welon-swimwear.com.cn'
         }]

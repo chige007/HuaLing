@@ -74,10 +74,13 @@ $(function(){
 
 
     $('body').scroll(function(e) {
-        e.stopPropagation();
-        var scrollTop = $(this).scrollTop();
-        var clientHeight = document.body.clientHeight;
-        var scrollHeight = document.body.scrollHeight;
+        // e.stopPropagation();
+        // e.preventDefault();
+        var scrollTop = e.target.scrollTop;
+        var clientHeight = e.target.clientHeight;
+        var scrollHeight = e.target.scrollHeight;
+
+        // $('.g-bigTitle .text').text(scrollTop + ',' + clientHeight + ',' + scrollHeight);
         if (scrollTop + clientHeight == scrollHeight) {
             $('#FLOATSITE .next .wrap').fadeOut(400);
         } else {
@@ -91,22 +94,40 @@ $(function(){
     });
     $('#FLOATSITE .top .wrap').on('click', function(e) {
         e.stopPropagation();
+        e.preventDefault();
         $('body').animate({
             scrollTop: 0
         }, 300);
-    }).on('mouseover', function() {
-        $('#FLOATSITE .tips span').text('返回顶部').css('display', 'block');
-    }).on('mouseleave', function() {
+    }).on('mouseover', function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        var text = {
+            cn: '返回顶部',
+            hk: '返回頂部',
+            en: 'back to top'
+        }
+        $('#FLOATSITE .tips span').text(text[$('body').attr('data-lang')]).css('display', 'block');
+    }).on('mouseleave', function(e) {
         $('#FLOATSITE .tips span').css('display', 'none');
     });
     $('#FLOATSITE .next .wrap').on('click', function(e) {
         e.stopPropagation();
+        e.preventDefault();
         $('body').animate({
             scrollTop: $('body').scrollTop() + document.body.clientHeight
         }, 300);
-    }).on('mouseover', function() {
-        $('#FLOATSITE .tips span').text('下一页').css('display', 'block');
-    }).on('mouseleave', function() {
+    }).on('mouseover', function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        var text = {
+            cn: '下一页',
+            hk: '下一頁',
+            en: 'next page'
+        }
+        $('#FLOATSITE .tips span').text(text[$('body').attr('data-lang')]).css('display', 'block');
+    }).on('mouseleave', function(e) {
+        e.stopPropagation();
+        e.preventDefault();
         $('#FLOATSITE .tips span').css('display', 'none');
     });
 })

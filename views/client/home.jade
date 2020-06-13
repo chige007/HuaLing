@@ -6,7 +6,8 @@ block body
     .container
         include components/header
         #videoWrap
-            video(src="/videos/demo.mp4", autoplay="autoplay", loop="loop", muted="muted", width="100%") 您的浏览器不支持 video 标签
+            video#myVideo(autoplay="autoplay", poster="/images/bg_business_4_open.jpg", loop="loop", muted="muted", width="100%")
+                source(src="/videos/demo.mp4", type="video/mp4")
         //- #workImgs
         //-     .maxBox(style="max-width: 1020px")
         //-         .imgsWrap

@@ -1,7 +1,7 @@
 extends layouts/base
 
 block head
-
+    link(rel="stylesheet", href="/stylesheets/development_history.css")
 block body
     .container
         include components/header
@@ -10,13 +10,23 @@ block body
                 .text #{text.title[lang]}
 
             p.g-normalText.center(style="margin-bottom: 60px;") #{text.content[lang]}
-                        
-            - var i = 1
-            - var length = 6
-            //- if (lang == 'en') 
-            //-     -length = 6
-            while i < length
-                img(src="/images/img_fzlc_pc_#{lang == 'hk' ? 'cn' : lang}_#{i}.jpg", alt="发展历程", style="width: 100%; display: block;")
-                - i += 1
+
+            .imgList.pc(style="display: none")
+                - var i = 1
+                - var length = 6
+                //- if (lang == 'en') 
+                //-     -length = 6
+                while i < length
+                    img(src="/images/img_fzlc_pc_#{lang}_#{i}.jpg", alt="发展历程", style="width: 100%; display: block;")
+                    - i += 1
+
+            .imgList.mobile(style="display: none")
+                - var i = 1
+                - var length = 6
+                while i < length
+                    img(src="/images/img_fzlc_mobile_#{lang}_#{i}.jpg", alt="发展历程", style="width: 100%; display: block;")
+                    - i += 1
 
         include components/footer
+block script
+    script(src="/javascripts/development_history.js")

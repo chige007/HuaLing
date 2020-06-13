@@ -404,6 +404,22 @@ textarea:-ms-input-placeholder {
 .maxBox:after {
   clear: both;
 }
+.maxBox:before,
+.maxBox:after {
+  display: table;
+  content: " ";
+}
+.maxBox:after {
+  clear: both;
+}
+.clear:before,
+.clear:after {
+  display: table;
+  content: " ";
+}
+.clear:after {
+  clear: both;
+}
 #HEADER {
   padding: 18px 18px 0px 18px;
 }
@@ -553,7 +569,7 @@ textarea:-ms-input-placeholder {
     height: 100%;
     top: 50px;
     bottom: 0px;
-    z-index: 99;
+    z-index: 999;
     margin: 0px;
     background-color: rgba(244, 244, 244, 0.98);
   }
@@ -686,7 +702,6 @@ textarea:-ms-input-placeholder {
   margin-bottom: 15px;
   display: block;
   color: #646464;
-  word-break: break-all;
 }
 .g-normalText .bold {
   font-weight: bolder;
@@ -706,7 +721,7 @@ textarea:-ms-input-placeholder {
   position: fixed;
   right: 30px;
   bottom: 100px;
-  width: 60px;
+  width: 65px;
   text-align: center;
   z-index: 999;
 }
@@ -761,4 +776,20 @@ textarea:-ms-input-placeholder {
 }
 #FLOATSITE .next {
   margin-top: 10px;
+}
+@media screen and (max-width: 650px) {
+  #FLOATSITE {
+    right: 10px;
+    bottom: 50px;
+    width: 50px;
+  }
+  #FLOATSITE .top {
+    margin-bottom: 10px;
+  }
+  #FLOATSITE .top .wrap {
+    display: block;
+  }
+  #FLOATSITE .tips {
+    display: none;
+  }
 }

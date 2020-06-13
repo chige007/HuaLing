@@ -35,9 +35,9 @@ const text = {
             hk: '樺興運動'
         },
 		introduction: {
-			cn: '桦岭集团的重要组成部分，坐拥两家工厂，分别为惠州桦兴运动用品有限公司和常州桦利信体育用品有限公司',
-            en: 'One of the most essential departments of Welon, owns two factories Huizhou Huaxing Sports Goods Co.Ltd.& Hualixin Sports Goods Co.Ltd. ',
-            hk: '樺嶺集團的重要組成部分，坐擁兩家工廠，分別為惠州樺興運動用品有限公司和常州樺利信體育用品有限公司。'
+			cn: '桦岭集团的重要组成部分，拥有两家工厂，分别为惠州桦兴运动用品有限公司和常州桦利信体育用品有限公司。',
+            en: 'One of the most essential departments of Welon, owns two factories Huizhou Huaxing Sports Goods Co.Ltd.& Hualixin Sports Goods Co.Ltd.',
+            hk: '樺嶺集團的重要組成部分，擁有兩家工廠，分別為惠州樺興運動用品有限公司和常州樺利信體育用品有限公司。'
 		},
         sub: [{
             name: {
@@ -46,9 +46,9 @@ const text = {
                 hk: '惠州樺興運動用品有限公司'
             },
             detail: {
-                cn: '坐落于广东惠州，含多年的氯丁橡胶材料的运动产品OEM和ODM生产经验，保证其能快速服务各种类别的客人。',
+                cn: '位于广东惠州，拥有多年Neoprene运动产品OEM和ODM生产经验，保证其能快速服务各种类别的客人。',
                 en: '(Huizhou, Guangdong), an experienced OEM & ODM manufacturer, specializing in producing various types of Neoprene Sport items. ',
-                hk: '坐落於廣東惠州，含多年的氯丁橡膠資料的運動產品OEM和ODM生產經驗，保證其能快速服務各種類別的客人。'
+                hk: '位於廣東惠州，擁有多年Neoprene運動產品OEM和ODM生產經驗，保證其能快速服務各種類別的客人。'
             },
             web: '//www.welon-huahui.com.cn'
         }, {
@@ -58,9 +58,9 @@ const text = {
                 hk: '樺利信運動用品有限公司'
             },
             detail: {
-                cn: '坐落于江苏常州，专业的水上运动用品一条龙生产商,拥有15年的冲浪衣潜水衣研发、设计、生产和销售经验，以及优秀的原材料研发能力',
-                en: "(Changzhou, Jiangsu) is an one – stop supply chain manufacturer,  owning 15 year’s wetsuit design, manufacturing, sales experience & advantage raw material research ability.",
-                hk: '坐落於江蘇常州，專業的水上運動用品一條龍生產商，擁有15年的衝浪衣潜水衣研發、設計、生產和銷售經驗，以及優秀的原材料研發能力'
+                cn: '位于于江苏常州，专业的水上运动用品一条龙生产商,拥有15年的冲浪衣潜水衣研发、设计、生产和销售经验，以及优秀的原材料研发能力。',
+                en: "(Changzhou, Jiangsu) one – stop supply chain manufacturer,  owning 15-year’s experience at wetsuit design, manufacturing, sales & superior raw material research ability.",
+                hk: '位於於江蘇常州，專業的水上運動用品一條龍生產商，擁有15年的衝浪衣潜水衣研發、設計、生產和銷售經驗，以及優秀的原材料研發能力。'
             },
             web: '//www.welon-huahui.com.cn'
         }, {
@@ -70,9 +70,9 @@ const text = {
                 hk: 'NEOSPLASH 品牌'
             },
             detail: {
-                cn: 'WELON的国内自主品牌，主营潜水/冲浪湿衣以及相关水上运动产品。在国内运动零售店和网上商城有售',
+                cn: 'WELON的国内自主品牌，主营潜水/冲浪湿衣以及相关水上运动产品。以上产品均在国内运动零售店和网上商城有售。',
                 en: "Proprietary brand Neo-Splash covers wide-ranging neoprene diving / surfing suits and water sport accessories, available for sale in domestic retail stores and online shopping malls.",
-                hk: 'WELON的國內自主品牌，主營潜水/衝浪濕衣以及相關水上運動產品。在國內運動零售店和網上商城有售'
+                hk: 'WELON的國內自主品牌，主營潜水/衝浪濕衣以及相關水上運動產品。以上產品均在國內運動零售店和網上商城有售。'
             },
             web: '//www.neo-splash.com'
         }]
