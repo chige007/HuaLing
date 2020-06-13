@@ -279,11 +279,10 @@
 }
 #businessList {
   margin-top: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 #businessList .item {
   display: block;
-  min-height: 130px;
   width: 100%;
   padding-bottom: 24%;
   background-position: center;
@@ -305,9 +304,6 @@
   -moz-transition: all 0.4s;
   -o-transition: all 0.4s;
   -ms-transition: all 0.4s;
-}
-#businessList .item .bgImg img {
-  width: 100%;
 }
 #businessList .item:hover {
   cursor: pointer;

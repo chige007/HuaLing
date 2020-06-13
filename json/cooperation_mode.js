@@ -5,9 +5,9 @@ const text = {
         hk: '合作模式'
     },
     paragraph: {
-        cn: '根据客户的不同需求，为其订制符合不同层级供应链解决方案',
-        en: 'Offer differnet levels of supply chain solutions',
-        hk: '根据客户的不同需求，为其订制符合不同层级供应链解决方案',
+        cn: '为满足全球客户的多元化需求，为其订制不同层级的供应链解决方案',
+        en: 'Offer different levels of supply chain solution, to meet the diverse needs of our global customers.',
+        hk: '為滿足全球客戶的多元化需求，為其訂制不同層級的供應鏈解決方案',
     },
     modes: [{
         img: '/images/img_cooperation_1.jpg',

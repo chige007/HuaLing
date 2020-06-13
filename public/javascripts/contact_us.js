@@ -48,7 +48,7 @@ $(function() {
                 '地址 : 廣州市番禺區大石鎮工業二路1號之一華美國際1棟3樓</div></div>'
             ],
             en: [
-                '<div style="font-size: 13px; color: #888;"><b style="margin-bottom: 8px; display: inline-block; font-size: 15px; color: #333">Welon China Ltd.</b>',
+                '<div style="font-size: 13px; color: #888;"><b style="margin-bottom: 8px; display: inline-block; font-size: 15px; color: #333">WELON China Ltd.</b>',
                 'Telephone : 020-81031628',
                 'E-mail : master@welon-cn.com',
                 'Address : 3/F,Block 1,Nimble Huamei International,No.1-1,Gongye Er Lu,Dashi,Panyu,Guangzhou,Guangdong,China</div></div>'

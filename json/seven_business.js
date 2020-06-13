@@ -12,13 +12,13 @@ const text = {
     business: [{
         name: {
             cn: ' 创展运动',
-            en: 'WELON CREATIVE SPORT',
+            en: 'Creative Sport',
             hk: '創展運動'
         },
         sub: [{
             name: {
                 cn: ' 惠州创展运动器材有限公司',
-                en: 'Huizhou Creative Sporting Googs Co., Ltd',
+                en: 'Huizhou Creative Sporting Goods Co., Ltd',
                 hk: '惠州創展運動器材有限公司'
             },
             detail: {
@@ -31,7 +31,7 @@ const text = {
     }, {
         name: {
             cn: '桦兴运动',
-            en: 'HUAXING SPORT ',
+            en: 'HuaXing Sport',
             hk: '樺興運動'
         },
 		introduction: {
@@ -79,7 +79,7 @@ const text = {
     }, {
         name: {
             cn: '桦岭运动时尚 ',
-            en: 'WELON SPORT AND FASHION GROUP LIMITED',
+            en: 'Welon Sport and Fashion',
             hk: '樺嶺運動時尚'
         },
         sub: [{
@@ -97,7 +97,7 @@ const text = {
         }, {
             name: {
                 cn: 'SISIA时尚度假泳衣',
-                en: 'SISIA SWIMWEAR',
+                en: 'Sisia Swimwear',
                 hk: 'SISIA時尚度假泳衣'
             },
             detail: {
@@ -110,7 +110,7 @@ const text = {
     }, {
         name: {
             cn: '威玛斯运动',
-            en: 'WINMAX SPORT',
+            en: 'Winmax Sport',
             hk: '威瑪斯運動'
         },
         sub: [{
@@ -153,7 +153,7 @@ const text = {
     }, {
         name: {
             cn: '互联网商务',
-            en: 'Global E-commerce',
+            en: 'Global E-Commerce',
             hk: '互聯網商務'
         },
         sub: [{

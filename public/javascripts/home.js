@@ -61,6 +61,8 @@ $(function(){
     }
     resizeWin();
 
+    $('#videoWrap').vidbacking();
+
     $('#workImgs').find('.nextBtn').on('click', function() {
         slide(currentIndex + 1);
     });

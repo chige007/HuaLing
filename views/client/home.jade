@@ -1,13 +1,19 @@
 extends layouts/base
 
 block head
+    //- link(rel="stylesheet", href="/javascripts/vidbacking/jquery.vidbacking.min.css")
     link(rel="stylesheet", href="/stylesheets/home.css")
 block body
     .container
         include components/header
         #videoWrap
-            video#myVideo(autoplay="autoplay", poster="/images/bg_business_4_open.jpg", loop="loop", muted="muted", width="100%")
+            video#myVideo(autoplay="autoplay", loop="loop", width="100%")
                 source(src="/videos/demo.mp4", type="video/mp4")
+            //- video#myVideo(class="vidbacking", poster="/images/icon_video.png", autoplay="autoplay", loop="loop", muted="muted", width="100%")
+                //- source(src="/videos/demo.webm" type="video/webm")
+                //- source(src="http://www.jplayer.org/video/m4v/Incredibles_Teaser.m4v", type="video/mp4")
+
+
         //- #workImgs
         //-     .maxBox(style="max-width: 1020px")
         //-         .imgsWrap
@@ -39,6 +45,8 @@ block body
         //-         i.icon &#xe6b1;
         //-     .nextBtn
         //-         i.icon &#xe6b2;
+
+        
         #companyIntroduct
             .maxBox.clear(style="max-width: 1020px")
                 p.text !{text.introduction[lang].replace(/\n/g, '<br/>')}
@@ -81,4 +89,6 @@ block body
         include components/footer
                     
 block script
+    //- script(src="/javascripts/vidbacking/jquery.vidbacking.min.js")
+    //- script(src="/javascripts/html5media.min.js")
     script(src="/javascripts/home.js")

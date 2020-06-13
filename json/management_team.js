@@ -6,7 +6,7 @@ const text = {
     },
     paragraph: {
         cn: '桦岭拥有专业和经验丰富的团队服务于各个业务环节',
-        en: 'Welon has got professional and experienced teams to serve all parts in business',
+        en: 'WELON has got professional and experienced teams to serve all parts in business',
         hk: '樺嶺擁有專業和經驗豐富的團隊服務於各個業務環節',
     },
     teams: [{

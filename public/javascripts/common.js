@@ -73,7 +73,7 @@ $(function(){
     });
 
 
-    $('body').scroll(function(e) {
+    $('#container').scroll(function(e) {
         // e.stopPropagation();
         // e.preventDefault();
         var scrollTop = e.target.scrollTop;
@@ -95,7 +95,7 @@ $(function(){
     $('#FLOATSITE .top .wrap').on('click', function(e) {
         e.stopPropagation();
         e.preventDefault();
-        $('body').animate({
+        $('#container').animate({
             scrollTop: 0
         }, 300);
     }).on('mouseover', function(e) {
@@ -113,8 +113,8 @@ $(function(){
     $('#FLOATSITE .next .wrap').on('click', function(e) {
         e.stopPropagation();
         e.preventDefault();
-        $('body').animate({
-            scrollTop: $('body').scrollTop() + document.body.clientHeight
+        $('#container').animate({
+            scrollTop: $('#container').scrollTop() + document.body.clientHeight
         }, 300);
     }).on('mouseover', function(e) {
         e.stopPropagation();

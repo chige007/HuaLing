@@ -15,8 +15,8 @@ block body
                     .item
                         img(src="#{mode.img}", alt="image")
                         p.mainText #{lang == 'en' ? mode.name['en_s'] || mode.name['en'] : mode.name[lang]}
-                        if (lang != 'en')
-                            p.subText #{mode.name['en']}
+                        //- if (lang != 'en')
+                        //-     p.subText #{mode.name['en']}
                         .redLine
                         p.introduction #{mode.introduction[lang]}
 

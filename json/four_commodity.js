@@ -165,7 +165,7 @@ const text = {
             },
             detail: {
                 cn: '度假时尚泳衣\n女士比基尼、连体泳衣、分体泳衣等\n男士泳裤\n儿童泳衣、泳裤',
-                en: "Fashion swimwear for beach and resort\nWomen bikini,one piece,tankini,monokini\nMen's trucks\nKid's swimwear",
+                en: "Fashion swimwear for beach and resort\nWomen Bikini,One-piece,\nTankini,Monokini\nMen's Trucks\nKid's Swimwear",
                 hk: '度假時尚泳衣\n女士比基尼、連體泳衣、分體泳衣等\n男士泳褲\n兒童泳衣、泳褲'
             },
             web: '//www.welon-swimwear.com.cn'
@@ -177,7 +177,7 @@ const text = {
             },
             detail: {
                 cn: '竞技泳衣、运动泳衣\n防晒衣、儿童防晒服饰',
-                en: 'Competition swimwear\nSports swimwear for pool\nRash guards\nSun-protective swimsuit',
+                en: 'Competition Swimwear\nSports Swimwear For Pool\nRash guards\nSun-protective swimsuit',
                 hk: '競技泳衣、運動泳衣\n防曬衣、兒童防曬服飾'
             },
             web: '//www.welon-swimwear.com.cn'
@@ -189,7 +189,7 @@ const text = {
             },
             detail: {
                 cn: '罩衫、防晒泳衣、沙滩巾、沙滩裤等',
-                en: 'Coverups,Rash vest,Sarong,Boardshorts',
+                en: 'Coverups, Sarong\nRash Vest, Board shorts',
                 hk: '罩衫、防曬泳衣、沙灘巾、沙灘褲等'
             },
             web: '//www.welon-swimwear.com.cn'
@@ -201,7 +201,7 @@ const text = {
             },
             detail: {
                 cn: '瑜伽、健身、运动服饰',
-                en: 'Yoga wear,Fitness wear,Sportswear',
+                en: 'Yoga wear,Fitness wear,\nSportswear',
                 hk: '瑜伽、健身、運動服飾'
             },
             web: '//www.welon-swimwear.com.cn'

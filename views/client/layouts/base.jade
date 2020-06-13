@@ -15,9 +15,10 @@ html
     link(rel="shortcut icon", href="/images/favicon.ico", type="image/x-icon")
     block head
   body(data-lang="#{lang}")
-    block body
+    #container
+        block body
 
-    script(src="/javascripts/jquery/jquery-3.5.0.min.js")
-    //- script(src="/javascripts/jquery/jquery-1.12.4.min.js")
+    //- script(src="/javascripts/jquery/jquery-3.5.0.min.js")
+    script(src="/javascripts/jquery/jquery-1.12.4.min.js")
     script(src="/javascripts/common.js")
     block script

@@ -301,8 +301,9 @@ body {
   font-size: 14px;
   background-color: #fff;
 }
-body {
+#container {
   overflow-y: auto;
+  height: 100%;
   -webkit-overflow-scrolling: touch;
 }
 a,
@@ -653,7 +654,7 @@ textarea:-ms-input-placeholder {
 }
 #FOOTER a.link {
   font-weight: 300;
-  padding: 0px 10px;
+  padding-left: 10px;
   display: inline-block;
   border-left: 1px solid #fff;
   height: 14px;
@@ -673,6 +674,8 @@ textarea:-ms-input-placeholder {
   }
   #FOOTER a.link {
     margin-top: 12px;
+    margin-right: 0px;
+    padding: 0px 10px;
     border-right: 1px solid #fff;
     border-left: none;
   }
@@ -782,7 +785,6 @@ textarea:-ms-input-placeholder {
     right: 10px;
     bottom: 50px;
     width: 50px;
-    display: none;
   }
   #FLOATSITE .top {
     margin-bottom: 10px;

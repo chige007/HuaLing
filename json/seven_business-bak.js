@@ -6,19 +6,19 @@ const text = {
     },
     paragraph: {
         cn: '桦岭业务分为七大板块，覆盖不同运动产品，和多种业务模式和销售渠道。',
-        en: 'Welon business is divided into seven parts, covering different sports products, business models and sales channels.',
+        en: 'WELON business is divided into seven parts, covering different sports products, business models and sales channels.',
         hk: '樺嶺業務分為七大板塊，覆蓋不同運動產品，和多種業務模式和銷售管道。'
     },
     business: [{
         name: {
             cn: '创展运动',
-            en: 'Welon Creative Sport',
+            en: 'WELON Creative Sport',
             hk: '創展運動'
         },
         sub: [{
             name: {
                 cn: '创展运动',
-                en: 'Welon Creative Sport',
+                en: 'WELON Creative Sport',
                 hk: '創展運動'
             },
             detail: {
@@ -42,7 +42,7 @@ const text = {
             },
             detail: {
                 cn: '桦岭集团的重要组成部分，坐拥两家工厂，分别为惠州桦兴运动用品有限公司和常州桦利信体育用品有限公司',
-                en: 'One of the most essential departments of Welon, owns two factories Huizhou Huaxing Sports Goods Co.Ltd.& Hualixin Sports Goods Co.Ltd.',
+                en: 'One of the most essential departments of WELON, owns two factories Huizhou Huaxing Sports Goods Co.Ltd.& Hualixin Sports Goods Co.Ltd.',
                 hk: '樺嶺集團的重要組成部分，坐擁兩家工廠，分別為惠州樺興運動用品有限公司和常州樺利信體育用品有限公司'
             },
             web: '//www.welon-huahui.com.cn'
@@ -92,7 +92,7 @@ const text = {
         sub: [{
             name: {
                 cn: '桦岭运动时尚集团有限公司',
-                en: 'Welon Sport and Fashion Group Ltd',
+                en: 'WELON Sport and Fashion Group Ltd',
                 hk: '樺嶺運動時尚集團有限公司'
             },
             detail: {

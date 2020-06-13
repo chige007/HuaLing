@@ -28,7 +28,7 @@ const text = {
         },
         content: {
             cn: '以核心产品为中心，形成四大运动系列产品',
-            en: 'Revolving around core products, Welon has developed full product lines for four major sports.',
+            en: 'Revolving around core products, WELON has developed full product lines for four major sports.',
             hk: '以覈心產品為中心，形成四大運動系列產品'
         },
         url: '/four_commodity'

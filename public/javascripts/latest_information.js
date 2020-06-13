@@ -2,7 +2,7 @@ $(function() {
     // 当前页码
     var page = 1;
     // 当前一页条数
-    var pageSize = 5;
+    var pageSize = 10;
     // 滚动加载锁
     var scrollLock = true;
     // 加载中效果
@@ -24,7 +24,9 @@ $(function() {
         }
         loading.hide();
         loading.show('加载中...');
-        var filter = {}
+        var filter = {
+            status: 1
+        }
         if (year) {
             filter.happenTime = {
                 $gte: new Date(year * 1, 0, 1),

@@ -16,7 +16,7 @@ const menus = [{
         url: '/group_business',
         name: {
             cn: '集团业务',
-            en: 'Who we are',
+            en: 'Who We Are',
             hk: '集團業務'
         }
     // }, {
