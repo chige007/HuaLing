@@ -290,9 +290,18 @@
 }
 #recruitments .item {
   width: 50%;
-  float: left;
+  display: inline-block;
+  vertical-align: top;
   padding-bottom: 50px;
   border-left: 1px solid #ddd;
+}
+#recruitments .item:before,
+#recruitments .item:after {
+  display: table;
+  content: " ";
+}
+#recruitments .item:after {
+  clear: both;
 }
 #recruitments .item.recruit_0:after,
 #recruitments .item.recruit_1:after {
@@ -328,6 +337,27 @@
   font-size: 13px;
   font-weight: 300;
   line-height: 1;
+}
+#recruitments .item .wrap .headline a.more {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+#recruitments .item .wrap .headline a.more img,
+#recruitments .item .wrap .headline a.more span {
+  display: inline-block;
+  vertical-align: middle;
+  color: #999;
+  font-size: 13px;
+}
+#recruitments .item .wrap .headline a.more img {
+  margin-right: 4px;
+  height: 16px;
+  top: 1px;
+}
+#recruitments .item .wrap .headline a.more:hover span {
+  color: #ec2127;
+  cursor: pointer;
 }
 #recruitments .item .wrap .headline .redLine {
   position: absolute;

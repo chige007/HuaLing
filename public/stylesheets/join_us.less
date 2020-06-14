@@ -5,9 +5,11 @@
     margin: 50px 0px;
     .item{
         width: 50%;
-        float: left;
+        display: inline-block;
+        vertical-align: top;
         padding-bottom: 50px;
         border-left: 1px solid #ddd;
+        .clear;
         &.recruit_0,
         &.recruit_1{
             &:after{
@@ -41,6 +43,29 @@
                     font-size: 13px;
                     font-weight: 300;
                     line-height: 1;
+                }
+                a.more{
+                    position: absolute;
+                    right: 20px;
+                    top: 20px;
+                    img,
+                    span{
+                        display: inline-block;
+                        vertical-align: middle;
+                        color: #999;
+                        font-size: 13px;
+                    }
+                    img{
+                        margin-right: 4px;
+                        height: 16px;
+                        top: 1px;
+                    }
+                    &:hover{
+                        span{
+                            color: @highlight;
+                            cursor: pointer;
+                        }
+                    }
                 }
                 .redLine{
                     position: absolute;

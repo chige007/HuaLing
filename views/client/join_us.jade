@@ -15,16 +15,31 @@ block body
             p.g-normalText(style="text-align: center;") #{text.paragraph2[lang]}
 
             #recruitments
-                each recruit, index in text.recruitments
+                each recruit,index in text.recruitments
                     .item(class="#{'recruit_' + index}")
                         .wrap
                             .headline
-                                p.big #{recruit.name[lang]}
-                                if (lang != 'en')
-                                    p.small #{recruit.name['en']}
+                                p.big #{lang == 'hk' ? recruit.name['hk'] : recruit.name['cn']}
+                                a.more(href="#{recruit.link}", target="_blank")
+                                    img(src="/images/icon_plus.png", alt="+")
+                                    span #{lang == 'hk' ? '瞭解更多' : '了解更多'}
                                 .redLine
-                            .content
-                                p.label #{lang == 'cn' ? '职位信息' : lang == 'hk' ? '職位資訊' : 'Position Information'}
-                                p.detail !{recruit.detail[lang].replace(/\n/g, '<br>')}
+                            if (index < 6)    
+                                .content
+                                    p.label #{lang == 'hk' ? '職位資訊' : '职位信息'}
+                                    p.detail !{lang == 'hk' ? recruit.detail['hk'].replace(/\n/g, '<br>') : recruit.detail['cn'].replace(/\n/g, '<br>')}
+                                
+                                
+                //- each recruit, index in text.recruitments
+                //-     .item(class="#{'recruit_' + index}")
+                //-         .wrap
+                //-             .headline
+                //-                 p.big #{recruit.name[lang]}
+                //-                 if (lang != 'en')
+                //-                     p.small #{recruit.name['en']}
+                //-                 .redLine
+                //-             .content
+                //-                 p.label #{lang == 'cn' ? '职位信息' : lang == 'hk' ? '職位資訊' : 'Position Information'}
+                //-                 p.detail !{recruit.detail[lang].replace(/\n/g, '<br>')}
 
         include components/footer
