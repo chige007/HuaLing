@@ -77,7 +77,7 @@ $(function(){
             video.play();
         });
         video.autoplay = true;
-        video.controls = false;
+        video.controls = true;
         video.src = '/videos/video_home_mobile_' + lang + '.mp4';
     }
 
