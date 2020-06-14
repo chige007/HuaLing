@@ -433,6 +433,10 @@
   #recruitments .item .wrap .headline p.small {
     font-weight: 300;
   }
+  #recruitments .item .wrap .headline a.more {
+    right: 10px;
+    top: 8px;
+  }
   #recruitments .item:after {
     content: '';
     position: absolute;

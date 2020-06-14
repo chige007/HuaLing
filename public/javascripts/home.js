@@ -63,10 +63,23 @@ $(function(){
 
     // $('#videoWrap').vidbacking();
     var video = document.getElementById('myVideo');
-    video.addEventListener('canplay', function(e) {
-        this.pause();
-        this.play();
-    })
+    var deviceType = GLOBAL.getDeviceType();
+    var lang = $('body').attr('data-lang');
+    if (lang == 'hk') lang = 'cn';
+    if (deviceType == 'pc') {
+        video.autoplay = true;
+        video.controls = false;
+        video.src = '/videos/video_home_pc_' + lang + '.mp4';
+    } else {
+        video.addEventListener('canplay', function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            video.play();
+        });
+        video.autoplay = true;
+        video.controls = false;
+        video.src = '/videos/video_home_mobile_' + lang + '.mp4';
+    }
 
     $('#workImgs').find('.nextBtn').on('click', function() {
         slide(currentIndex + 1);
