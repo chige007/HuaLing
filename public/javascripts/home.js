@@ -66,18 +66,18 @@ $(function(){
     var deviceType = GLOBAL.getDeviceType();
     var lang = $('body').attr('data-lang');
     if (lang == 'hk') lang = 'cn';
+    video.addEventListener('canplay', function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        video.play();
+    });
+    video.autoplay = true;
+    video.controls = true;
     if (deviceType == 'pc') {
-        video.autoplay = true;
-        video.controls = false;
+        video.poster = '/images/img_video_poster_pc.png';
         video.src = '/videos/video_home_pc_' + lang + '.mp4';
     } else {
-        video.addEventListener('canplay', function(e) {
-            e.stopPropagation();
-            e.preventDefault();
-            video.play();
-        });
-        video.autoplay = true;
-        video.controls = true;
+        video.poster = '/images/img_video_poster_mobile.png';
         video.src = '/videos/video_home_mobile_' + lang + '.mp4';
     }
 
