@@ -26,7 +26,7 @@ block body
                                 .redLine
                             if (index < 6)    
                                 .content
-                                    p.label #{lang == 'hk' ? '職位資訊' : '职位信息'}
+                                    //- p.label #{lang == 'hk' ? '職位資訊' : '职位信息'}
                                     p.detail !{lang == 'hk' ? recruit.detail['hk'].replace(/\n/g, '<br>') : recruit.detail['cn'].replace(/\n/g, '<br>')}
                                 
                                 
